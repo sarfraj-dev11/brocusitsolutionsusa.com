@@ -1,126 +1,110 @@
-</main>
+<?php
+/** Dynamic footer — reads everything from config. */
+$_legal = unserialize(LEGAL_LINKS);
+?>
 
-<!-- ═══════════════════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════════════════ -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="row g-4 g-lg-5">
+<footer id="site-footer" style="position:relative;background-color:#050508;border-top:1px solid rgba(124,58,237,.2);overflow:hidden;padding:6rem 0 2rem;">
+  
+  <!-- Massive Background Glow & Pattern -->
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px);background-size:24px 24px;pointer-events:none;mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent);"></div>
+  <div style="position:absolute;top:-50%;left:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-            <!-- Col 1: Company -->
-            <div class="col-lg-4 col-md-6">
-                <a href="/">
-                    <img src="/assets/images/logo-white.webp" alt="<?= $SITE['company'] ?>" height="45" class="mb-3">
-                </a>
-                <p class="footer-brand-desc">
-                    <?= $SITE['tagline'] ?> We provide trusted home security systems, smart automation, and technology services across all 50 US states.
-                </p>
-                <div class="footer-social">
-                    <a href="<?= $SITE['social']['facebook'] ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="<?= $SITE['social']['twitter'] ?>" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="<?= $SITE['social']['instagram'] ?>" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="<?= $SITE['social']['linkedin'] ?>" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="<?= $SITE['social']['youtube'] ?>" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;">
 
-            <!-- Col 2: Our Services -->
-            <div class="col-lg-2 col-md-6 col-6">
-                <h5>Our Services</h5>
-                <ul class="footer-links">
-                    <?php foreach ($SITE['services'] as $svc): ?>
-                        <?php if (!empty($svc['active'])): ?>
-                        <li><a href="/<?= $svc['slug'] ?>"><?= $svc['name'] ?></a></li>
-                            <?php if (!empty($svc['products'])): ?>
-                                <?php foreach (array_slice($svc['products'], 0, 4) as $product): ?>
-                                <li><a href="/<?= $svc['slug'] ?>#<?= $product['slug'] ?>"><?= $product['name'] ?></a></li>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-
-            <!-- Col 3: Quick Links -->
-            <div class="col-lg-2 col-md-6 col-6">
-                <h5>Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- Col 4: Contact -->
-            <div class="col-lg-4 col-md-6">
-                <h5>Contact Us</h5>
-                <div class="footer-contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <a href="tel:<?= $SITE['phone'] ?>"><?= $SITE['phone_display'] ?></a>
-                        <br><small class="text-muted"><?= $SITE['hours']['display'] ?></small>
-                    </div>
-                </div>
-                <div class="footer-contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <a href="mailto:<?= $SITE['email'] ?>"><?= $SITE['email'] ?></a>
-                    </div>
-                </div>
-                <div class="footer-contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <span style="color:var(--color-gray-400);font-size:0.9rem;"><?= $SITE['address']['full'] ?></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Disclaimer -->
-        <div class="mt-4 pt-3 border-top" style="border-color:rgba(255,255,255,0.08)!important;">
-            <p style="font-size:0.78rem;color:var(--color-gray-500);line-height:1.6;">
-                <?= $SITE['legal']['disclaimer'] ?>
-            </p>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p><?= $SITE['legal']['copyright'] ?></p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>
-                        <a href="/privacy-policy">Privacy Policy</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <!-- Brand col -->
+    <div class="footer-brand" style="display:flex;flex-direction:column;">
+      <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:1.5rem;display:inline-block;text-decoration:none;transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+        <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:55px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(124,58,237,.4));">
+      </a>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:320px;margin-bottom:2.5rem;font-weight:400;font-family:var(--font-p, 'Inter', sans-serif);">
+        <?= SITE_NAME ?> is an independent advisory and referral service — not a manufacturer, dealer, installer, or monitoring provider. We empower you to make safe choices.
+      </p>
+      
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <a href="tel:<?= PHONE_TEL ?>" style="font-size:1.05rem;color:rgba(255,255,255,.8);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:1rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(5px)';" onmouseout="this.style.color='rgba(255,255,255,.8)';this.style.transform='none';">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(59,130,246,.15));border:1px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;color:#C4B5FD;transition:all .3s ease;box-shadow:0 0 15px rgba(124,58,237,.2);"><i class="fas fa-phone-flip" style="font-size:.9rem"></i></div>
+          <?= PHONE_DISPLAY ?>
+        </a>
+        <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:1.05rem;color:rgba(255,255,255,.8);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:1rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(5px)';" onmouseout="this.style.color='rgba(255,255,255,.8)';this.style.transform='none';">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(59,130,246,.15));border:1px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;color:#C4B5FD;transition:all .3s ease;box-shadow:0 0 15px rgba(124,58,237,.2);"><i class="fas fa-envelope" style="font-size:.9rem"></i></div>
+          <?= EMAIL_INFO ?>
+        </a>
+      </div>
     </div>
+
+    <!-- Nav cols -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
+      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Services<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
+      <a href="<?= url('home-security.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home Security</a>
+      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Get Free Advice</a>
+    </div>
+
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
+      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Company<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
+      <a href="<?= url('index.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home</a>
+      <a href="<?= url('about.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">About Us</a>
+      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Contact</a>
+    </div>
+
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
+      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Legal<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
+      <?php foreach ($_legal as $l): ?>
+      <a href="<?= url($l['href']) ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';"><?= $l['label'] ?></a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:2.5rem 1.5rem 0;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+    <!-- Gradient Divider -->
+    <div style="position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.5),transparent);"></div>
+    
+    <p style="font-size:.95rem;color:rgba(255,255,255,.45);margin:0;font-family:var(--font-p, 'Inter', sans-serif);line-height:1.6;">&copy; <?= COPYRIGHT_YEAR ?> <?= SITE_NAME ?>. All rights reserved.<br><span style="opacity:0.7;font-size:0.85rem;margin-top:0.35rem;display:block;"><?= ADDR_CITY ?>, <?= ADDR_STATE ?> &middot; Independent Advisory &amp; Referral Service</span></p>
+    
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:1.25rem;">
+      <!-- Social Media Icons -->
+      <div style="display:flex;gap:1rem;">
+        <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#7C3AED';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(124,58,237,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.7)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#1DA1F2';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(29,161,242,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.7)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#E1306C';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(225,48,108,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.7)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#0077B5';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,119,181,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.7)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      
+      <!-- Legal Bottom Links -->
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:flex-end;">
+        <?php foreach ($_legal as $l): ?>
+        <a href="<?= url($l['href']) ?>" style="font-size:.9rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .3s;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><?= strip_tags($l['label']) ?></a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" aria-label="Back to top" title="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
+<!-- External Scripts -->
+<script src="<?= asset('js/main.js') ?>" defer></script>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Site JS -->
-<script src="/assets/js/main.js"></script>
-
-</body>
-</html>
+<style>
+@media(max-width:1000px) {
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 3.5rem !important;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-bottom div {
+    justify-content: center;
+  }
+}
+@media(max-width:550px) {
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+</style>
