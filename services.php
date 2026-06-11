@@ -1,7 +1,8 @@
 <?php
 $page_title='Services | Brocussolutionsusa';
 $page_desc='Cloud architecture, AI integration, cybersecurity, digital transformation, custom development, and data analytics — powered by Brocussolutionsusa.';
-require_once 'includes/head.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
 
