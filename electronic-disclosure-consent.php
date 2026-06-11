@@ -5,39 +5,48 @@ require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
+
+<!-- HERO BANNER -->
+<section class="page-hero" style="background:radial-gradient(ellipse 80% 80% at 50% 40%, #5746c6 0%, #5746c6 45%, #110c28 100%);">
+  <div class="page-hero-inner">
+    <span class="label">Legal</span>
+    <h1 class="page-h">Electronic Disclosure &amp; Consent</h1>
+    <p class="page-sub">Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions LLC.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section style="background:linear-gradient(160deg, #fdfcff 0%, #f5f0ff 50%, #eff6ff 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#f0ebff 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#ebf5ff 0%,transparent 70%);pointer-events:none;"></div>
+
 <style>
     .legal-wrap {
         max-width: 1150px;
         margin: 0 auto;
-        padding: 5rem 1.5rem 7rem
-    }
-
-    .legal-wrap h1 {
-        font-family: var(--font-display);
-        font-size: clamp(1.8rem, 4vw, 2.6rem);
-        font-weight: 700;
-        margin-bottom: .5rem;
-        line-height: 1.2
+        padding: 5rem 1.5rem 7rem;
+        position: relative;
+        z-index: 1;
     }
 
     .legal-meta {
         font-size: .82rem;
-        color: rgba(255, 255, 255, .35);
+        color: #94A3B8;
         margin-bottom: 3rem;
-        border-bottom: 1px solid rgba(255, 255, 255, .07);
+        border-bottom: 1px solid rgba(15,23,42,.08);
         padding-bottom: 1.5rem
     }
 
     .legal-wrap h2 {
         font-weight: 700;
         margin: 2.5rem 0 .75rem;
-        color: #fff
+        color: #0F172A
     }
 
     .legal-wrap p,
     .legal-wrap li {
         font-size: .92rem;
-        color: rgba(255, 255, 255, .65);
+        color: #475569;
         line-height: 1.85;
         margin-bottom: .75rem
     }
@@ -48,20 +57,18 @@ require_once __DIR__ . '/includes/head.php';
     }
 
     .legal-wrap a {
-        color: #60A5FA
+        color: #6D28D9
     }
 
-    address {
+    .legal-wrap address {
         font-style: normal;
-        color: rgba(255, 255, 255, .6);
+        color: #374151;
         line-height: 1.8;
         font-size: .9rem;
         margin-top: .5rem
     }
 </style>
 <div class="legal-wrap">
-    <span class="label" style="display:inline-flex;margin-bottom:1.5rem">Legal</span>
-    <h1>Electronic Disclosure and Consent to Do Business Electronically</h1>
     <p class="legal-meta">Last updated: June 11, 2025</p>
 
     <p>This Electronic Disclosure and Consent ("Consent") explains how Brocus IT Solutions LLC ("Brocus," "we," "us," or "our") provides communications and disclosures to you electronically. By submitting a form on brocusitsolutionsusa.com, checking a consent box, or otherwise interacting with us electronically, you agree to the terms of this Consent.</p>
@@ -105,6 +112,7 @@ require_once __DIR__ . '/includes/head.php';
     <p>By proceeding, you confirm that you can access information presented electronically, that your device meets the requirements above, and that you consent to receive Communications electronically as described here. If you do not agree, do not submit a form or otherwise transact with us electronically.</p>
 
     <h2>9. Contact us</h2>
-    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>
+    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
 </div>
+</section>
 <?php include 'includes/footer.php'; ?>

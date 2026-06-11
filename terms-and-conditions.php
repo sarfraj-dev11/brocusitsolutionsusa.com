@@ -5,38 +5,48 @@ require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
+
+<!-- HERO BANNER -->
+<section class="page-hero" style="background:radial-gradient(ellipse 80% 80% at 50% 40%, #5746c6 0%, #5746c6 45%, #110c28 100%);">
+  <div class="page-hero-inner">
+    <span class="label">Legal</span>
+    <h1 class="page-h">Terms and Conditions</h1>
+    <p class="page-sub">The terms governing your use of brocusitsolutionsusa.com and the services provided by Brocus IT Solutions LLC.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section style="background:linear-gradient(160deg, #fdfcff 0%, #f5f0ff 50%, #eff6ff 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#f0ebff 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#ebf5ff 0%,transparent 70%);pointer-events:none;"></div>
+
 <style>
     .legal-wrap {
         max-width: 1150px;
         margin: 0 auto;
-        padding: 5rem 1.5rem 7rem
-    }
-
-    .legal-wrap h1 {
-        font-family: var(--font-display);
-        font-size: clamp(2rem, 4vw, 2.8rem);
-        font-weight: 700;
-        margin-bottom: .5rem
+        padding: 5rem 1.5rem 7rem;
+        position: relative;
+        z-index: 1;
     }
 
     .legal-meta {
         font-size: .82rem;
-        color: rgba(255, 255, 255, .35);
+        color: #94A3B8;
         margin-bottom: 3rem;
-        border-bottom: 1px solid rgba(255, 255, 255, .07);
+        border-bottom: 1px solid rgba(15,23,42,.08);
         padding-bottom: 1.5rem
     }
 
     .legal-wrap h2 {
         font-weight: 700;
         margin: 2.5rem 0 .75rem;
-        color: #fff
+        color: #0F172A
     }
 
     .legal-wrap p,
     .legal-wrap li {
         font-size: .92rem;
-        color: rgba(255, 255, 255, .65);
+        color: #475569;
         line-height: 1.85;
         margin-bottom: .75rem
     }
@@ -47,20 +57,18 @@ require_once __DIR__ . '/includes/head.php';
     }
 
     .legal-wrap a {
-        color: #60A5FA
+        color: #6D28D9
     }
 
-    address {
+    .legal-wrap address {
         font-style: normal;
-        color: rgba(255, 255, 255, .6);
+        color: #374151;
         line-height: 1.8;
         font-size: .9rem;
         margin-top: .5rem
     }
 </style>
 <div class="legal-wrap">
-    <span class="label" style="display:inline-flex;margin-bottom:1.5rem">Legal</span>
-    <h1>Terms and Conditions</h1>
     <p class="legal-meta">Last updated: June 11, 2025</p>
 
     <p>These Terms and Conditions ("Terms") govern your access to and use of brocusitsolutionsusa.com (the "Site") and the services offered by Brocus IT Solutions LLC ("Brocus," "we," "us," or "our"). By using the Site or submitting a request, you agree to these Terms. If you do not agree, please do not use the Site.</p>
@@ -114,10 +122,7 @@ require_once __DIR__ . '/includes/head.php';
     <p>If any provision of these Terms is found unenforceable, the remaining provisions will remain in effect. These Terms, together with our Privacy Policy and Electronic Disclosure Consent, are the entire agreement between you and Brocus regarding the Site.</p>
 
     <h2>17. Contact us</h2>
-    <<<<<<< HEAD
-        <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18554870595">(855) 487-0595</a></address>
-        =======
-        <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:(888) 958-4443">(888) 958-4443</a></address>
-        >>>>>>> e18daaa06462add242cecd1025006957d0070e52
+    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
 </div>
+</section>
 <?php include 'includes/footer.php'; ?>

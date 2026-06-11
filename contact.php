@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<section class="page-hero" style="background:radial-gradient(ellipse 80% 80% at 50% 40%, #3b96ff 0%, #5746c6 45%, #110c28 100%);">
+<section class="page-hero" style="background:radial-gradient(ellipse 80% 80% at 50% 40%, #5746c6 0%, #5746c6 45%, #110c28 100%);">
   <div class="page-hero-inner">
     <span class="label">Get in touch</span>
     <h1 class="page-h">Talk to an Independent Advisor</h1>
@@ -29,7 +29,6 @@ require_once __DIR__ . '/includes/head.php';
 
 <!-- CONTACT GRID -->
 <section style="padding:5rem 0 7rem;background:linear-gradient(160deg, #fdfcff 0%, #f5f0ff 50%, #eff6ff 100%);position:relative;overflow:hidden;">
-  <!-- Subtle decorative blobs -->
   <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#f0ebff 0%,transparent 70%);pointer-events:none;"></div>
   <div style="position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#ebf5ff 0%,transparent 70%);pointer-events:none;"></div>
   <div class="contact-grid">
@@ -63,120 +62,59 @@ require_once __DIR__ . '/includes/head.php';
           </div>
         <?php endforeach; ?>
       </div>
-      <!-- What to expect -->
-      <div style="background:rgba(37,99,235,.05);border:1px solid rgba(96,165,250,.15);border-radius:20px;padding:2rem;">
-        <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.5rem;">
-          <div style="width:36px;height:36px;border-radius:10px;background:rgba(96,165,250,.12);color:#60A5FA;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;"><i class="fas fa-info-circle"></i></div>
-          <h3 style="font-weight:700;color:#fff;margin:0;font-size:1rem;">What to expect when you reach out</h3>
-        </div>
-        <?php foreach (
-          [
-            'A friendly conversation, not a sales script.',
-            'A few simple questions about your home and what you are looking for.',
-            'Clear, honest guidance about your options.',
-            'A recommendation only if it genuinely fits, with zero obligation to move forward.',
-          ] as $e
-        ): ?>
-          <div style="display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.875rem;color:rgba(255,255,255,.7);line-height:1.6;">
-            <i class="fas fa-check" style="color:#6EE7B7;font-size:.65rem;margin-top:.35rem;flex-shrink:0;"></i><span><?= $e ?></span>
-          </div>
-        <?php endforeach; ?>
-        <p style="font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.65;margin:1.25rem 0 0;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;">We treat your time and your information with respect. You decide what happens next.</p>
-      </div>
     </div>
 
     <!-- Right: Form -->
-    <<<<<<< HEAD
-      <div id="contact-form" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:3rem;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);">
-      <div style="margin-bottom:2rem;">
-        <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);margin-bottom:1.25rem;">Prefer we reach out to you?</span>
-        <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 .75rem;">Request a Callback</h2>
-        <p style="color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.65;margin:0;">Fill out the short form below and an advisor will get back to you, usually within one business day. Tell us a little about your home and the best time to reach you, and we will take it from there.</p>
-      </div>
-      <?php if ($success): ?>
-        <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:14px;padding:1.25rem;color:#6EE7B7;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;">
-          <i class="fas fa-circle-check" style="font-size:1.1rem;flex-shrink:0;"></i> <?= $success ?>
+    <style>
+      #contact-form .form-control::placeholder { color: #374151 !important; opacity: 1; }
+    </style>
+    <div class="contact-form" id="contact-form" style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 12px 40px rgba(15,23,42,.06);">
+      <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Callback</h2>
+      <p style="font-size:.875rem;color:#64748B;margin-bottom:1.25rem">An advisor will get back to you within one business day.</p>
+      <?php if ($success): ?><div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#059669;margin-bottom:1rem"><?= $success ?></div><?php endif; ?>
+      <?php if ($error):   ?><div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#DC2626;margin-bottom:1rem"><?= $error ?></div><?php endif; ?>
+      <form action="<?= url('handlers/contact-handler.php') ?>" method="POST">
+        <input type="hidden" name="csrf_token" value="<?= csrfToken() ?>">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="full-name" style="color:#374151">Full Name</label>
+            <input type="text" id="full-name" name="full_name" class="form-control" placeholder="Jane Smith" value="<?= htmlspecialchars($vals['name'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone" style="color:#374151">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" value="<?= htmlspecialchars($vals['phone'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+          </div>
         </div>
-      <?php endif; ?>
-      <?php if ($error): ?>
-        <div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:14px;padding:1.25rem;color:#FCA5A5;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;">
-          <i class="fas fa-circle-exclamation" style="font-size:1.1rem;flex-shrink:0;"></i> <?= $error ?>
-        </div>
-      <?php endif; ?>
-      <form action="<?= url('handlers/contact-handler.php') ?>" method="POST" style="display:flex;flex-direction:column;gap:1.25rem;">
-        =======
-        <style>
-          #contact-form .form-control::placeholder {
-            color: #374151 !important;
-            opacity: 1;
-          }
-        </style>
-        <div class="contact-form" id="contact-form" style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 12px 40px rgba(15,23,42,.06);">
-          <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Callback</h2>
-          <p style="font-size:.875rem;color:#64748B;margin-bottom:1.25rem">An advisor will get back to you within one business day.</p>
-          <?php if ($success): ?><div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#059669;margin-bottom:1rem"><?= $success ?></div><?php endif; ?>
-          <?php if ($error):   ?><div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#DC2626;margin-bottom:1rem"><?= $error ?></div><?php endif; ?>
-          <form action="<?= url('handlers/contact-handler.php') ?>" method="POST">
-            >>>>>>> e18daaa06462add242cecd1025006957d0070e52
-            <input type="hidden" name="csrf_token" value="<?= csrfToken() ?>">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="full-name" style="color:#374151">Full Name</label>
-                <input type="text" id="full-name" name="full_name" class="form-control" placeholder="Jane Smith" value="<?= htmlspecialchars($vals['name'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="phone" style="color:#374151">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" value="<?= htmlspecialchars($vals['phone'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
-              </div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="email" style="color:#374151">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" value="<?= htmlspecialchars($vals['email'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
-              </div>
-              <div class="form-group">
-                <<<<<<< HEAD
-                  <label class="form-label" for="zip">ZIP Code</label>
-                  <input type="text" id="zip" name="zip" class="form-control" placeholder="33647" maxlength="10" value="<?= htmlspecialchars($vals['zip'] ?? '') ?>">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message">How Can We Help You? <span style="font-weight:400;opacity:.55">(optional)</span></label>
-              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us a bit about your home and what you are looking for."><?= htmlspecialchars($vals['message'] ?? '') ?></textarea>
-              =======
-              <label class="form-label" for="zip" style="color:#374151">ZIP Code</label>
-              <input type="text" id="zip" name="zip" class="form-control" placeholder="33647" maxlength="10" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
-            </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="email" style="color:#374151">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" value="<?= htmlspecialchars($vals['email'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="zip" style="color:#374151">ZIP Code</label>
+            <input type="text" id="zip" name="zip" class="form-control" placeholder="33647" maxlength="10" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+          </div>
         </div>
         <div class="form-group">
           <label class="form-label" for="message" style="color:#374151">How Can We Help You? <span style="font-weight:400;opacity:.6">(optional)</span></label>
           <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us a bit about your home and what you are looking for…" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;"></textarea>
-          >>>>>>> e18daaa06462add242cecd1025006957d0070e52
         </div>
+
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1.1rem 2rem;font-size:1rem;border-radius:14px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.3);transition:all .3s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 20px 40px rgba(124,58,237,.45)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 12px 30px rgba(124,58,237,.3)';">
           Request a Callback <i class="fas fa-arrow-right" style="font-size:.85rem;margin-left:.5rem;"></i>
         </button>
-        <<<<<<< HEAD
-          <p style="font-size:.72rem;color:rgba(255,255,255,.28);line-height:1.7;margin:0;">
-          By submitting this form and clicking "Request a Callback," you confirm the information is yours and you agree, by electronic signature, to our
-          <a href="<?= url('electronic-disclosure-consent.php') ?>" style="color:rgba(255,255,255,.45);text-decoration:underline;">Electronic Disclosure Consent</a>,
-          <a href="<?= url('terms-and-conditions.php') ?>" style="color:rgba(255,255,255,.45);text-decoration:underline;">Terms and Conditions</a>, and
-          <a href="<?= url('privacy-policy.php') ?>" style="color:rgba(255,255,255,.45);text-decoration:underline;">Privacy Policy</a>.
-          =======
 
-          <p style="font-size:.72rem;color:#94A3B8;line-height:1.6;margin-top:1.25rem">
-            By submitting this form and clicking "Request a Callback," you confirm the information is yours and you agree, by electronic signature, to our
-            <a href="electronic-disclosure-consent.php" style="color:#6D28D9;text-decoration:underline">Electronic Disclosure Consent</a>,
-            <a href="terms-and-conditions.php" style="color:#6D28D9;text-decoration:underline">Terms and Conditions</a>, and
-            <a href="privacy-policy.php" style="color:#6D28D9;text-decoration:underline">Privacy Policy</a>.
-            >>>>>>> e18daaa06462add242cecd1025006957d0070e52
-            You also give Brocus IT Solutions LLC and the providers it works with your prior express written consent to contact you at the phone number and email address you provide, including by automated telephone dialing system, prerecorded or artificial voice calls, and text messages, for marketing and service purposes. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to opt out of texts at any time, or HELP for help.
-          </p>
+        <p style="font-size:.72rem;color:#94A3B8;line-height:1.6;margin-top:1.25rem">
+          By submitting this form and clicking "Request a Callback," you confirm the information is yours and you agree, by electronic signature, to our
+          <a href="electronic-disclosure-consent.php" style="color:#6D28D9;text-decoration:underline">Electronic Disclosure Consent</a>,
+          <a href="terms-and-conditions.php" style="color:#6D28D9;text-decoration:underline">Terms and Conditions</a>, and
+          <a href="privacy-policy.php" style="color:#6D28D9;text-decoration:underline">Privacy Policy</a>.
+          You also give Brocus IT Solutions LLC and the providers it works with your prior express written consent to contact you at the phone number and email address you provide, including by automated telephone dialing system, prerecorded or artificial voice calls, and text messages, for marketing and service purposes. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to opt out of texts at any time, or HELP for help.
+        </p>
       </form>
-  </div>
+    </div>
   </div>
 </section>
-
 
 <!-- FINAL CTA -->
 <section id="cta-banner" style="padding:9rem 0;background-color:#050508;position:relative;overflow:hidden;">
@@ -214,9 +152,7 @@ require_once __DIR__ . '/includes/head.php';
 
 <style>
   @media(max-width:680px) {
-    .form-grid-2 {
-      grid-template-columns: 1fr !important;
-    }
+    .form-grid-2 { grid-template-columns: 1fr !important; }
   }
 </style>
 <?php include __DIR__ . '/includes/footer.php'; ?>
