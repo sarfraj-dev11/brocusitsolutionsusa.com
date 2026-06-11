@@ -25,10 +25,10 @@ $canonical  = $canonical  ?? '';
   <!-- Favicon -->
   <link rel="icon" href="<?= asset('images/favicon.ico') ?>" type="image/x-icon">
 
-  <!-- Fonts: Space Grotesk (Headings) + Inter (Body/UI) -->
+  <!-- Fonts: Space Grotesk (Headings) + Manrope (Body/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

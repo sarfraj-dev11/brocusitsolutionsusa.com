@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /** Dynamic footer — reads everything from config. */
 $_legal = unserialize(LEGAL_LINKS);
 ?>
@@ -17,13 +17,13 @@ $_legal = unserialize(LEGAL_LINKS);
       <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:1.5rem;display:inline-block;text-decoration:none;transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
         <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:55px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(124,58,237,.4));">
       </a>
-      <p style="font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:320px;margin-bottom:2.5rem;font-weight:400;font-family:var(--font-p, 'Inter', sans-serif);">
+      <p style="font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:320px;margin-bottom:2.5rem;font-weight:400;font-family:var(--font-p, 'Manrope', sans-serif);">
         <?= SITE_NAME ?> is an independent advisory and referral service — not a manufacturer, dealer, installer, or monitoring provider. We empower you to make safe choices.
       </p>
       
       <div style="display:flex;flex-direction:column;gap:1.25rem;">
         <a href="tel:<?= PHONE_TEL ?>" style="font-size:1.05rem;color:rgba(255,255,255,.8);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:1rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(5px)';" onmouseout="this.style.color='rgba(255,255,255,.8)';this.style.transform='none';">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(59,130,246,.15));border:1px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;color:#C4B5FD;transition:all .3s ease;box-shadow:0 0 15px rgba(124,58,237,.2);"><i class="fas fa-phone-flip" style="font-size:.9rem"></i></div>
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(59,130,246,.15));border:1px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;color:#C4B5FD;transition:all .3s ease;box-shadow:0 0 15px rgba(124,58,237,.2);"><i class="fas fa-phone" style="font-size:.9rem"></i></div>
           <?= PHONE_DISPLAY ?>
         </a>
         <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:1.05rem;color:rgba(255,255,255,.8);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:1rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(5px)';" onmouseout="this.style.color='rgba(255,255,255,.8)';this.style.transform='none';">
@@ -36,21 +36,21 @@ $_legal = unserialize(LEGAL_LINKS);
     <!-- Nav cols -->
     <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
       <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Services<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
-      <a href="<?= url('home-security.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home Security</a>
-      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Get Free Advice</a>
+      <a href="<?= url('home-security.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home Security</a>
+      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Get Free Advice</a>
     </div>
 
     <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
       <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Company<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
-      <a href="<?= url('index.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home</a>
-      <a href="<?= url('about.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">About Us</a>
-      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Contact</a>
+      <a href="<?= url('index.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home</a>
+      <a href="<?= url('about.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">About Us</a>
+      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Contact</a>
     </div>
 
     <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
       <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Legal<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
       <?php foreach ($_legal as $l): ?>
-      <a href="<?= url($l['href']) ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';"><?= $l['label'] ?></a>
+      <a href="<?= url($l['href']) ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';"><?= $l['label'] ?></a>
       <?php endforeach; ?>
     </div>
   </div>
@@ -59,7 +59,7 @@ $_legal = unserialize(LEGAL_LINKS);
     <!-- Gradient Divider -->
     <div style="position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.5),transparent);"></div>
     
-    <p style="font-size:.95rem;color:rgba(255,255,255,.45);margin:0;font-family:var(--font-p, 'Inter', sans-serif);line-height:1.6;">&copy; <?= COPYRIGHT_YEAR ?> <?= SITE_NAME ?>. All rights reserved.<br><span style="opacity:0.7;font-size:0.85rem;margin-top:0.35rem;display:block;"><?= ADDR_CITY ?>, <?= ADDR_STATE ?> &middot; Independent Advisory &amp; Referral Service</span></p>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.45);margin:0;font-family:var(--font-p, 'Manrope', sans-serif);line-height:1.6;">&copy; <?= COPYRIGHT_YEAR ?> <?= SITE_NAME ?>. All rights reserved.<br><span style="opacity:0.7;font-size:0.85rem;margin-top:0.35rem;display:block;"><?= ADDR_CITY ?>, <?= ADDR_STATE ?> &middot; Independent Advisory &amp; Referral Service</span></p>
     
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:1.25rem;">
       <!-- Social Media Icons -->
@@ -73,7 +73,7 @@ $_legal = unserialize(LEGAL_LINKS);
       <!-- Legal Bottom Links -->
       <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:flex-end;">
         <?php foreach ($_legal as $l): ?>
-        <a href="<?= url($l['href']) ?>" style="font-size:.9rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .3s;font-family:var(--font-p, 'Inter', sans-serif);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><?= strip_tags($l['label']) ?></a>
+        <a href="<?= url($l['href']) ?>" style="font-size:.9rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .3s;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><?= strip_tags($l['label']) ?></a>
         <?php endforeach; ?>
       </div>
     </div>

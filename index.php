@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/includes/bootstrap.php';
 $page_title = 'Independent Advisors for US Households | Brocus IT Solutions';
 $page_desc  = 'Brocus IT Solutions helps US households make confident home decisions with free, independent, no-pressure advice, then connects you with vetted providers. Starting with home security. Call today.';
@@ -265,7 +265,7 @@ require_once __DIR__ . '/includes/head.php';
 
       <div class="hero-buttons">
         <a href="tel:+18889584443" class="btn btn-lg" style="background:#8B5CF6;color:#fff;border-radius:10px;font-weight:600;box-shadow:0 8px 24px rgba(139,92,246,.4);white-space:nowrap;">
-          <i class="fas fa-phone-flip" style="font-size:.85rem"></i> Call now: (888) 958-4443
+          <i class="fas fa-phone" style="font-size:.85rem"></i> Call now: (888) 958-4443
         </a>
         <a href="contact.php" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:10px;white-space:nowrap;backdrop-filter:blur(8px);">
           Get free advice
@@ -426,7 +426,7 @@ require_once __DIR__ . '/includes/head.php';
         </div>
 
         <p style="font-size:1.1rem;color:rgba(255,255,255,.7);line-height:1.8;margin:0 0 2rem;font-weight:400;">
-          Independent guidance on alarms, cameras, smart locks, and 24/7 monitoring — matched precisely to your home and budget, with absolutely zero sales pressure.
+          Independent guidance on alarms, cameras, smart locks, and monitoring, matched to your home and budget.
         </p>
 
         <ul style="list-style:none;padding:0;margin:0 0 2.5rem;display:flex;flex-direction:column;gap:.875rem;">
@@ -496,7 +496,7 @@ require_once __DIR__ . '/includes/head.php';
       </div>
 
       <a href="tel:+18889584443" class="btn btn-primary btn-lg" style="display:inline-flex;align-items:center;gap:1rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.25);border-radius:20px;padding:1.25rem 2.5rem;font-size:1.15rem;font-weight:700;color:#fff;transition:all .3s;">
-        <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone-flip" style="font-size:.9rem;"></i></div>
+        <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone" style="font-size:.9rem;"></i></div>
         Speak to an advisor
       </a>
     </div>
@@ -625,20 +625,20 @@ require_once __DIR__ . '/includes/head.php';
         <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,5,20,0.3) 0%, transparent 50%);"></div>
 
         <!-- Glass Stats Panel (Bento sub-item) -->
-        <div style="position:absolute;bottom:2.5rem;left:2.5rem;right:2.5rem;background:rgba(255,255,255,.03);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:2.5rem;box-shadow:0 30px 60px rgba(0,0,0,.3);">
+        <div class="spotlight-stats-panel" style="position:absolute;bottom:2.5rem;left:2.5rem;right:2.5rem;background:rgba(255,255,255,.03);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:2.5rem;box-shadow:0 30px 60px rgba(0,0,0,.3);">
           <div style="font-size:.7rem;color:#E2E8F0;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.75rem;display:flex;align-items:center;gap:.75rem;">
             <div style="width:28px;height:28px;border-radius:50%;background:rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;color:#E9D5FF;border:1px solid rgba(196,181,253,.2);"><i class="fas fa-university" style="font-size:.7rem;"></i></div>
             UNC Charlotte Study (422 Burglars)
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;position:relative;">
+          <div class="spotlight-stats-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;position:relative;">
             <!-- Subtle elegant divider -->
-            <div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(to bottom,rgba(255,255,255,.05),rgba(255,255,255,.15),rgba(255,255,255,.05));"></div>
+            <div class="spotlight-divider" style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(to bottom,rgba(255,255,255,.05),rgba(255,255,255,.15),rgba(255,255,255,.05));"></div>
 
-            <div style="padding-right:1.5rem;">
+            <div class="stat-col-left" style="padding-right:1.5rem;">
               <div style="font-family:var(--font);font-size:3.5rem;font-weight:800;color:#fff;line-height:1;margin-bottom:.5rem;letter-spacing:-.03em;">83<span style="font-size:1.75rem;color:#A78BFA;">%</span></div>
               <div style="font-size:.95rem;color:#CBD5E1;font-weight:400;line-height:1.5;">Check for an alarm system first</div>
             </div>
-            <div style="padding-left:1.5rem;">
+            <div class="stat-col-right" style="padding-left:1.5rem;">
               <div style="font-family:var(--font);font-size:3.5rem;font-weight:800;color:#fff;line-height:1;margin-bottom:.5rem;letter-spacing:-.03em;">60<span style="font-size:1.75rem;color:#A78BFA;">%</span></div>
               <div style="font-size:.95rem;color:#CBD5E1;font-weight:400;line-height:1.5;">Would move to a different target</div>
             </div>
@@ -647,7 +647,7 @@ require_once __DIR__ . '/includes/head.php';
       </div>
 
       <!-- Right: Content -->
-      <div style="padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center;background:#fff;">
+      <div class="spotlight-content" style="padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center;background:#fff;">
         <div>
           <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6D28D9;background:#F5F3FF;border:1px solid #EDE9FE;margin-bottom:2rem;">
             <span style="width:6px;height:6px;border-radius:50%;background:#8B5CF6;display:inline-block;animation:pulseDot 2s infinite;box-shadow:0 0 8px #8B5CF6;"></span>
@@ -662,9 +662,12 @@ require_once __DIR__ . '/includes/head.php';
             Home security is where Brocus starts. We help you cut through confusing contracts and surprise fees, and figure out what actually fits, whether that is full professional monitoring or a simple setup. The reassuring part is that visible security works. In a University of North Carolina at Charlotte study of 422 burglars, about 83 percent said they would check for an alarm before breaking in, and around 60 percent would move to a different target if they found one.
           </p>
 
-          <a href="tel:+18889584443" class="btn btn-primary btn-lg" style="display:inline-flex;align-items:center;gap:1rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.25);border-radius:20px;padding:1.25rem 2.5rem;font-size:1.15rem;font-weight:700;color:#fff;transition:all .3s;">
-            <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone-flip" style="font-size:.9rem;"></i></div>
-            Get free advice: (888) 958-4443
+          <a href="tel:+18889584443" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:.875rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.25);border-radius:16px;padding:.75rem 1.5rem;color:#fff;transition:all .3s;text-align:left;line-height:1.2;">
+            <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone" style="font-size:.8rem;"></i></div>
+            <div style="display:flex;flex-direction:column;gap:0;">
+              <span style="font-size:.9rem;font-weight:600;color:rgba(255,255,255,.9);">Get free home security advice:</span>
+              <span style="font-size:1.1rem;font-weight:800;letter-spacing:-.01em;">(888) 958-4443</span>
+            </div>
           </a>
         </div>
       </div>
@@ -687,7 +690,7 @@ require_once __DIR__ . '/includes/head.php';
         Support
       </span>
       <h2 style="font-family:var(--font);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:1.5rem;">Frequently asked <span style="background:linear-gradient(135deg,#A78BFA,#C4B5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span></h2>
-      <p style="font-size:1.15rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:2.5rem;font-weight:400;font-family:var(--font-p, 'Inter', sans-serif);">Have a different question and can't find the answer you're looking for? Reach out to our support team and we'll get back to you as soon as we can.</p>
+      <p style="font-size:1.15rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:2.5rem;font-weight:400;font-family:var(--font-p, 'Manrope', sans-serif);">Have a different question and can't find the answer you're looking for? Reach out to our support team and we'll get back to you as soon as we can.</p>
       
       <a href="contact.php" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.05)';" onmouseout="this.style.background='transparent';">
         <i class="fas fa-envelope" style="font-size:.9rem;color:#A78BFA;"></i> Contact Support
@@ -709,7 +712,7 @@ require_once __DIR__ . '/includes/head.php';
             <span style="padding-right:1.5rem;line-height:1.4;"><?= $faq['q'] ?></span>
             <div class="faq-icon" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:#A78BFA;transition:all .3s ease;flex-shrink:0;"><i class="fas fa-plus" style="font-size:.9rem;"></i></div>
           </div>
-          <div class="faq-a" style="color:rgba(255,255,255,.65);font-size:1.05rem;line-height:1.75;font-weight:400;font-family:var(--font-p, 'Inter', sans-serif);">
+          <div class="faq-a" style="color:rgba(255,255,255,.65);font-size:1.05rem;line-height:1.75;font-weight:400;font-family:var(--font-p, 'Manrope', sans-serif);">
             <div style="padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.08);margin-top:1.25rem;">
               <?= $faq['a'] ?>
             </div>
@@ -731,18 +734,13 @@ require_once __DIR__ . '/includes/head.php';
       <div style="position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
 
       <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
-        <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(196,181,253,.1);border:1px solid rgba(196,181,253,.25);margin-bottom:2rem;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#A78BFA;display:inline-block;animation:pulseDot 2s infinite;box-shadow:0 0 8px #A78BFA;"></span>
-          Ready for straight answers?
-        </span>
+        <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Ready for<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">straight answers?</span></h2>
         
-        <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Skip the sales pitch.<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Talk to someone on your side.</span></h2>
-        
-        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Inter', sans-serif);font-weight:400;">Connect with an independent advisor who builds recommendations around your home and budget, not a sales quota.</p>
+        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Manrope', sans-serif);font-weight:400;">Skip the sales pitch and talk to an independent advisor who is on your side.</p>
         
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
           <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;"><i class="fas fa-phone-flip" style="font-size:.85rem"></i></div>
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
             Call now: <?= PHONE_DISPLAY ?>
           </a>
           <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
@@ -751,11 +749,11 @@ require_once __DIR__ . '/includes/head.php';
         </div>
         
         <div style="margin-top:3.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
         </div>
       </div>
     </div>
@@ -798,6 +796,29 @@ require_once __DIR__ . '/includes/head.php';
 
     [style*="grid-template-columns:1fr 1fr"] {
       grid-template-columns: 1fr !important
+    }
+
+    .spotlight-content {
+      padding: 3rem 1.5rem !important;
+    }
+    .spotlight-stats-panel {
+      bottom: 1.5rem !important;
+      left: 1.5rem !important;
+      right: 1.5rem !important;
+      padding: 1.5rem !important;
+    }
+    .spotlight-stats-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+    }
+    .spotlight-divider {
+      display: none !important;
+    }
+    .stat-col-left {
+      padding-right: 0 !important;
+    }
+    .stat-col-right {
+      padding-left: 0 !important;
     }
 
     [style*="gap:5rem"] {

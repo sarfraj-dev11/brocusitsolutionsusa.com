@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/includes/bootstrap.php';
 $page_title = 'Contact ' . SITE_SHORT . ' | Free, No-Pressure Advice';
 $page_desc  = 'Get in touch with ' . SITE_SHORT . ' for free, independent, no-pressure advice on your home decisions. Call, email, or request a callback. US-based advisors ready to help.';
@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/head.php';
     <div>
       <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:2rem">How to reach us</h2>
       <?php foreach([
-        ['i'=>'fa-phone-flip','c'=>'#60A5FA','t'=>'Phone','v'=>PHONE_DISPLAY,'href'=>'tel:'.PHONE_TEL],
+        ['i'=>'fa-phone','c'=>'#60A5FA','t'=>'Phone','v'=>PHONE_DISPLAY,'href'=>'tel:'.PHONE_TEL],
         ['i'=>'fa-envelope','c'=>'#A78BFA','t'=>'Email','v'=>EMAIL_INFO,'href'=>'mailto:'.EMAIL_INFO],
         ['i'=>'fa-location-dot','c'=>'#6EE7B7','t'=>'Mailing Address','v'=>SITE_NAME.'<br>'.ADDR_LINE1.'<br>'.ADDR_CITY.', '.ADDR_STATE.' '.ADDR_ZIP,'href'=>null],
         ['i'=>'fa-clock','c'=>'#FCD34D','t'=>'Hours','v'=>HOURS_WEEKDAY.'<br>'.HOURS_SATURDAY,'href'=>null],
@@ -118,21 +118,21 @@ require_once __DIR__ . '/includes/head.php';
         
         <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">A quick call is the<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">easiest way forward</span></h2>
         
-        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Inter', sans-serif);font-weight:400;">Whether you are just starting to look into your options or you already know what you want — we are ready to help.</p>
+        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Manrope', sans-serif);font-weight:400;">Whether you are just starting to look into your options or you already know what you want — we are ready to help.</p>
         
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
           <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;"><i class="fas fa-phone-flip" style="font-size:.85rem"></i></div>
+            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
             Call now: <?= PHONE_DISPLAY ?>
           </a>
         </div>
         
         <div style="margin-top:3.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Inter', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
         </div>
       </div>
     </div>

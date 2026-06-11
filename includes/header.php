@@ -25,7 +25,8 @@ $_cur   = currentPage();
 
     <!-- Logo -->
     <a href="<?= url('index.php') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
-      <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain">
+      <img src="<?= asset('images/transparent-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="height:60px;width:auto;object-fit:contain">
+      <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="height:60px;width:auto;object-fit:contain;display:none;">
     </a>
 
     <!-- Nav links (from config) -->
@@ -81,8 +82,10 @@ $_cur   = currentPage();
 .sh-announce-inner a:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.8)}
 
 /* ── Header ── */
-#site-header{position:sticky;top:0;z-index:200;background:#171e3c;transition:background .35s,border-color .35s,backdrop-filter .35s,box-shadow .35s;border-bottom:1px solid transparent;margin-top:12px}
-#site-header.scrolled{background:rgba(23,30,60,.96);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom-color:rgba(255,255,255,.15);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+#site-header{position:sticky;top:0;z-index:200;background:transparent;transition:background .35s,border-color .35s,backdrop-filter .35s,box-shadow .35s;border-bottom:1px solid transparent;margin-top:12px}
+#site-header.scrolled{background:#161d39;backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom-color:rgba(255,255,255,.15);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+#site-header.scrolled .logo-transparent { display: none !important; }
+#site-header.scrolled .logo-scrolled { display: block !important; }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;height:60px}
 /* Logo */
 .sh-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
