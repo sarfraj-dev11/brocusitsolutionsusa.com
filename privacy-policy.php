@@ -1,14 +1,15 @@
 <?php
-$legal_contact = '<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>';
+$legal_contact = '<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:(888) 958-4443">(888) 958-4443</a></address>';
 ?>
 <?php
 $page_title = 'Privacy Policy | Brocus IT Solutions LLC';
 $page_desc  = 'Read how Brocus IT Solutions LLC collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
-require_once 'includes/head.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
 <style>
-.legal-wrap{max-width:780px;margin:0 auto;padding:5rem 1.5rem 7rem}
+.legal-wrap{max-width:1150px;margin:0 auto;padding:5rem 1.5rem 7rem}
 .legal-wrap h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:.5rem}
 .legal-meta{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:1.5rem}
 .legal-wrap h2{font-size:1.05rem;font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
@@ -45,24 +46,31 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <h2>3. How we share your information</h2>
 <p>We are an advisory and referral service, so sharing certain information is central to what we do. We may share your information with:</p>
 <ul>
-<li><strong>Third-party providers.</strong> When you request a quote, consultation, or service, we share the relevant details with one or more independent providers so they can follow up with you. Once your information is shared, the provider's own privacy policy will also apply.</li>
-<li><strong>Service vendors.</strong> Companies that perform functions on our behalf — hosting, analytics, customer communication, and marketing support — under obligations to protect your information.</li>
+<li><strong>Third-party providers.</strong> When you request a quote, consultation, or service, we share the relevant details with one or more independent providers so they can follow up with you. Once your information is shared, the provider's own privacy policy will also apply to how they use it.</li>
+<li><strong>Service vendors.</strong> Companies that perform functions on our behalf, such as hosting, analytics, customer communication, and marketing support, under obligations to protect your information.</li>
 <li><strong>Legal and safety reasons.</strong> When we believe disclosure is necessary to comply with the law, respond to legal process, protect our rights, or protect the safety of any person.</li>
 <li><strong>Business transfers.</strong> In connection with a merger, acquisition, financing, or sale of assets, your information may be transferred as part of that transaction.</li>
 </ul>
 <p>We do not sell your personal information in exchange for money. Some sharing for advertising may be considered a "sale" or "sharing" under certain state laws, and you may exercise the choices described in Section 7.</p>
 
 <h2>4. Marketing communications and your consent</h2>
-<p>If you provide your contact details and consent, we and the providers we work with may contact you by phone, prerecorded or automated calls, text messages, and email. Consent is not required as a condition of any purchase. You can opt out of marketing texts by replying STOP, opt out of marketing emails using the unsubscribe link, or ask to be placed on our internal do-not-call list by contacting us.</p>
+<p>If you provide your contact details and consent, we and the providers we work with may contact you by phone, prerecorded or automated calls, text messages, and email. Consent is not required as a condition of any purchase. You can opt out of marketing texts by replying STOP, opt out of marketing emails using the unsubscribe link, or ask to be placed on our internal do-not-call list by contacting us. Even after you opt out of marketing, we may still send you non-marketing messages related to a request you made.</p>
 
 <h2>5. Compensation and our role</h2>
 <p>Brocus may receive compensation from the third-party providers we work with in connection with referrals. This does not add any cost to you and does not change the privacy choices available to you under this policy.</p>
 
 <h2>6. Cookies and tracking technologies</h2>
-<p>We use cookies, pixels, tags, and similar technologies to operate the Site, remember your preferences, analyze traffic, and support our advertising. You can control cookies through your browser settings, though disabling them may affect how the Site works.</p>
+<p>We use cookies, pixels, tags, and similar technologies to operate the Site, remember your preferences, analyze traffic, and support our advertising. You can control cookies through your browser settings, though disabling them may affect how the Site works. We may also use third-party analytics and advertising services that set their own cookies and collect information about your activity over time and across websites.</p>
 
 <h2>7. Your privacy rights</h2>
-<p>Depending on where you live, you may have rights to: request access to your personal information; request correction or deletion; opt out of the sale or sharing of your personal information and of targeted advertising; and not be discriminated against for exercising your rights. Residents of states with comprehensive privacy laws, including Florida and California, may have these and additional rights. To make a request, contact us using the details in Section 12.</p>
+<p>Depending on where you live, you may have rights to:</p>
+<ul>
+<li>Request access to the personal information we hold about you.</li>
+<li>Request that we correct or delete your personal information.</li>
+<li>Opt out of the sale or sharing of your personal information and of targeted advertising.</li>
+<li>Not be discriminated against for exercising your rights.</li>
+</ul>
+<p>Residents of states with comprehensive privacy laws, including Florida, California, and others, may have these and additional rights. To make a request, contact us using the details in Section 12. We will verify your request before acting on it and will respond within the time required by applicable law.</p>
 
 <h2>8. Data security</h2>
 <p>We use reasonable administrative, technical, and physical safeguards designed to protect your information. No method of transmission or storage is completely secure, however, so we cannot guarantee absolute security.</p>
@@ -77,7 +85,8 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <p>The Site may link to third-party websites that we do not control. We are not responsible for their content or privacy practices, and we encourage you to review their policies.</p>
 
 <h2>12. Changes to this policy and how to contact us</h2>
-<p>We may update this Privacy Policy from time to time. The "Last updated" date shows when it was last revised, and continued use of the Site means you accept the current version. Questions or privacy requests can be directed to:</p>
-<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>
+<p>We may update this Privacy Policy from time to time. The "Last updated" date shows when it was last revised, and continued use of the Site means you accept the current version.</p>
+<p>Questions or privacy requests can be directed to:</p>
+<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:(888) 958-4443">(888) 958-4443</a></address>
 </div>
 <?php include 'includes/footer.php'; ?>
