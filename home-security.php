@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/head.php';
     </div>
     <!-- Trust signals -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:3rem;">
-      <?php foreach(['Free Consultation','No Sales Pressure','Independent Advice','US-Based Advisors'] as $t): ?>
+      <?php foreach(['Free Consultation','No Sales Pressure','Independent Advice','Real, Human Advisors'] as $t): ?>
       <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:rgba(255,255,255,.55);"><i class="fas fa-check" style="color:#A78BFA;font-size:.65rem;"></i><?= $t ?></span>
       <?php endforeach; ?>
     </div>
@@ -36,7 +36,7 @@ require_once __DIR__ . '/includes/head.php';
 <section style="padding:6rem 0;background:linear-gradient(180deg,#F8FAFC 0%,#FFFFFF 50%,#F1F5F9 100%);position:relative;overflow:hidden;border-top:1px solid #E2E8F0;">
   <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#f0ebff 0%,transparent 70%);pointer-events:none;"></div>
   <div style="position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#ebf5ff 0%,transparent 70%);pointer-events:none;"></div>
-  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1;">
     <div>
       <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);margin-bottom:1.25rem;">The Problem</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0 0 1.25rem;line-height:1.25;color:#0F172A;">Choosing a home security system in the United States is harder than it should be</h2>
@@ -45,7 +45,7 @@ require_once __DIR__ . '/includes/head.php';
       <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary"><i class="fas fa-phone" style="font-size:.8rem"></i> Talk to a real advisor now: <?= PHONE_DISPLAY ?></a>
     </div>
     <div style="border-radius:24px;overflow:hidden;border:1px solid #E2E8F0;box-shadow:0 24px 60px rgba(15,23,42,.1);">
-      <img src="<?= asset('images/advisor.jpg') ?>" alt="Independent home security advisor" width="520" height="420" style="width:100%;height:420px;object-fit:cover;display:block">
+      <img src="<?= asset('images/advisor_consultation.png') ?>" alt="Independent home security advisor" width="520" height="420" style="width:100%;height:420px;object-fit:cover;display:block;border-radius:24px;">
     </div>
   </div>
 </section>
@@ -149,7 +149,7 @@ require_once __DIR__ . '/includes/head.php';
     <span class="label">Our Process</span>
     <h2 class="sec-h">How working with Brocus is different</h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1000px;margin:0 auto;padding:0 1.5rem">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto;padding:0 1.5rem">
     <?php foreach([
       ['n'=>'First','i'=>'fa-ear-listen','c'=>'#60A5FA','t'=>'We listen','d'=>'You tell us about your home over a quick call or message. Size, layout, whether you rent or own, what worries you most, and what you have tried before. No quiz designed to upsell you.'],
       ['n'=>'Then','i'=>'fa-lightbulb','c'=>'#A78BFA','t'=>'We explain your options','d'=>'We walk you through what fits, what does not, and why. Monitored or self-monitored. Cameras, sensors, smart locks, or a full system. Contract or month to month. You leave the call understanding your choices, even if you decide to wait.'],
@@ -171,7 +171,7 @@ require_once __DIR__ . '/includes/head.php';
 <!-- WHAT WE HELP YOU FIGURE OUT -->
 <section style="padding:7rem 0;background:linear-gradient(180deg,#F8FAFC 0%,#FFFFFF 100%);position:relative;overflow:hidden;border-top:1px solid #E2E8F0;">
   <div style="position:absolute;top:-150px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(96,165,250,.08),transparent 70%);pointer-events:none;"></div>
-  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;z-index:1;">
     <div>
       <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);margin-bottom:1.25rem;">What we help you figure out</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0 0 2rem;line-height:1.25;color:#0F172A;">The questions that actually matter</h2>
@@ -229,7 +229,7 @@ require_once __DIR__ . '/includes/head.php';
         ['i'=>'fa-circle-dollar-to-slot','c'=>'#6EE7B7','bg'=>'rgba(110,231,183,.08)','t'=>'A free, no-pressure consultation with a real person','d'=>'Our advisory service costs you nothing. There is no obligation to move forward after speaking with us.'],
         ['i'=>'fa-comments','c'=>'#A78BFA','bg'=>'rgba(167,139,250,.08)','t'=>'Clear explanations instead of sales scripts','d'=>'We explain your options in plain language — what each choice means, what it costs, and what it actually does.'],
         ['i'=>'fa-user-tie','c'=>'#FCD34D','bg'=>'rgba(252,211,77,.08)','t'=>'One point of contact from first question to final decision','d'=>'From your first question to your final decision, you deal with one advisor who knows your situation.'],
-        ['i'=>'fa-shield-check','c'=>'#F472B6','bg'=>'rgba(244,114,182,.08)','t'=>'Providers that are vetted before we ever recommend them','d'=>'We screen every provider before referring them. Your installation will be handled by someone we stand behind.'],
+        ['i'=>'fa-user-check','c'=>'#F472B6','bg'=>'rgba(244,114,182,.08)','t'=>'Providers that are vetted before we ever recommend them','d'=>'We screen every provider before referring them. Your installation will be handled by someone we stand behind.'],
         ['i'=>'fa-house-chimney','c'=>'#34D399','bg'=>'rgba(52,211,153,.08)','t'=>'Guidance built around your home, your budget, and your goals','d'=>'Your home, budget, and priorities drive every recommendation. Not a quota, not a commission structure.'],
       ] as $r): ?>
       <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;transition:all .3s;" onmouseover="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.12)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,.02)';this.style.borderColor='rgba(255,255,255,.06)';this.style.transform='none'">
@@ -325,7 +325,7 @@ require_once __DIR__ . '/includes/head.php';
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
           <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Real, Human Advisors</span>
         </div>
       </div>
     </div>
