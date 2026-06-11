@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ─────────────────────────────────────────────────────
  *  BROCUS IT SOLUTIONS LLC — SITE CONFIGURATION
@@ -11,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
+define('BASE_PATH', ''); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
