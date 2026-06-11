@@ -16,7 +16,7 @@ require_once __DIR__ . '/includes/head.php';
 
 <!-- MISSION -->
 <section style="padding:7rem 0;background:linear-gradient(160deg,#fdfcff 0%,#f5f0ff 50%,#eff6ff 100%);position:relative;overflow:hidden;">
-  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
     <div>
       <<<<<<< HEAD
         <span class="label">Who we are</span>
@@ -37,7 +37,7 @@ require_once __DIR__ . '/includes/head.php';
     </div>
     <div style="position:relative;padding-right:1rem;">
       <div style="position:absolute;top:-20px;left:-20px;width:100%;height:100%;background:linear-gradient(135deg,#E8D7FF,#BFDBFE);border-radius:32px;z-index:0;transform:rotate(-3deg);"></div>
-      <img src="/assets/images/advisor.jpg" alt="Brocus IT Solutions advisor" width="520" height="440" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;display:block;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.15);">
+      <img src="/assets/images/advisor_consultation.png" alt="Brocus IT Solutions advisor" width="520" height="440" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;display:block;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.15);">
     </div>
   </div>
 </section>
@@ -185,7 +185,7 @@ require_once __DIR__ . '/includes/head.php';
             <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
             <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
             <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-            <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+            <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Real, Human Advisors</span>
           </div>
       </div>
     </div>

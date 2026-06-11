@@ -6,6 +6,13 @@ $_cur   = currentPage();
 
 <!-- ── MAIN NAV ── -->
 <header id="site-header">
+  <!-- Mobile Top Call Strip -->
+  <div class="sh-mobile-call-strip">
+    <a href="tel:<?= PHONE_TEL ?>">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.13.87.35 1.71.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call now: <?= PHONE_DISPLAY ?>
+    </a>
+  </div>
   <div class="nav-inner">
 
     <!-- Logo -->
@@ -115,8 +122,13 @@ $_cur   = currentPage();
 .sh-mobile-cta{display:flex;align-items:center;justify-content:center;gap:.75rem;padding:1rem;border-radius:14px;background:linear-gradient(135deg,#7C3AED,#4F46E5);color:#fff;font-weight:600;text-decoration:none;font-size:1.05rem;box-shadow:0 8px 24px rgba(124,58,237,.35);transition:all .2s}
 .sh-mobile-cta:active{transform:translateY(2px);box-shadow:0 4px 12px rgba(124,58,237,.35)}
 
+/* Mobile Call Strip */
+.sh-mobile-call-strip{display:none;background:linear-gradient(135deg,#7C3AED,#4F46E5);text-align:center;padding:8px 15px;}
+.sh-mobile-call-strip a{color:#fff;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+
 /* Responsive breakpoints */
 @media(max-width:900px){
+  .sh-mobile-call-strip{display:block;}
   .sh-nav,.sh-cta-pill{display:none !important}
   .sh-burger{display:flex !important}
   .nav-inner{display:flex !important;justify-content:space-between;height:56px !important;padding:0 1.25rem !important}

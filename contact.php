@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/bootstrap.php';
 $page_title = 'Contact Brocus IT Solutions | Free, No-Pressure Advice';
-$page_desc  = 'Get in touch with Brocus IT Solutions for free, independent, no-pressure advice on your home decisions. Call, email, or request a callback. US-based advisors ready to help.';
+$page_desc  = 'Get in touch with Brocus IT Solutions for free, independent, no-pressure advice on your home decisions. Call, email, or request a callback. Real, Human Advisors ready to help.';
 $success    = $_SESSION['form_success'] ?? '';
 $error      = $_SESSION['form_error']   ?? '';
 $vals       = $_SESSION['form_values']  ?? [];
@@ -20,7 +20,7 @@ require_once __DIR__ . '/includes/head.php';
       <a href="#contact-form" class="btn btn-outline btn-lg">Request a Callback</a>
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:3rem;">
-      <?php foreach (['Free Consultation', 'No Sales Pressure', 'US-Based Advisors', 'One Business Day Response'] as $t): ?>
+      <?php foreach (['Free Consultation', 'No Sales Pressure', 'Real, Human Advisors', 'One Business Day Response'] as $t): ?>
         <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:rgba(255,255,255,.5);"><i class="fas fa-check" style="color:#A78BFA;font-size:.65rem;"></i><?= $t ?></span>
       <?php endforeach; ?>
     </div>
@@ -205,7 +205,7 @@ require_once __DIR__ . '/includes/head.php';
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
           <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Real, Human Advisors</span>
         </div>
       </div>
     </div>

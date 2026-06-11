@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/head.php';
   .hero-split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1280px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 13rem 1.5rem 5rem;
@@ -254,7 +254,7 @@ require_once __DIR__ . '/includes/head.php';
     <!-- Left Column: Content -->
     <div class="hero-left-content">
       <div class="hero-top-pill">
-        <i class="fas fa-shield-check"></i> INDEPENDENT ADVISORS FOR US HOUSEHOLDS
+        <i class="fas fa-shield-alt"></i> INDEPENDENT ADVISORS FOR US HOUSEHOLDS
       </div>
 
       <h1 class="hero-main-h1">
@@ -276,29 +276,31 @@ require_once __DIR__ . '/includes/head.php';
         </a>
       </div>
 
-      <div class="hero-stats-row">
+      <div class="hero-stats-row" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem;">
         <div class="hero-stat-block">
-          <div class="hero-stat-num">83%</div>
-          <div class="hero-stat-label">Deterrence Rate</div>
+          <div class="hero-stat-num" style="font-size:2.25rem;">10,000+</div>
+          <div class="hero-stat-label">Homes Protected</div>
         </div>
         <div class="hero-stat-block">
-          <div class="hero-stat-num">100k+</div>
-          <div class="hero-stat-label">Homes Protected</div>
+          <div class="hero-stat-num" style="font-size:2.25rem;">24/7</div>
+          <div class="hero-stat-label">Live Monitoring</div>
+        </div>
+        <div class="hero-stat-block">
+          <div class="hero-stat-num" style="font-size:2.25rem;">All 50</div>
+          <div class="hero-stat-label">States Covered</div>
+        </div>
+        <div class="hero-stat-block">
+          <div class="hero-stat-num" style="font-size:2.25rem;">10+ Years</div>
+          <div class="hero-stat-label">In Business</div>
         </div>
       </div>
     </div>
 
     <!-- Right Column: Image -->
     <div class="hero-right-image">
-      <img src="<?= asset('images/hero-house.jpg') ?>" alt="Modern Home Security" class="hero-img-cutout">
+      <img src="<?= asset('images/advisor_lifestyle.png') ?>" alt="Modern Home Security" class="hero-img-cutout">
 
-      <div class="floating-stars-pill">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
+
     </div>
   </div>
 </section>
@@ -326,7 +328,7 @@ require_once __DIR__ . '/includes/head.php';
       <!-- Left: Beautiful Image -->
       <div style="position:relative;padding-right:1rem;">
         <div style="position:absolute;top:-20px;left:-20px;width:100%;height:100%;background:linear-gradient(135deg,#E8D7FF,#BFDBFE);border-radius:32px;z-index:0;transform:rotate(-3deg);"></div>
-        <img src="<?= asset('images/advisor_lifestyle.png') ?>" alt="Friendly Advisor" style="position:relative;z-index:1;width:100%;height:auto;border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.15);object-fit:cover;aspect-ratio:4/5;">
+        <img src="<?= asset('images/advisor_consultation.png') ?>" alt="Friendly Advisor" style="position:relative;z-index:1;width:100%;height:auto;border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.15);object-fit:cover;aspect-ratio:4/5;">
 
         <!-- Floating badge -->
         <div style="position:absolute;bottom:30px;right:-10px;background:#fff;padding:1.25rem 1.5rem;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.1);z-index:2;display:flex;align-items:center;gap:1rem;">
@@ -380,7 +382,7 @@ require_once __DIR__ . '/includes/head.php';
   <div style="position:absolute;top:-200px;right:-100px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.15),transparent 70%);pointer-events:none;filter:blur(60px);"></div>
   <div style="position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);pointer-events:none;filter:blur(60px);"></div>
 
-  <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
 
     <!-- Section Header -->
     <div style="text-align:center;margin-bottom:5rem;">
@@ -397,7 +399,7 @@ require_once __DIR__ . '/includes/head.php';
 
       <!-- Left: Image Box -->
       <div style="position:relative;min-height:350px;">
-        <img src="<?= asset('images/home-security-card.jpg') ?>" alt="Home Security" style="position:absolute;width:100%;height:100%;object-fit:cover;display:block;opacity:.85;">
+        <img src="<?= asset('images/home-security-spotlight.jpg') ?>" alt="Home Security" style="position:absolute;width:100%;height:100%;object-fit:cover;display:block;opacity:.85;">
         <!-- Gradient Overlays to blend image into background smoothly -->
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(15,10,30,1) 100%);"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 40%,rgba(15,10,30,1) 100%);"></div>
@@ -440,7 +442,7 @@ require_once __DIR__ . '/includes/head.php';
   <!-- Premium ambient lighting -->
   <div style="position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.06),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-  <div style="max-width:1240px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,450px),1fr));gap:6rem;align-items:center;position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,450px),1fr));gap:6rem;align-items:center;position:relative;z-index:1;">
 
     <!-- Left: Content -->
     <div style="padding-right:1rem;">
@@ -482,7 +484,7 @@ require_once __DIR__ . '/includes/head.php';
     <div style="position:relative;margin-top:2rem;">
       <!-- Main Image -->
       <div style="border-radius:32px;overflow:hidden;box-shadow:0 30px 80px rgba(15,23,42,.12);position:relative;z-index:1;height:650px;">
-        <img src="<?= asset('images/advisor.jpg') ?>" alt="Brocus advisor" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="<?= asset('images/advisor_consultation.png') ?>" alt="Brocus advisor" style="width:100%;height:100%;object-fit:cover;display:block;">
         <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(15,23,42,0.4), transparent 60%);"></div>
       </div>
 
@@ -507,9 +509,9 @@ require_once __DIR__ . '/includes/head.php';
           </div>
 
           <div style="display:flex;align-items:center;gap:1.25rem;">
-            <div style="width:52px;height:52px;border-radius:16px;background:#F5F3FF;color:#7C3AED;display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:1px solid rgba(124,58,237,.15);"><i class="fas fa-flag-usa"></i></div>
+            <div style="width:52px;height:52px;border-radius:16px;background:#F5F3FF;color:#7C3AED;display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:1px solid rgba(124,58,237,.15);"><i class="fas fa-user-friends"></i></div>
             <div>
-              <div style="font-family:var(--font);font-size:1.3rem;font-weight:800;color:#0F172A;line-height:1.2;margin-bottom:.2rem;">US Based</div>
+              <div style="font-family:var(--font);font-size:1.3rem;font-weight:800;color:#0F172A;line-height:1.2;margin-bottom:.2rem;">Real, Human</div>
               <div style="font-size:1rem;color:#64748B;font-weight:500;">Advisors</div>
             </div>
           </div>
@@ -589,7 +591,7 @@ require_once __DIR__ . '/includes/head.php';
   <div style="position:absolute;top:10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.04),transparent 70%);border-radius:50%;pointer-events:none;"></div>
   <div style="position:absolute;bottom:-10%;left:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,.04),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-  <div style="max-width:1240px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
 
     <!-- Premium Bento Container -->
     <div style="background:#fff;border-radius:40px;box-shadow:0 40px 100px rgba(15,10,30,.06), 0 10px 30px rgba(15,10,30,.03);border:1px solid rgba(226,232,240,.8);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));overflow:hidden;">
@@ -730,7 +732,7 @@ require_once __DIR__ . '/includes/head.php';
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
           <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Real, Human Advisors</span>
         </div>
       </div>
     </div>
