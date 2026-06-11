@@ -15,7 +15,7 @@ require_once __DIR__ . '/includes/head.php';
     flex-direction: column;
     justify-content: center;
     background: #050508;
-    background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(124,58,237,0.15) 0%, rgba(59,130,246,0.08) 45%, transparent 100%);
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.08) 45%, transparent 100%);
     position: relative;
     overflow: hidden;
     padding: 0;
