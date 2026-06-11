@@ -1,0 +1,7 @@
+# robots.txt for brocusitsolutionsusa.com
+User-agent: *
+Allow: /
+Disallow: /config.php
+Disallow: /includes/
+
+Sitemap: https://brocusitsolutionsusa.com/sitemap.xml
