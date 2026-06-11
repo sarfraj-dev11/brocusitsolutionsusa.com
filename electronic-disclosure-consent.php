@@ -1,14 +1,15 @@
 <?php
 $page_title = 'Electronic Disclosure Consent | Brocus IT Solutions LLC';
 $page_desc  = 'Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions LLC, including the requirements and how to withdraw consent.';
-require_once 'includes/head.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
 <style>
 .legal-wrap{max-width:780px;margin:0 auto;padding:5rem 1.5rem 7rem}
 .legal-wrap h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:.5rem;line-height:1.2}
 .legal-meta{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:1.5rem}
-.legal-wrap h2{font-size:1.05rem;font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
+.legal-wrap h2{font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
 .legal-wrap p,.legal-wrap li{font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:.75rem}
 .legal-wrap ul{padding-left:1.25rem;margin-bottom:.75rem}
 .legal-wrap a{color:#60A5FA}
@@ -60,6 +61,6 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <p>By proceeding, you confirm that you can access information presented electronically, that your device meets the requirements above, and that you consent to receive Communications electronically as described here. If you do not agree, do not submit a form or otherwise transact with us electronically.</p>
 
 <h2>9. Contact us</h2>
-<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>
+<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18554870595">(855) 487-0595</a></address>
 </div>
 <?php include 'includes/footer.php'; ?>

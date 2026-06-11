@@ -1,4 +1,4 @@
-ï»¿<?php
+<?php
 require_once __DIR__ . '/includes/bootstrap.php';
 $page_title = 'About ' . SITE_SHORT . ' | Independent Advisors for US Households';
 $page_desc  = SITE_NAME . ' is a US-based independent advisory service that helps households make confident home decisions, starting with home security. Learn how we work.';
@@ -22,7 +22,7 @@ require_once __DIR__ . '/includes/head.php';
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.875rem 0 1.25rem;line-height:1.25">Built to put you at the center of the decision</h2>
       <p style="color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1rem">Brocus IT Solutions LLC is a United States based advisory company built on a simple belief: people deserve honest guidance before they spend money on their home. Too often, households are sold the wrong product, locked into the wrong contract, or talked into paying for things they will never use.</p>
       <p style="color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1rem">We are an independent advisory and referral service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
-      <p style="color:rgba(255,255,255,.65);line-height:1.8">Today, our focus is helping families across the US choose the right home security â€” and we are building toward helping with more everyday home decisions over time.</p>
+      <p style="color:rgba(255,255,255,.65);line-height:1.8">Today, our focus is helping families across the US choose the right home security — and we are building toward helping with more everyday home decisions over time.</p>
     </div>
     <div style="border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.08)">
       <img src="/brocusitsolutionsusa/assets/images/advisor.jpg" alt="Brocus IT Solutions advisor" width="520" height="440" style="width:100%;height:440px;object-fit:cover;display:block">
@@ -35,7 +35,7 @@ require_once __DIR__ . '/includes/head.php';
   <div style="max-width:860px;margin:0 auto;padding:0 1.5rem;text-align:center">
     <span class="label">Why we exist</span>
     <h2 class="sec-h" style="margin:.875rem auto 1.5rem">The calm, straight-talking voice in the noise</h2>
-    <p style="font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8">Shopping for almost any home service today is noisy. Search for one and you are met with aggressive ads, vague pricing, and reviews that often have a financial interest in steering you one way. It is genuinely hard to know who to trust. We saw an opportunity to be someone whose only job is to help you understand the decision in front of you and make the choice that is right for your home. When the guidance is honest and the pressure is gone, people make better decisions and feel good about them afterward. That is the entire point of Brocus.</p>
+    <p style="color:rgba(255,255,255,.65);line-height:1.8">Shopping for almost any home service today is noisy. Search for one and you are met with aggressive ads, vague pricing, and reviews that often have a financial interest in steering you one way. It is genuinely hard to know who to trust. We saw an opportunity to be someone whose only job is to help you understand the decision in front of you and make the choice that is right for your home. When the guidance is honest and the pressure is gone, people make better decisions and feel good about them afterward. That is the entire point of Brocus.</p>
   </div>
 </section>
 
@@ -71,7 +71,7 @@ require_once __DIR__ . '/includes/head.php';
     <div class="how-steps">
       <?php foreach([
         ['t'=>'You reach out','d'=>'A quick call or message starts the conversation. No forms longer than you need.'],
-        ['t'=>'We learn about your home','d'=>'We ask about your space, your concerns, and your budget â€” with genuine curiosity, not a script.'],
+        ['t'=>'We learn about your home','d'=>'We ask about your space, your concerns, and your budget — with genuine curiosity, not a script.'],
         ['t'=>'We explain your options','d'=>'Clearly, in plain language, with the pros and cons of each path. No jargon.'],
         ['t'=>'We connect you with a vetted provider','d'=>'When you are ready, we match you with an independent third-party provider who supplies and services your chosen solution.'],
         ['t'=>'You stay in control','d'=>'If the answer is to wait, we respect that too. You decide what happens next, always.'],
@@ -115,14 +115,14 @@ require_once __DIR__ . '/includes/head.php';
         
         <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Home security is where we start,<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">not where we stop</span></h2>
         
-        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Manrope', sans-serif);font-weight:400;">We launched by helping US homeowners make smarter, calmer decisions about protecting their homes. Over time, our goal is to bring that same independent, no-pressure approach to more of the everyday choices households face â€” so that whenever a major home decision feels confusing, there is a trustworthy place to turn.</p>
+        <p style="color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-weight:400;">We launched by helping US homeowners make smarter, calmer decisions about protecting their homes. Over time, our goal is to bring that same independent, no-pressure approach to more of the everyday choices households face — so that whenever a major home decision feels confusing, there is a trustworthy place to turn.</p>
         
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
-          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
+          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
             <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
             Call now: <?= PHONE_DISPLAY ?>
           </a>
-          <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
+          <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
             Send Us a Message <i class="fas fa-arrow-right" style="font-size:.9rem;color:#A78BFA;"></i>
           </a>
         </div>

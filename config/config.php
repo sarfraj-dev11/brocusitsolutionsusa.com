@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ─────────────────────────────────────────────────────
  *  BROCUS IT SOLUTIONS LLC — SITE CONFIGURATION
@@ -11,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', ''); // '' on production
+define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -21,8 +22,8 @@ define('SITE_DOMAIN',  'brocusitsolutionsusa.com');
 define('SITE_URL',     'https://brocusitsolutionsusa.com');
 
 // ── Contact ──────────────────────────────────────────
-define('PHONE_DISPLAY', '(888) 958-4443');
-define('PHONE_TEL',     '+18889584443');
+define('PHONE_DISPLAY', '(855) 487-0595');
+define('PHONE_TEL',     '+(855) 487-0595');
 define('EMAIL_INFO',    'info@brocusitsolutionsusa.com');
 
 // ── Address ──────────────────────────────────────────

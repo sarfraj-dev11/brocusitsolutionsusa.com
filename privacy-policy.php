@@ -1,17 +1,18 @@
 <?php
-$legal_contact = '<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>';
+$legal_contact = '<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18554870595">(855) 487-0595</a></address>';
 ?>
 <?php
 $page_title = 'Privacy Policy | Brocus IT Solutions LLC';
 $page_desc  = 'Read how Brocus IT Solutions LLC collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
-require_once 'includes/head.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
 <style>
 .legal-wrap{max-width:780px;margin:0 auto;padding:5rem 1.5rem 7rem}
 .legal-wrap h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:.5rem}
 .legal-meta{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:1.5rem}
-.legal-wrap h2{font-size:1.05rem;font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
+.legal-wrap h2{font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
 .legal-wrap p,.legal-wrap li{font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:.75rem}
 .legal-wrap ul{padding-left:1.25rem;margin-bottom:.75rem}
 .legal-wrap a{color:#60A5FA}
@@ -46,7 +47,7 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <p>We are an advisory and referral service, so sharing certain information is central to what we do. We may share your information with:</p>
 <ul>
 <li><strong>Third-party providers.</strong> When you request a quote, consultation, or service, we share the relevant details with one or more independent providers so they can follow up with you. Once your information is shared, the provider's own privacy policy will also apply.</li>
-<li><strong>Service vendors.</strong> Companies that perform functions on our behalf â€” hosting, analytics, customer communication, and marketing support â€” under obligations to protect your information.</li>
+<li><strong>Service vendors.</strong> Companies that perform functions on our behalf — hosting, analytics, customer communication, and marketing support — under obligations to protect your information.</li>
 <li><strong>Legal and safety reasons.</strong> When we believe disclosure is necessary to comply with the law, respond to legal process, protect our rights, or protect the safety of any person.</li>
 <li><strong>Business transfers.</strong> In connection with a merger, acquisition, financing, or sale of assets, your information may be transferred as part of that transaction.</li>
 </ul>
@@ -78,6 +79,6 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 
 <h2>12. Changes to this policy and how to contact us</h2>
 <p>We may update this Privacy Policy from time to time. The "Last updated" date shows when it was last revised, and continued use of the Site means you accept the current version. Questions or privacy requests can be directed to:</p>
-<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>
+<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18554870595">(855) 487-0595</a></address>
 </div>
 <?php include 'includes/footer.php'; ?>

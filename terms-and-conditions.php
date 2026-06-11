@@ -1,14 +1,15 @@
 <?php
 $page_title = 'Terms and Conditions | Brocus IT Solutions LLC';
 $page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory and referral services provided by Brocus IT Solutions LLC.';
-require_once 'includes/head.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include 'includes/header.php'; ?>
 <style>
 .legal-wrap{max-width:780px;margin:0 auto;padding:5rem 1.5rem 7rem}
 .legal-wrap h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:.5rem}
 .legal-meta{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:1.5rem}
-.legal-wrap h2{font-size:1.05rem;font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
+.legal-wrap h2{font-weight:700;margin:2.5rem 0 .75rem;color:#fff}
 .legal-wrap p,.legal-wrap li{font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:.75rem}
 .legal-wrap ul{padding-left:1.25rem;margin-bottom:.75rem}
 .legal-wrap a{color:#60A5FA}
@@ -40,7 +41,7 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <p>You agree not to use the Site to submit false or fraudulent information, to violate any law, to infringe the rights of others, to introduce harmful code, or to attempt to gain unauthorized access to our systems. We may suspend or terminate access for any misuse.</p>
 
 <h2>7. Intellectual property</h2>
-<p>The Site and its content â€” including text, graphics, logos, and design â€” are owned by or licensed to Brocus and are protected by intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from our content without our written permission.</p>
+<p>The Site and its content — including text, graphics, logos, and design — are owned by or licensed to Brocus and are protected by intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from our content without our written permission.</p>
 
 <h2>8. No professional advice and no guarantee</h2>
 <p>The information on the Site and the guidance we provide are for general informational purposes and are not legal, financial, or professional advice. We make no guarantee that any provider will meet your expectations or that any product or service will achieve a particular result.</p>
@@ -70,6 +71,6 @@ address{font-style:normal;color:rgba(255,255,255,.6);line-height:1.8;font-size:.
 <p>If any provision of these Terms is found unenforceable, the remaining provisions will remain in effect. These Terms, together with our Privacy Policy and Electronic Disclosure Consent, are the entire agreement between you and Brocus regarding the Site.</p>
 
 <h2>17. Contact us</h2>
-<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18889584443">(888) 958-4443</a></address>
+<address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:+18554870595">(855) 487-0595</a></address>
 </div>
 <?php include 'includes/footer.php'; ?>
