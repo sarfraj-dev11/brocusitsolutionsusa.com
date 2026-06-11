@@ -18,14 +18,22 @@ require_once __DIR__ . '/includes/head.php';
 <section style="padding:7rem 0;background:linear-gradient(160deg,#fdfcff 0%,#f5f0ff 50%,#eff6ff 100%);position:relative;overflow:hidden;">
   <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
     <div>
-      <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);">
-        <span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;display:inline-block;box-shadow:0 0 8px #7C3AED;"></span>
-        Who we are
-      </span>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.875rem 0 1.25rem;line-height:1.25;color:#0F172A">Built to put you at the center of the decision</h2>
-      <p style="color:#374151;line-height:1.8;margin-bottom:1rem">Brocus IT Solutions LLC is a United States based advisory company built on a simple belief: people deserve honest guidance before they spend money on their home. Too often, households are sold the wrong product, locked into the wrong contract, or talked into paying for things they will never use.</p>
-      <p style="color:#374151;line-height:1.8;margin-bottom:1rem">We are an independent advisory and referral service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
-      <p style="color:#374151;line-height:1.8">Today, our focus is helping families across the US choose the right home security — and we are building toward helping with more everyday home decisions over time.</p>
+      <<<<<<< HEAD
+        <span class="label">Who we are</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.875rem 0 1.25rem;line-height:1.25">Built to put you at the center of the decision</h2>
+        <p style="color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1rem">Brocus IT Solutions LLC is a United States based advisory company built on a simple belief: people deserve honest guidance before they spend money on their home. Too often, households are sold the wrong product, locked into the wrong contract, or talked into paying for things they will never use.</p>
+        <p style="color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1rem">We are an independent advisory and referral service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
+        <p style="color:rgba(255,255,255,.65);line-height:1.8">Today, our focus is helping families across the US choose the right home security � and we are building toward helping with more everyday home decisions over time.</p>
+        =======
+        <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;display:inline-block;box-shadow:0 0 8px #7C3AED;"></span>
+          Who we are
+        </span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.875rem 0 1.25rem;line-height:1.25;color:#0F172A">Built to put you at the center of the decision</h2>
+        <p style="color:#374151;line-height:1.8;margin-bottom:1rem">Brocus IT Solutions LLC is a United States based advisory company built on a simple belief: people deserve honest guidance before they spend money on their home. Too often, households are sold the wrong product, locked into the wrong contract, or talked into paying for things they will never use.</p>
+        <p style="color:#374151;line-height:1.8;margin-bottom:1rem">We are an independent advisory and referral service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
+        <p style="color:#374151;line-height:1.8">Today, our focus is helping families across the US choose the right home security — and we are building toward helping with more everyday home decisions over time.</p>
+        >>>>>>> e18daaa06462add242cecd1025006957d0070e52
     </div>
     <div style="position:relative;padding-right:1rem;">
       <div style="position:absolute;top:-20px;left:-20px;width:100%;height:100%;background:linear-gradient(135deg,#E8D7FF,#BFDBFE);border-radius:32px;z-index:0;transform:rotate(-3deg);"></div>
@@ -37,12 +45,18 @@ require_once __DIR__ . '/includes/head.php';
 <!-- WHY WE EXIST -->
 <section style="padding:5rem 0;background:#FFFFFF;">
   <div style="max-width:860px;margin:0 auto;padding:0 1.5rem;text-align:center">
-    <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);">
-      <span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;display:inline-block;box-shadow:0 0 8px #7C3AED;"></span>
-      Why we exist
-    </span>
-    <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:#0F172A;letter-spacing:-.02em;margin:.875rem auto 1.5rem;line-height:1.15">The calm, straight-talking voice in the noise</h2>
-    <p style="font-size:1.05rem;color:#475569;line-height:1.8">Shopping for almost any home service today is noisy. Search for one and you are met with aggressive ads, vague pricing, and reviews that often have a financial interest in steering you one way. It is genuinely hard to know who to trust. We saw an opportunity to be someone whose only job is to help you understand the decision in front of you and make the choice that is right for your home. When the guidance is honest and the pressure is gone, people make better decisions and feel good about them afterward. That is the entire point of Brocus.</p>
+    <<<<<<< HEAD
+      <span class="label">Why we exist</span>
+      <h2 class="sec-h" style="margin:.875rem auto 1.5rem">The calm, straight-talking voice in the noise</h2>
+      <p style="color:rgba(255,255,255,.65);line-height:1.8">Shopping for almost any home service today is noisy. Search for one and you are met with aggressive ads, vague pricing, and reviews that often have a financial interest in steering you one way. It is genuinely hard to know who to trust. We saw an opportunity to be someone whose only job is to help you understand the decision in front of you and make the choice that is right for your home. When the guidance is honest and the pressure is gone, people make better decisions and feel good about them afterward. That is the entire point of Brocus.</p>
+      =======
+      <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);">
+        <span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;display:inline-block;box-shadow:0 0 8px #7C3AED;"></span>
+        Why we exist
+      </span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:#0F172A;letter-spacing:-.02em;margin:.875rem auto 1.5rem;line-height:1.15">The calm, straight-talking voice in the noise</h2>
+      <p style="font-size:1.05rem;color:#475569;line-height:1.8">Shopping for almost any home service today is noisy. Search for one and you are met with aggressive ads, vague pricing, and reviews that often have a financial interest in steering you one way. It is genuinely hard to know who to trust. We saw an opportunity to be someone whose only job is to help you understand the decision in front of you and make the choice that is right for your home. When the guidance is honest and the pressure is gone, people make better decisions and feel good about them afterward. That is the entire point of Brocus.</p>
+      >>>>>>> e18daaa06462add242cecd1025006957d0070e52
   </div>
 </section>
 
@@ -133,35 +147,46 @@ require_once __DIR__ . '/includes/head.php';
 <!-- CTA -->
 <section id="cta-banner" style="padding:9rem 0;background-color:#050508;position:relative;overflow:hidden;">
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
-    
+
     <div style="position:relative;background:linear-gradient(135deg,rgba(30,11,62,.8) 0%,rgba(13,21,71,.8) 100%);border-radius:32px;padding:6rem 3rem;text-align:center;overflow:hidden;border:1px solid rgba(124,58,237,.3);box-shadow:0 30px 60px rgba(0,0,0,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);">
-      
+
       <!-- Glowing Orbs inside the card -->
       <div style="position:absolute;top:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
       <div style="position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
 
       <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
         <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Ready for<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">straight answers?</span></h2>
-        
-        <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Manrope', sans-serif);font-weight:400;">Skip the sales pitch and talk to an independent advisor who is on your side.</p>
-        
-        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
-          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
-            Call now: <?= PHONE_DISPLAY ?>
-          </a>
-          <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
-            Get free advice <i class="fas fa-arrow-right" style="font-size:.9rem;color:#A78BFA;"></i>
-          </a>
-        </div>
-        
-        <div style="margin-top:3.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
-          <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
-          <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
-        </div>
+
+        <<<<<<< HEAD
+          <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Home security is where we start,<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">not where we stop</span></h2>
+
+          <p style="color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-weight:400;">We launched by helping US homeowners make smarter, calmer decisions about protecting their homes. Over time, our goal is to bring that same independent, no-pressure approach to more of the everyday choices households face � so that whenever a major home decision feels confusing, there is a trustworthy place to turn.</p>
+          =======
+          <p style="font-size:1.2rem;color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-family:var(--font-p, 'Manrope', sans-serif);font-weight:400;">Skip the sales pitch and talk to an independent advisor who is on your side.</p>
+          >>>>>>> e18daaa06462add242cecd1025006957d0070e52
+
+          <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
+            <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
+              <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
+              Call now: <?= PHONE_DISPLAY ?>
+            </a>
+            <<<<<<< HEAD
+              <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
+              Send Us a Message <i class="fas fa-arrow-right" style="font-size:.9rem;color:#A78BFA;"></i>
+              =======
+              <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;font-size:1.1rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
+                Get free advice <i class="fas fa-arrow-right" style="font-size:.9rem;color:#A78BFA;"></i>
+                >>>>>>> e18daaa06462add242cecd1025006957d0070e52
+              </a>
+          </div>
+
+          <div style="margin-top:3.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+            <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
+            <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
+            <span style="display:inline-flex;align-items:center;gap:.6rem;font-size:.95rem;color:rgba(255,255,255,.6);font-family:var(--font-p, 'Manrope', sans-serif);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> US-based advisors</span>
+          </div>
       </div>
     </div>
   </div>
