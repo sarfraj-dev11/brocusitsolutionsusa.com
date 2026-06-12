@@ -271,7 +271,7 @@ require_once __DIR__ . '/includes/head.php';
         <a href="tel:<?= PHONE_TEL ?>" class="btn btn-lg" style="background:#8B5CF6;color:#fff;border-radius:10px;font-weight:600;box-shadow:0 8px 24px rgba(139,92,246,.4);white-space:nowrap;">
           <i class="fas fa-phone" style="font-size:.85rem"></i> Call now: (855) 487-0595
         </a>
-        <a href="contact.php" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:10px;white-space:nowrap;backdrop-filter:blur(8px);">
+        <a href="contact" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:10px;white-space:nowrap;backdrop-filter:blur(8px);">
           Get free advice
         </a>
       </div>
@@ -428,7 +428,7 @@ require_once __DIR__ . '/includes/head.php';
           Independent guidance on alarms, cameras, smart locks, and monitoring, matched to your home and budget.
         </p>
 
-        <a href="<?= url('home-security.php') ?>" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;border-radius:16px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:1px solid rgba(139,92,246,.5);box-shadow:0 10px 30px rgba(124,58,237,.3);padding:1.15rem 2rem;">
+        <a href="<?= url('home-security') ?>" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;border-radius:16px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:1px solid rgba(139,92,246,.5);box-shadow:0 10px 30px rgba(124,58,237,.3);padding:1.15rem 2rem;">
           Explore home security <i class="fas fa-arrow-right" style="margin-left:.5rem;font-size:.9rem;"></i>
         </a>
       </div>
@@ -671,7 +671,7 @@ require_once __DIR__ . '/includes/head.php';
       <h2 style="font-family:var(--font);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:1.5rem;">Frequently asked <span style="background:linear-gradient(135deg,#A78BFA,#C4B5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span></h2>
       <p class="sec-p" style="max-width:600px;margin:0 auto 2.5rem;">Have a different question and can't find the answer you're looking for? Reach out to our support team and we'll get back to you as soon as we can.</p>
 
-      <a href="contact.php" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.05)';" onmouseout="this.style.background='transparent';">
+      <a href="contact" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.05)';" onmouseout="this.style.background='transparent';">
         <i class="fas fa-envelope" style="font-size:.9rem;color:#A78BFA;"></i> Contact Support
       </a>
     </div>
@@ -722,7 +722,7 @@ require_once __DIR__ . '/includes/head.php';
             <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
             Call now: <?= PHONE_DISPLAY ?>
           </a>
-          <a href="contact.php" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
+          <a href="contact" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
             Get free advice <i class="fas fa-arrow-right" style="font-size:.9rem;color:#A78BFA;"></i>
           </a>
         </div>

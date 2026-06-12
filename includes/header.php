@@ -16,7 +16,7 @@ $_cur   = currentPage();
   <div class="nav-inner">
 
     <!-- Logo -->
-    <a href="<?= url('index.php') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
+    <a href="<?= url('') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
       <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="height:49px;width:auto;object-fit:contain">
       <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="height:49px;width:auto;object-fit:contain;display:none;">
     </a>

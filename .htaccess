@@ -44,11 +44,25 @@ AddDefaultCharset UTF-8
     Header unset X-Powered-By
 </IfModule>
 
-# ── Clean URLs (optional — remove .php extension) ──
-# Uncomment on production with mod_rewrite
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{REQUEST_FILENAME} !-f
-#     RewriteCond %{REQUEST_FILENAME} !-d
-#     RewriteRule ^([^\.]+)$ $1.php [NC,L]
-# </IfModule>
+# ── Clean URLs (remove .php extension) ──────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1) Force HTTPS (uncomment on production)
+    # RewriteCond %{HTTPS} !=on
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2) Redirect /index.php to root /
+    RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+    RewriteRule ^index\.php$ / [R=301,L]
+
+    # 3) Redirect any .php URL to the clean version (301 permanent)
+    RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+    RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+
+    # 4) Internally rewrite clean URLs to .php files
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L]
+</IfModule>

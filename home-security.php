@@ -21,7 +21,7 @@ require_once __DIR__ . '/includes/head.php';
     <p class="page-sub">Free guidance with no sales pressure — we help you choose right, then connect you with a vetted provider who delivers it.</p>
     <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem">
       <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg"><i class="fas fa-phone" style="font-size:.85rem"></i> Talk to a Real Advisor</a>
-      <a href="<?= url('contact.php') ?>" class="btn btn-outline btn-lg">Request a Callback</a>
+      <a href="<?= url('contact') ?>" class="btn btn-outline btn-lg">Request a Callback</a>
     </div>
     <!-- Trust signals -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:3rem;">

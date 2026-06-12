@@ -103,9 +103,9 @@ require_once __DIR__ . '/includes/head.php';
       .phone-prefix {
         display: flex;
         align-items: center;
-        gap: .4rem;
-        padding: 0 .75rem;
-        font-size: .875rem;
+        gap: .25rem;
+        padding: 0 .4rem;
+        font-size: .8rem;
         font-weight: 600;
         color: #374151;
         white-space: nowrap;
@@ -115,8 +115,8 @@ require_once __DIR__ . '/includes/head.php';
         user-select: none;
       }
       .phone-prefix .usa-flag {
-        width: 22px;
-        height: 15px;
+        width: 20px;
+        height: 14px;
         border-radius: 2px;
         object-fit: cover;
         flex-shrink: 0;
@@ -217,9 +217,9 @@ require_once __DIR__ . '/includes/head.php';
 
         <p style="font-size:.72rem;color:#94A3B8;line-height:1.6;margin-top:1.25rem">
           By submitting this form and clicking "Request a Callback," you confirm the information is yours and you agree, by electronic signature, to our
-          <a href="electronic-disclosure-consent.php" style="color:#6D28D9;text-decoration:underline">Electronic Disclosure Consent</a>,
-          <a href="terms-and-conditions.php" style="color:#6D28D9;text-decoration:underline">Terms and Conditions</a>, and
-          <a href="privacy-policy.php" style="color:#6D28D9;text-decoration:underline">Privacy Policy</a>.
+          <a href="electronic-disclosure-consent" style="color:#6D28D9;text-decoration:underline">Electronic Disclosure Consent</a>,
+          <a href="terms-and-conditions" style="color:#6D28D9;text-decoration:underline">Terms and Conditions</a>, and
+          <a href="privacy-policy" style="color:#6D28D9;text-decoration:underline">Privacy Policy</a>.
           You also give Brocus IT Solutions LLC and the providers it works with your prior express written consent to contact you at the phone number and email address you provide, including by automated telephone dialing system, prerecorded or artificial voice calls, and text messages, for marketing and service purposes. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to opt out of texts at any time, or HELP for help.
         </p>
       </form>
