@@ -43,7 +43,13 @@ define('NAV_ITEMS', serialize([
     ['href' => 'index.php',         'slug' => 'index',         'label' => 'Home',          'dropdown' => []],
     ['href' => 'home-security.php', 'slug' => 'home-security', 'label' => 'Home Security', 'dropdown' => [
         'products' => [
-            // Placeholder — products added in future
+            ['href' => 'home-security/smart-indoor-camera.php', 'slug' => 'smart-indoor-camera', 'label' => 'Smart Indoor Camera', 'desc' => 'High-res indoor monitoring'],
+            ['href' => 'home-security/smart-outdoor-camera.php', 'slug' => 'smart-outdoor-camera', 'label' => 'Smart Outdoor Camera', 'desc' => 'Weatherproof exterior security'],
+            ['href' => 'home-security/smart-doorbell-camera.php', 'slug' => 'smart-doorbell-camera', 'label' => 'Smart Doorbell Camera', 'desc' => 'See who is at your front door'],
+            ['href' => 'home-security/smart-door-locks.php', 'slug' => 'smart-door-locks', 'label' => 'Smart Door Locks', 'desc' => 'Keyless entry and remote access'],
+            ['href' => 'home-security/door-and-window-sensors.php', 'slug' => 'door-and-window-sensors', 'label' => 'Door & Window Sensors', 'desc' => 'Perimeter breach detection'],
+            ['href' => 'home-security/smart-alarm-system.php', 'slug' => 'smart-alarm-system', 'label' => 'Smart Alarm System', 'desc' => 'Comprehensive home protection'],
+            ['href' => 'home-security/smart-security-panel.php', 'slug' => 'smart-security-panel', 'label' => 'Security Control Panel', 'desc' => 'The central hub for your system'],
         ],
         'services' => [
             ['href' => 'home-security/professional-monitoring/', 'slug' => 'professional-monitoring', 'label' => '24/7 Monitoring', 'desc' => 'Round-the-clock professional alarm monitoring'],

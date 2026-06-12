@@ -69,17 +69,8 @@ $_cur   = currentPage();
                       </div>
                     <?php else: ?>
                       <?php foreach ($item['dropdown']['products'] as $child): ?>
-                        <a href="<?= url($child['href']) ?>" class="sh-mega-link" role="menuitem">
-                          <div class="sh-mega-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                              <rect x="2" y="3" width="7" height="7" rx="1" />
-                              <rect x="15" y="3" width="7" height="7" rx="1" />
-                              <rect x="2" y="14" width="7" height="7" rx="1" />
-                              <rect x="15" y="14" width="7" height="7" rx="1" />
-                            </svg></div>
-                          <div class="sh-mega-link-body">
-                            <div class="sh-mega-link-title"><?= htmlspecialchars($child['label']) ?></div>
-                            <div class="sh-mega-link-desc"><?= htmlspecialchars($child['desc']) ?></div>
-                          </div>
+                        <a href="<?= url($child['href']) ?>" class="sh-mega-simple-link" role="menuitem">
+                          <?= htmlspecialchars($child['label']) ?>
                         </a>
                       <?php endforeach; ?>
                     <?php endif; ?>
@@ -522,6 +513,21 @@ $_cur   = currentPage();
   }
 
   /* Links */
+  .sh-mega-simple-link {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(.4, 0, .2, 1);
+  }
+  .sh-mega-simple-link:hover {
+    color: #0F172A;
+    background: #F1F5F9;
+  }
+  
   .sh-mega-link {
     display: flex;
     align-items: center;
