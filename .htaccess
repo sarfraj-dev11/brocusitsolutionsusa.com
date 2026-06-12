@@ -33,8 +33,8 @@ AddDefaultCharset UTF-8
     ExpiresByType application/json       "access plus 0 seconds"
 </IfModule>
 
-# ── Protect sensitive directories ───────────────────
-<FilesMatch "^(config|handlers|includes)">
+# ── Protect sensitive directories (NOT handlers — forms POST there) ──
+<FilesMatch "^(config|includes)">
     Order allow,deny
     Deny from all
 </FilesMatch>
@@ -59,9 +59,11 @@ AddDefaultCharset UTF-8
     RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/index\.php[\s?] [NC]
     RewriteRule ^index\.php$ /brocusitsolutionsusa/ [R=301,L]
 
-    # 3) EARLY: home-security.php → /brocusitsolutionsusa/home-security (must come before generic rule)
-    RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/home-security\.php[\s?] [NC]
-    RewriteRule ^home-security\.php$ /brocusitsolutionsusa/home-security [R=301,L]
+    # 3) Redirect any .php URL to the clean version (301 permanent)
+    #    EXCEPT handler files — POST requests must not be redirected
+    RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+    RewriteCond %{REQUEST_URI} !^/handlers/ [NC]
+    RewriteRule ^(.+)\.php$ /$1 [R=301,L]
 
     # 4) Redirect any other .php URL to its clean version
     RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/([^.]+)\.php[\s?] [NC]
