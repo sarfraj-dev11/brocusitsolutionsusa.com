@@ -135,6 +135,10 @@ $mail = new PHPMailer(true);
 
 try {
     // SMTP configuration
+    $mail->SMTPDebug = 3; // Enable verbose debug output
+    $mail->Debugoutput = function($str, $level) {
+        file_put_contents(__DIR__ . '/smtp_error_log.txt', gmdate('Y-m-d H:i:s'). " [$level] $str\n", FILE_APPEND);
+    };
     $mail->isSMTP();
     $mail->Host       = SMTP_HOST;
     $mail->SMTPAuth   = true;
@@ -151,6 +155,9 @@ try {
             'allow_self_signed' => true,
         ],
     ];
+
+    // Explicitly set Hostname to prevent 'localhost' in Message-ID and EHLO (helps with spam filters)
+    $mail->Hostname = SITE_DOMAIN;
 
     // Sender & recipient
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
