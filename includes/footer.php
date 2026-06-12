@@ -11,72 +11,57 @@ $_legal = unserialize(LEGAL_LINKS);
   <div style="position:absolute;top:-50%;left:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
   <div style="position:absolute;bottom:0;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;"> <!-- Brand col -->
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;">
+
+    <!-- Brand col -->
     <div class="footer-brand" style="display:flex;flex-direction:column;">
-      <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-block;text-decoration:none;transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
-        <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:55px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(124,58,237,.4));">
+      <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-block;text-decoration:none;transition:opacity .2s ease;" onmouseover="this.style.opacity='.85';" onmouseout="this.style.opacity='1';">
+        <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain;">
       </a>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <a href="tel:<?= PHONE_TEL ?>" style="font-size:.975rem;color:rgba(255,255,255,.75);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:.875rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(4px)';" onmouseout="this.style.color='rgba(255,255,255,.75)';this.style.transform='none';">
-          <div style="width:36px;height:36px;border-radius:10px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.25);display:flex;align-items:center;justify-content:center;color:#C4B5FD;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.8rem"></i></div>
+      <div style="display:flex;flex-direction:column;gap:.85rem;">
+        <a href="tel:<?= PHONE_TEL ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:inline-flex;align-items:center;gap:.75rem;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.75rem"></i></div>
           <?= PHONE_DISPLAY ?>
         </a>
-        <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:.975rem;color:rgba(255,255,255,.75);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:.875rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(4px)';" onmouseout="this.style.color='rgba(255,255,255,.75)';this.style.transform='none';">
-          <div style="width:36px;height:36px;border-radius:10px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.25);display:flex;align-items:center;justify-content:center;color:#C4B5FD;flex-shrink:0;"><i class="fas fa-envelope" style="font-size:.8rem"></i></div>
+        <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:inline-flex;align-items:center;gap:.75rem;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-envelope" style="font-size:.75rem"></i></div>
           <?= EMAIL_INFO ?>
         </a>
       </div>
     </div>
 
-    <!-- Nav cols -->
-    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
-      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Services<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
-      <a href="<?= url('home-security.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home Security</a>
-      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Get Free Advice</a>
+    <!-- Our Services col -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Our Services</span>
+      <a href="<?= url('home-security/professional-monitoring/') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">24/7 Professional Monitoring</a>
+      <a href="<?= url('home-security.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Smart Home Security</a>
+      <a href="<?= url('home-security.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Fire &amp; CO Detection</a>
     </div>
 
-    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
-      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Company<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
-      <a href="<?= url('index.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Home</a>
-      <a href="<?= url('about.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">About Us</a>
-      <a href="<?= url('contact.php') ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';">Contact</a>
+    <!-- Company col -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Company</span>
+      <a href="<?= url('index.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Home</a>
+      <a href="<?= url('about.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">About Us</a>
+      <a href="<?= url('contact.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Contact Us</a>
     </div>
 
-    <div class="footer-col" style="display:flex;flex-direction:column;gap:1rem;">
-      <span class="footer-col-title" style="font-family:var(--font);font-size:.95rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;display:inline-block;position:relative;">Legal<div style="position:absolute;bottom:-8px;left:0;width:30px;height:2px;background:linear-gradient(90deg,#7C3AED,#4F46E5);border-radius:2px;"></div></span>
-      <?php foreach ($_legal as $l): ?>
-        <a href="<?= url($l['href']) ?>" style="display:inline-block;font-size:1.05rem;color:rgba(255,255,255,.65);text-decoration:none;transition:all .3s ease;font-family:var(--font-p, 'Manrope', sans-serif);" onmouseover="this.style.color='#fff';this.style.transform='translateX(6px)';" onmouseout="this.style.color='rgba(255,255,255,.65)';this.style.transform='none';"><?= $l['label'] ?></a>
-      <?php endforeach; ?>
+    <!-- Get Started col -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Get Started</span>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.65;margin:0 0 1rem;font-family:'Manrope',sans-serif;">Ready to secure your home? Get a free, no-obligation quote from our experts.</p>
+      <a href="<?= url('contact.php') ?>" class="btn btn-primary" style="display:inline-flex;justify-content:center;padding:.75rem 1.25rem;font-size:.85rem;font-weight:700;border-radius:8px;">Get a Free Quote</a>
     </div>
+
   </div>
 
-  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:2.5rem 1.5rem 0;position:relative;z-index:1;">
-    <!-- Gradient Divider -->
-    <div style="position:absolute;top:0;left:1.5rem;right:1.5rem;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.5),transparent);"></div>
-
-    <!-- Disclaimer: centered, full width -->
-    <p style="text-align:center;font-size:.8rem;color:rgba(255,255,255,.32);line-height:1.7;max-width:720px;margin:0 auto 2rem;font-family:var(--font-p,'Manrope',sans-serif);">Brocus IT Solutions LLC is an independent advisory and referral service — not a manufacturer, dealer, installer, or monitoring provider. We empower you to make safe choices.
-
-    </p>
-
-    <!-- Bottom row: copyright | socials | legal links -->
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-      <p style="font-size:.875rem;color:rgba(255,255,255,.4);margin:0;font-family:var(--font-p,'Manrope',sans-serif);line-height:1.5;">&copy; <?= COPYRIGHT_YEAR ?> <?= SITE_NAME ?>. All rights reserved.<br><span style="font-size:.8rem;opacity:.75;"><?= ADDR_CITY ?>, <?= ADDR_STATE ?> &middot; Independent Advisory &amp; Referral Service</span></p>
-
-      <!-- Social Media Icons -->
-      <div style="display:flex;gap:.875rem;">
-        <a href="#" aria-label="Facebook" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#7C3AED';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(124,58,237,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.6)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-facebook-f" style="font-size:.8rem"></i></a>
-        <a href="#" aria-label="Twitter" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#1DA1F2';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(29,161,242,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.6)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-twitter" style="font-size:.8rem"></i></a>
-        <a href="#" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#E1306C';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(225,48,108,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.6)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-instagram" style="font-size:.8rem"></i></a>
-        <a href="#" aria-label="LinkedIn" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .3s ease;" onmouseover="this.style.background='#0077B5';this.style.color='#fff';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,119,181,.4)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.color='rgba(255,255,255,.6)';this.style.transform='none';this.style.boxShadow='none';"><i class="fab fa-linkedin-in" style="font-size:.8rem"></i></a>
-      </div>
-
-      <!-- Legal links -->
-      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:flex-end;">
-        <?php foreach ($_legal as $l): ?>
-          <a href="<?= url($l['href']) ?>" style="font-size:.85rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s;font-family:var(--font-p,'Manrope',sans-serif);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><?= strip_tags($l['label']) ?></a>
-        <?php endforeach; ?>
-      </div>
+  <div style="border-top:1px solid rgba(124,58,237,.3);margin:0 1.5rem;"></div>
+  <div style="padding:2.5rem 1.5rem 2rem;text-align:center;">
+    <p style="font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.75;margin:0 auto 0.75rem;max-width:800px;font-family:'Manrope',sans-serif;">Brocus IT Solutions LLC is an independent advisory and referral service — not a manufacturer, dealer, installer, or monitoring provider. We empower you to make safe choices.</p>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.65);margin:0 auto 1.25rem;font-family:'Manrope',sans-serif;">&copy; 2026 Brocus IT Solutions LLC. All rights reserved.</p>
+    <div style="display:inline-flex;gap:2rem;">
+      <a href="<?= url('privacy-policy.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</a>
+      <a href="<?= url('terms-of-service.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms of Service</a>
     </div>
   </div>
 </footer>

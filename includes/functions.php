@@ -18,8 +18,10 @@ function url(string $path = ''): string {
 
 // ── Page / navigation helpers ───────────────────────
 
-/** Returns the slug of the current page (without .php) */
+/** Returns the slug of the current page (without .php, or overridden by $page_slug) */
 function currentPage(): string {
+    global $page_slug;
+    if (!empty($page_slug)) return $page_slug;
     return basename($_SERVER['PHP_SELF'], '.php') ?: 'index';
 }
 
