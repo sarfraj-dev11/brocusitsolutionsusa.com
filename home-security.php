@@ -21,12 +21,12 @@ require_once __DIR__ . '/includes/head.php';
     <p class="page-sub">Free guidance with no sales pressure — we help you choose right, then connect you with a vetted provider who delivers it.</p>
     <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem">
       <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg"><i class="fas fa-phone" style="font-size:.85rem"></i> Talk to a Real Advisor</a>
-      <a href="<?= url('contact.php') ?>" class="btn btn-outline btn-lg">Request a Callback</a>
+      <a href="<?= url('contact') ?>" class="btn btn-outline btn-lg">Request a Callback</a>
     </div>
     <!-- Trust signals -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:3rem;">
-      <?php foreach(['Free Consultation','No Sales Pressure','Independent Advice','Real, Human Advisors'] as $t): ?>
-      <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:rgba(255,255,255,.55);"><i class="fas fa-check" style="color:#A78BFA;font-size:.65rem;"></i><?= $t ?></span>
+      <?php foreach (['Free Consultation', 'No Sales Pressure', 'Independent Advice', 'Real, Human Advisors'] as $t): ?>
+        <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:rgba(255,255,255,.55);"><i class="fas fa-check" style="color:#A78BFA;font-size:.65rem;"></i><?= $t ?></span>
       <?php endforeach; ?>
     </div>
   </div>
@@ -64,17 +64,19 @@ require_once __DIR__ . '/includes/head.php';
         <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary"><i class="fas fa-phone" style="font-size:.8rem"></i> Get free, unbiased advice</a>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <?php foreach([
-          ['i'=>'fa-scale-balanced','c'=>'#60A5FA','bg'=>'rgba(96,165,250,.1)','t'=>'Unbiased Guidance','d'=>'We have no financial incentive to push any brand or product.'],
-          ['i'=>'fa-circle-dollar-to-slot','c'=>'#6EE7B7','bg'=>'rgba(110,231,183,.1)','t'=>'Free Consultation','d'=>'Speaking with a Brocus advisor costs you absolutely nothing.'],
-          ['i'=>'fa-user-tie','c'=>'#A78BFA','bg'=>'rgba(167,139,250,.1)','t'=>'One Point of Contact','d'=>'One advisor. One conversation. No runaround.'],
-          ['i'=>'fa-shield-halved','c'=>'#FCD34D','bg'=>'rgba(252,211,77,.1)','t'=>'Vetted Providers Only','d'=>'We only refer providers we have already screened.'],
-        ] as $f): ?>
-        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:1.75rem 1.5rem;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(255,255,255,.15)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
-          <div style="width:48px;height:48px;border-radius:14px;background:<?= $f['bg'] ?>;color:<?= $f['c'] ?>;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><i class="fas <?= $f['i'] ?>"></i></div>
-          <div style="font-weight:700;margin-bottom:.5rem;"><?= $f['t'] ?></div>
-          <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;margin:0;"><?= $f['d'] ?></p>
-        </div>
+        <?php foreach (
+          [
+            ['i' => 'fa-scale-balanced', 'c' => '#60A5FA', 'bg' => 'rgba(96,165,250,.1)', 't' => 'Unbiased Guidance', 'd' => 'We have no financial incentive to push any brand or product.'],
+            ['i' => 'fa-circle-dollar-to-slot', 'c' => '#6EE7B7', 'bg' => 'rgba(110,231,183,.1)', 't' => 'Free Consultation', 'd' => 'Speaking with a Brocus advisor costs you absolutely nothing.'],
+            ['i' => 'fa-user-tie', 'c' => '#A78BFA', 'bg' => 'rgba(167,139,250,.1)', 't' => 'One Point of Contact', 'd' => 'One advisor. One conversation. No runaround.'],
+            ['i' => 'fa-shield-halved', 'c' => '#FCD34D', 'bg' => 'rgba(252,211,77,.1)', 't' => 'Vetted Providers Only', 'd' => 'We only refer providers we have already screened.'],
+          ] as $f
+        ): ?>
+          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:1.75rem 1.5rem;transition:border-color .3s;" onmouseover="this.style.borderColor='rgba(255,255,255,.15)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+            <div style="width:48px;height:48px;border-radius:14px;background:<?= $f['bg'] ?>;color:<?= $f['c'] ?>;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><i class="fas <?= $f['i'] ?>"></i></div>
+            <div style="font-weight:700;margin-bottom:.5rem;"><?= $f['t'] ?></div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;margin:0;"><?= $f['d'] ?></p>
+          </div>
         <?php endforeach; ?>
       </div>
     </div>
@@ -101,26 +103,28 @@ require_once __DIR__ . '/includes/head.php';
 
     <!-- Stat cards — single purple brand color -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-bottom:4rem;">
-      <?php foreach([
-        ['stat'=>'229','unit'=>'per 100k','icon'=>'fa-chart-line','title'=>'Burglary rate in 2024','desc'=>'The national burglary rate is at historic lows — not every few seconds like some ads claim.'],
-        ['stat'=>'$2,600','unit'=>'avg loss','icon'=>'fa-circle-dollar-to-slot','title'=>'Financial hit per break-in','desc'=>'The FBI estimates each burglary costs over $2,600 before counting the stress and sense of safety.'],
-        ['stat'=>'83%','unit'=>'','icon'=>'fa-shield-halved','title'=>'Would check for an alarm first','desc'=>'In a UNC Charlotte study of 422 burglars, 83% said they check for an alarm before entry.'],
-        ['stat'=>'60%','unit'=>'','icon'=>'fa-person-running','title'=>'Would move to a different target','desc'=>'Roughly 60% said they would leave if they found a security system present.'],
-      ] as $s): ?>
-      <div style="background:#FAFAFF;border:1.5px solid #EDE9FE;border-radius:20px;padding:2rem 1.75rem;transition:all .25s;position:relative;overflow:hidden;" onmouseover="this.style.background='#F5F3FF';this.style.borderColor='#C4B5FD';this.style.transform='translateY(-5px)';this.style.boxShadow='0 24px 48px rgba(109,40,217,.10)'" onmouseout="this.style.background='#FAFAFF';this.style.borderColor='#EDE9FE';this.style.transform='none';this.style.boxShadow='none'">
-        <!-- Top accent bar -->
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7C3AED,#A78BFA);border-radius:20px 20px 0 0;"></div>
-        <!-- Icon -->
-        <div style="width:40px;height:40px;border-radius:11px;background:rgba(124,58,237,.1);color:#7C3AED;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
-          <i class="fas <?= $s['icon'] ?>"></i>
+      <?php foreach (
+        [
+          ['stat' => '229', 'unit' => 'per 100k', 'icon' => 'fa-chart-line', 'title' => 'Burglary rate in 2024', 'desc' => 'The national burglary rate is at historic lows — not every few seconds like some ads claim.'],
+          ['stat' => '$2,600', 'unit' => 'avg loss', 'icon' => 'fa-circle-dollar-to-slot', 'title' => 'Financial hit per break-in', 'desc' => 'The FBI estimates each burglary costs over $2,600 before counting the stress and sense of safety.'],
+          ['stat' => '83%', 'unit' => '', 'icon' => 'fa-shield-halved', 'title' => 'Would check for an alarm first', 'desc' => 'In a UNC Charlotte study of 422 burglars, 83% said they check for an alarm before entry.'],
+          ['stat' => '60%', 'unit' => '', 'icon' => 'fa-person-running', 'title' => 'Would move to a different target', 'desc' => 'Roughly 60% said they would leave if they found a security system present.'],
+        ] as $s
+      ): ?>
+        <div style="background:#FAFAFF;border:1.5px solid #EDE9FE;border-radius:20px;padding:2rem 1.75rem;transition:all .25s;position:relative;overflow:hidden;" onmouseover="this.style.background='#F5F3FF';this.style.borderColor='#C4B5FD';this.style.transform='translateY(-5px)';this.style.boxShadow='0 24px 48px rgba(109,40,217,.10)'" onmouseout="this.style.background='#FAFAFF';this.style.borderColor='#EDE9FE';this.style.transform='none';this.style.boxShadow='none'">
+          <!-- Top accent bar -->
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7C3AED,#A78BFA);border-radius:20px 20px 0 0;"></div>
+          <!-- Icon -->
+          <div style="width:40px;height:40px;border-radius:11px;background:rgba(124,58,237,.1);color:#7C3AED;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;">
+            <i class="fas <?= $s['icon'] ?>"></i>
+          </div>
+          <!-- Big number -->
+          <div style="font-size:2.75rem;font-weight:900;color:#4C1D95;line-height:1;margin-bottom:.25rem;letter-spacing:-.04em;font-family:var(--font);">
+            <?= $s['stat'] ?><span style="font-size:.9rem;font-weight:600;color:#7C3AED;margin-left:.3rem;opacity:.8;"><?= $s['unit'] ?></span>
+          </div>
+          <div style="font-weight:700;font-size:.9rem;color:#1E1B4B;margin-bottom:.625rem;line-height:1.3;"><?= $s['title'] ?></div>
+          <p style="font-size:.82rem;color:#64748B;line-height:1.65;margin:0;"><?= $s['desc'] ?></p>
         </div>
-        <!-- Big number -->
-        <div style="font-size:2.75rem;font-weight:900;color:#4C1D95;line-height:1;margin-bottom:.25rem;letter-spacing:-.04em;font-family:var(--font);">
-          <?= $s['stat'] ?><span style="font-size:.9rem;font-weight:600;color:#7C3AED;margin-left:.3rem;opacity:.8;"><?= $s['unit'] ?></span>
-        </div>
-        <div style="font-weight:700;font-size:.9rem;color:#1E1B4B;margin-bottom:.625rem;line-height:1.3;"><?= $s['title'] ?></div>
-        <p style="font-size:.82rem;color:#64748B;line-height:1.65;margin:0;"><?= $s['desc'] ?></p>
-      </div>
       <?php endforeach; ?>
     </div>
 
@@ -150,17 +154,19 @@ require_once __DIR__ . '/includes/head.php';
     <h2 class="sec-h">How working with Brocus is different</h2>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto;padding:0 1.5rem">
-    <?php foreach([
-      ['n'=>'First','i'=>'fa-ear-listen','c'=>'#60A5FA','t'=>'We listen','d'=>'You tell us about your home over a quick call or message. Size, layout, whether you rent or own, what worries you most, and what you have tried before. No quiz designed to upsell you.'],
-      ['n'=>'Then','i'=>'fa-lightbulb','c'=>'#A78BFA','t'=>'We explain your options','d'=>'We walk you through what fits, what does not, and why. Monitored or self-monitored. Cameras, sensors, smart locks, or a full system. Contract or month to month. You leave the call understanding your choices, even if you decide to wait.'],
-      ['n'=>'Finally','i'=>'fa-handshake','c'=>'#6EE7B7','t'=>'We connect you with the right provider','d'=>'When you are ready, we match you with a vetted third-party provider who supplies the equipment, handles professional installation where needed, and provides ongoing service. You stay in control of the decision the whole way through.'],
-    ] as $s): ?>
-    <div class="feat-card">
-      <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:<?= $s['c'] ?>;margin-bottom:.875rem"><?= $s['n'] ?></div>
-      <div style="width:46px;height:46px;border-radius:13px;background:<?= $s['c'] ?>18;color:<?= $s['c'] ?>;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem"><i class="fas <?= $s['i'] ?>"></i></div>
-      <h3 style="font-weight:700;margin-bottom:.625rem"><?= $s['t'] ?></h3>
-      <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75"><?= $s['d'] ?></p>
-    </div>
+    <?php foreach (
+      [
+        ['n' => 'First', 'i' => 'fa-ear-listen', 'c' => '#60A5FA', 't' => 'We listen', 'd' => 'You tell us about your home over a quick call or message. Size, layout, whether you rent or own, what worries you most, and what you have tried before. No quiz designed to upsell you.'],
+        ['n' => 'Then', 'i' => 'fa-lightbulb', 'c' => '#A78BFA', 't' => 'We explain your options', 'd' => 'We walk you through what fits, what does not, and why. Monitored or self-monitored. Cameras, sensors, smart locks, or a full system. Contract or month to month. You leave the call understanding your choices, even if you decide to wait.'],
+        ['n' => 'Finally', 'i' => 'fa-handshake', 'c' => '#6EE7B7', 't' => 'We connect you with the right provider', 'd' => 'When you are ready, we match you with a vetted third-party provider who supplies the equipment, handles professional installation where needed, and provides ongoing service. You stay in control of the decision the whole way through.'],
+      ] as $s
+    ): ?>
+      <div class="feat-card">
+        <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:<?= $s['c'] ?>;margin-bottom:.875rem"><?= $s['n'] ?></div>
+        <div style="width:46px;height:46px;border-radius:13px;background:<?= $s['c'] ?>18;color:<?= $s['c'] ?>;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem"><i class="fas <?= $s['i'] ?>"></i></div>
+        <h3 style="font-weight:700;margin-bottom:.625rem"><?= $s['t'] ?></h3>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75"><?= $s['d'] ?></p>
+      </div>
     <?php endforeach; ?>
   </div>
   <div style="text-align:center;margin-top:4rem;">
@@ -175,18 +181,20 @@ require_once __DIR__ . '/includes/head.php';
     <div>
       <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);margin-bottom:1.25rem;">What we help you figure out</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0 0 2rem;line-height:1.25;color:#0F172A;">The questions that actually matter</h2>
-      <?php foreach([
-        ['t'=>'Whether you need professional monitoring at all','d'=>'For some homes, self-monitoring through an app is plenty. For others, a monitored system that can dispatch help is worth every dollar. We help you tell the difference.'],
-        ['t'=>'The right equipment for your home type','d'=>'A studio apartment, a three-bedroom house, and a large multi-story home all need different coverage. We help you avoid both under-protecting and overspending.'],
-        ['t'=>'Contracts and the fine print','d'=>'Long-term agreements, financing, cancellation terms, and equipment ownership all affect what you really pay. We point out the questions to ask before you sign anything.'],
-        ['t'=>'Renter-friendly options','d'=>'If you lease, you have choices that leave no damage and move with you. We cover those too.'],
-      ] as $item): ?>
-      <div style="border-bottom:1px solid #E2E8F0;padding:1.25rem 0">
-        <div style="font-weight:700;margin-bottom:.375rem;display:flex;align-items:center;gap:.625rem;color:#0F172A;">
-          <i class="fas fa-circle-check" style="color:#059669;font-size:.7rem;flex-shrink:0"></i><?= $item['t'] ?>
+      <?php foreach (
+        [
+          ['t' => 'Whether you need professional monitoring at all', 'd' => 'For some homes, self-monitoring through an app is plenty. For others, a monitored system that can dispatch help is worth every dollar. We help you tell the difference.'],
+          ['t' => 'The right equipment for your home type', 'd' => 'A studio apartment, a three-bedroom house, and a large multi-story home all need different coverage. We help you avoid both under-protecting and overspending.'],
+          ['t' => 'Contracts and the fine print', 'd' => 'Long-term agreements, financing, cancellation terms, and equipment ownership all affect what you really pay. We point out the questions to ask before you sign anything.'],
+          ['t' => 'Renter-friendly options', 'd' => 'If you lease, you have choices that leave no damage and move with you. We cover those too.'],
+        ] as $item
+      ): ?>
+        <div style="border-bottom:1px solid #E2E8F0;padding:1.25rem 0">
+          <div style="font-weight:700;margin-bottom:.375rem;display:flex;align-items:center;gap:.625rem;color:#0F172A;">
+            <i class="fas fa-circle-check" style="color:#059669;font-size:.7rem;flex-shrink:0"></i><?= $item['t'] ?>
+          </div>
+          <p class="light-muted" style="padding-left:1.375rem"><?= $item['d'] ?></p>
         </div>
-        <p class="light-muted" style="padding-left:1.375rem"><?= $item['d'] ?></p>
-      </div>
       <?php endforeach; ?>
     </div>
     <div>
@@ -196,14 +204,16 @@ require_once __DIR__ . '/includes/head.php';
           <span style="font-weight:700;color:#92400E;">When home security may not be the right call</span>
         </div>
         <p style="font-size:.875rem;color:#78350F;line-height:1.75;margin-bottom:1rem">We would rather lose a sale than give you bad advice. There are real situations where you should pause:</p>
-        <?php foreach([
-          'If your building already provides robust security and monitoring, a second system may be redundant.',
-          'If your main concern is a single issue, such as one entry point or a package theft problem, a small, targeted device may solve it for far less than a full system.',
-          'If your budget is tight this month, we will tell you which low-cost habits and simple devices give you the most protection now, so you can add more later.',
-        ] as $w): ?>
-        <div style="display:flex;align-items:flex-start;gap:.625rem;margin-bottom:.875rem;font-size:.85rem;color:#92400E;line-height:1.6;">
-          <i class="fas fa-minus" style="color:#D97706;font-size:.6rem;margin-top:.35rem;flex-shrink:0"></i><?= $w ?>
-        </div>
+        <?php foreach (
+          [
+            'If your building already provides robust security and monitoring, a second system may be redundant.',
+            'If your main concern is a single issue, such as one entry point or a package theft problem, a small, targeted device may solve it for far less than a full system.',
+            'If your budget is tight this month, we will tell you which low-cost habits and simple devices give you the most protection now, so you can add more later.',
+          ] as $w
+        ): ?>
+          <div style="display:flex;align-items:flex-start;gap:.625rem;margin-bottom:.875rem;font-size:.85rem;color:#92400E;line-height:1.6;">
+            <i class="fas fa-minus" style="color:#D97706;font-size:.6rem;margin-top:.35rem;flex-shrink:0"></i><?= $w ?>
+          </div>
         <?php endforeach; ?>
       </div>
       <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:16px;padding:1.5rem">
@@ -224,21 +234,23 @@ require_once __DIR__ . '/includes/head.php';
       <p style="max-width:580px;margin:0 auto;color:rgba(255,255,255,.55);line-height:1.8;">We built this service to give families the one thing the security industry rarely offers: honest, pressure-free advice.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem;">
-      <?php foreach([
-        ['i'=>'fa-scale-balanced','c'=>'#60A5FA','bg'=>'rgba(96,165,250,.08)','t'=>'Independent advice that is not tied to any single brand','d'=>'We are not owned by any security company. Our only job is to help you find what is right for your home.'],
-        ['i'=>'fa-circle-dollar-to-slot','c'=>'#6EE7B7','bg'=>'rgba(110,231,183,.08)','t'=>'A free, no-pressure consultation with a real person','d'=>'Our advisory service costs you nothing. There is no obligation to move forward after speaking with us.'],
-        ['i'=>'fa-comments','c'=>'#A78BFA','bg'=>'rgba(167,139,250,.08)','t'=>'Clear explanations instead of sales scripts','d'=>'We explain your options in plain language — what each choice means, what it costs, and what it actually does.'],
-        ['i'=>'fa-user-tie','c'=>'#FCD34D','bg'=>'rgba(252,211,77,.08)','t'=>'One point of contact from first question to final decision','d'=>'From your first question to your final decision, you deal with one advisor who knows your situation.'],
-        ['i'=>'fa-user-check','c'=>'#F472B6','bg'=>'rgba(244,114,182,.08)','t'=>'Providers that are vetted before we ever recommend them','d'=>'We screen every provider before referring them. Your installation will be handled by someone we stand behind.'],
-        ['i'=>'fa-house-chimney','c'=>'#34D399','bg'=>'rgba(52,211,153,.08)','t'=>'Guidance built around your home, your budget, and your goals','d'=>'Your home, budget, and priorities drive every recommendation. Not a quota, not a commission structure.'],
-      ] as $r): ?>
-      <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;transition:all .3s;" onmouseover="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.12)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,.02)';this.style.borderColor='rgba(255,255,255,.06)';this.style.transform='none'">
-        <div style="width:48px;height:48px;border-radius:14px;background:<?= $r['bg'] ?>;color:<?= $r['c'] ?>;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas <?= $r['i'] ?>"></i></div>
-        <div>
-          <div style="font-weight:700;font-size:.98rem;margin-bottom:.5rem;color:#fff;"><?= $r['t'] ?></div>
-          <p style="font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.65;margin:0;"><?= $r['d'] ?></p>
+      <?php foreach (
+        [
+          ['i' => 'fa-scale-balanced', 'c' => '#60A5FA', 'bg' => 'rgba(96,165,250,.08)', 't' => 'Independent advice that is not tied to any single brand', 'd' => 'We are not owned by any security company. Our only job is to help you find what is right for your home.'],
+          ['i' => 'fa-circle-dollar-to-slot', 'c' => '#6EE7B7', 'bg' => 'rgba(110,231,183,.08)', 't' => 'A free, no-pressure consultation with a real person', 'd' => 'Our advisory service costs you nothing. There is no obligation to move forward after speaking with us.'],
+          ['i' => 'fa-comments', 'c' => '#A78BFA', 'bg' => 'rgba(167,139,250,.08)', 't' => 'Clear explanations instead of sales scripts', 'd' => 'We explain your options in plain language — what each choice means, what it costs, and what it actually does.'],
+          ['i' => 'fa-user-tie', 'c' => '#FCD34D', 'bg' => 'rgba(252,211,77,.08)', 't' => 'One point of contact from first question to final decision', 'd' => 'From your first question to your final decision, you deal with one advisor who knows your situation.'],
+          ['i' => 'fa-user-check', 'c' => '#F472B6', 'bg' => 'rgba(244,114,182,.08)', 't' => 'Providers that are vetted before we ever recommend them', 'd' => 'We screen every provider before referring them. Your installation will be handled by someone we stand behind.'],
+          ['i' => 'fa-house-chimney', 'c' => '#34D399', 'bg' => 'rgba(52,211,153,.08)', 't' => 'Guidance built around your home, your budget, and your goals', 'd' => 'Your home, budget, and priorities drive every recommendation. Not a quota, not a commission structure.'],
+        ] as $r
+      ): ?>
+        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:2rem;display:flex;align-items:flex-start;gap:1.25rem;transition:all .3s;" onmouseover="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.12)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,.02)';this.style.borderColor='rgba(255,255,255,.06)';this.style.transform='none'">
+          <div style="width:48px;height:48px;border-radius:14px;background:<?= $r['bg'] ?>;color:<?= $r['c'] ?>;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas <?= $r['i'] ?>"></i></div>
+          <div>
+            <div style="font-weight:700;font-size:.98rem;margin-bottom:.5rem;color:#fff;"><?= $r['t'] ?></div>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.65;margin:0;"><?= $r['d'] ?></p>
+          </div>
         </div>
-      </div>
       <?php endforeach; ?>
     </div>
   </div>
@@ -251,7 +263,7 @@ require_once __DIR__ . '/includes/head.php';
   <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:1000px;height:500px;background:radial-gradient(ellipse,rgba(124,58,237,.15),transparent 70%);pointer-events:none;"></div>
 
   <div class="faq-grid" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;position:relative;z-index:1;">
-    
+
     <!-- Left Column -->
     <div>
       <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);margin-bottom:1.5rem;">
@@ -259,21 +271,23 @@ require_once __DIR__ . '/includes/head.php';
       </span>
       <h2 style="font-family:var(--font);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:1.5rem;">Frequently asked <span style="background:linear-gradient(135deg,#A78BFA,#C4B5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span></h2>
       <p style="color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:2.5rem;font-weight:400;">Still have questions about how our independent service works? Our advisors are always happy to help you get the answers you need.</p>
-      
+
       <a href="tel:<?= PHONE_TEL ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.05)';" onmouseout="this.style.background='transparent';">
         <i class="fas fa-phone" style="font-size:.9rem;color:#A78BFA;"></i> <?= PHONE_DISPLAY ?>
       </a>
     </div>
-    
+
     <!-- Right Column (Accordion) -->
     <div style="display:flex;flex-direction:column;gap:1rem;">
-      <?php foreach([
-        ['q'=>'Does Brocus install the security system?','a'=>'No. We are an independent advisory and referral service. We help you choose the right setup and then connect you with a vetted third-party provider who supplies, installs, and services it.'],
-        ['q'=>'Is the consultation really free?','a'=>'Yes. Speaking with one of our advisors costs you nothing, and there is no obligation to move forward.'],
-        ['q'=>'Do you only recommend one brand?','a'=>'No. Because we are independent, we are free to recommend what genuinely fits your home rather than a single product line.'],
-        ['q'=>'What if I am not sure I even need a system?','a'=>'That is one of the best reasons to call. We will give you an honest answer, even if the answer is that you do not need a full system right now.'],
-        ['q'=>'Which areas do you cover?','a'=>'We help homeowners across the United States and match you with providers who serve your location.'],
-      ] as $i=>$faq): ?>
+      <?php foreach (
+        [
+          ['q' => 'Does Brocus install the security system?', 'a' => 'No. We are an independent advisory and referral service. We help you choose the right setup and then connect you with a vetted third-party provider who supplies, installs, and services it.'],
+          ['q' => 'Is the consultation really free?', 'a' => 'Yes. Speaking with one of our advisors costs you nothing, and there is no obligation to move forward.'],
+          ['q' => 'Do you only recommend one brand?', 'a' => 'No. Because we are independent, we are free to recommend what genuinely fits your home rather than a single product line.'],
+          ['q' => 'What if I am not sure I even need a system?', 'a' => 'That is one of the best reasons to call. We will give you an honest answer, even if the answer is that you do not need a full system right now.'],
+          ['q' => 'Which areas do you cover?', 'a' => 'We help homeowners across the United States and match you with providers who serve your location.'],
+        ] as $i => $faq
+      ): ?>
         <div class="faq-item" id="hs-faq-<?= $i ?>" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:1.75rem 2.25rem;cursor:pointer;transition:all .3s ease;" onclick="toggleFaq2(<?= $i ?>)" onmouseover="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(124,58,237,.3)';" onmouseout="this.style.background='rgba(255,255,255,.02)';this.style.borderColor='rgba(255,255,255,.08)';">
           <div class="faq-q" style="display:flex;justify-content:space-between;align-items:center;color:#F8FAFC;font-family:var(--font);font-weight:700;letter-spacing:-.01em;">
             <span style="padding-right:1.5rem;line-height:1.4;"><?= $faq['q'] ?></span>
@@ -293,9 +307,9 @@ require_once __DIR__ . '/includes/head.php';
 <!-- ═══ FINAL CTA ═══ -->
 <section id="cta-banner" style="padding:9rem 0;background-color:#050508;position:relative;overflow:hidden;">
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
-    
+
     <div style="position:relative;background:linear-gradient(135deg,rgba(30,11,62,.8) 0%,rgba(13,21,71,.8) 100%);border-radius:32px;padding:6rem 3rem;text-align:center;overflow:hidden;border:1px solid rgba(124,58,237,.3);box-shadow:0 30px 60px rgba(0,0,0,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);">
-      
+
       <!-- Glowing Orbs inside the card -->
       <div style="position:absolute;top:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
       <div style="position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
@@ -305,11 +319,11 @@ require_once __DIR__ . '/includes/head.php';
           <span style="width:6px;height:6px;border-radius:50%;background:#A78BFA;display:inline-block;animation:pulseDot 2s infinite;box-shadow:0 0 8px #A78BFA;"></span>
           Ready for straight answers about protecting your home?
         </span>
-        
+
         <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">Ready for straight answers about <span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">protecting your home?</span></h2>
-        
+
         <p style="color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.75;font-weight:400;">Skip the sales pitch and talk to an independent advisor who is on your side.</p>
-        
+
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
           <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
             <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
@@ -319,7 +333,7 @@ require_once __DIR__ . '/includes/head.php';
             Or email us at support@brocusitsolutionsusa.com
           </a>
         </div>
-        
+
         <div style="margin-top:3.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
           <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
           <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
@@ -333,11 +347,13 @@ require_once __DIR__ . '/includes/head.php';
 </section>
 
 <style>
-  .faq-grid { grid-template-columns: 1fr 1.5fr; }
+  .faq-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
 
   .faq-item.open {
-    background: rgba(255,255,255,.04) !important;
-    border-color: rgba(124,58,237,.4) !important;
+    background: rgba(255, 255, 255, .04) !important;
+    border-color: rgba(124, 58, 237, .4) !important;
   }
 
   .faq-item.open .faq-icon {
@@ -356,8 +372,15 @@ require_once __DIR__ . '/includes/head.php';
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media(max-width:900px) {
@@ -367,6 +390,10 @@ require_once __DIR__ . '/includes/head.php';
     }
   }
 </style>
-<script>function toggleFaq2(i){document.getElementById('hs-faq-'+i).classList.toggle('open');}</script>
+<script>
+  function toggleFaq2(i) {
+    document.getElementById('hs-faq-' + i).classList.toggle('open');
+  }
+</script>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

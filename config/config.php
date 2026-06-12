@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', ''); // '' on production
+define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -40,23 +40,30 @@ define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
 define('NAV_ITEMS', serialize([
-    ['href' => 'index.php',          'slug' => 'index',         'label' => 'Home'],
-    ['href' => 'home-security.php',  'slug' => 'home-security', 'label' => 'Home Security'],
-    ['href' => 'about.php',          'slug' => 'about',         'label' => 'About'],
-    ['href' => 'contact.php',        'slug' => 'contact',       'label' => 'Contact'],
+    ['href' => 'index.php',         'slug' => 'index',         'label' => 'Home',          'dropdown' => []],
+    ['href' => 'home-security.php', 'slug' => 'home-security', 'label' => 'Home Security', 'dropdown' => [
+        'products' => [
+            // Placeholder — products added in future
+        ],
+        'services' => [
+            ['href' => 'home-security/professional-monitoring/', 'slug' => 'professional-monitoring', 'label' => '24/7 Monitoring', 'desc' => 'Round-the-clock professional alarm monitoring'],
+        ],
+    ]],
+    ['href' => 'about.php',         'slug' => 'about',         'label' => 'About',         'dropdown' => []],
+    ['href' => 'contact.php',       'slug' => 'contact',       'label' => 'Contact',       'dropdown' => []],
 ]));
 
 // ── Footer legal links ───────────────────────────────
 define('LEGAL_LINKS', serialize([
-    ['href' => 'privacy-policy.php',             'label' => 'Privacy Policy'],
-    ['href' => 'terms-and-conditions.php',       'label' => 'Terms &amp; Conditions'],
-    ['href' => 'electronic-disclosure-consent.php', 'label' => 'Electronic Disclosure'],
+    ['href' => 'privacy-policy',                 'label' => 'Privacy Policy'],
+    ['href' => 'terms-and-conditions',           'label' => 'Terms &amp; Conditions'],
+    ['href' => 'electronic-disclosure-consent',  'label' => 'Electronic Disclosure'],
 ]));
 
 // ── Announce bar ─────────────────────────────────────
 define('ANNOUNCE_TEXT', 'Free, independent home security advice — no sales pressure, real people');
 define('ANNOUNCE_LINK_TEXT', 'Learn more');
-define('ANNOUNCE_LINK_HREF', 'home-security.php');
+define('ANNOUNCE_LINK_HREF', 'home-security');
 
 // ── Analytics (leave empty until live) ───────────────
 define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
