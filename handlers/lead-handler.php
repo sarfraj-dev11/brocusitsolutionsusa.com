@@ -123,7 +123,7 @@ try {
     if (APP_ENV === 'development') {
         echo json_encode(['success' => false, 'message' => 'Mailer Error: ' . $mail->ErrorInfo]);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Sorry, we could not send your message right now. Please call us at ' . PHONE_DISPLAY . '.']);
+        echo json_encode(['success' => false, 'message' => 'Sorry, we could not send your message right now. Mailer Error: ' . $mail->ErrorInfo]);
     }
 }
 exit;
