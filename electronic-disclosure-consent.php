@@ -100,19 +100,19 @@ require_once __DIR__ . '/includes/head.php';
     <p>If our hardware or software requirements change in a way that creates a material risk you will not be able to access Communications, we will notify you and give you the chance to withdraw your consent.</p>
 
     <h2>5. Keeping your information current</h2>
-    <p>It is your responsibility to keep your email address and phone number current so we can reach you. You can update your contact details by emailing us at <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a>.</p>
+    <p>It is your responsibility to keep your email address and phone number current so we can reach you. You can update your contact details by emailing us at <a href="mailto:support@brocusitsolutionsusa.com">support@brocusitsolutionsusa.com</a>.</p>
 
     <h2>6. Requesting paper copies</h2>
     <p>You may request a paper copy of any electronic Communication by contacting us at the email or address below. We may charge a reasonable fee for paper copies unless charging a fee is prohibited by law.</p>
 
     <h2>7. Withdrawing your consent</h2>
-    <p>You may withdraw your consent to receive Communications electronically at any time by contacting us at <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a>. If you withdraw consent, we may no longer be able to provide certain services to you electronically. Withdrawal of consent does not affect the validity of Communications provided before your withdrawal took effect.</p>
+    <p>You may withdraw your consent to receive Communications electronically at any time by contacting us at <a href="mailto:support@brocusitsolutionsusa.com">support@brocusitsolutionsusa.com</a>. If you withdraw consent, we may no longer be able to provide certain services to you electronically. Withdrawal of consent does not affect the validity of Communications provided before your withdrawal took effect.</p>
 
     <h2>8. Acknowledgment</h2>
     <p>By proceeding, you confirm that you can access information presented electronically, that your device meets the requirements above, and that you consent to receive Communications electronically as described here. If you do not agree, do not submit a form or otherwise transact with us electronically.</p>
 
     <h2>9. Contact us</h2>
-    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
+    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:support@brocusitsolutionsusa.com">support@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
 </div>
 </section>
 <?php include 'includes/footer.php'; ?>

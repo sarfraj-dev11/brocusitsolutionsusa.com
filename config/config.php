@@ -24,7 +24,7 @@ define('SITE_URL',     'https://brocusitsolutionsusa.com');
 // ── Contact ──────────────────────────────────────────
 define('PHONE_DISPLAY', '(855) 487-0595');
 define('PHONE_TEL',     '(855) 487-0595');
-define('EMAIL_INFO',    'info@brocusitsolutionsusa.com');
+define('EMAIL_INFO',    'support@brocusitsolutionsusa.com');
 
 // ── Address ──────────────────────────────────────────
 define('ADDR_LINE1', '10639 Mistflower Lane');
