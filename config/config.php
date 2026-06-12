@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', '/brocusitsolutionsusa.com'); // '' on production
+define('BASE_PATH', ''); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -34,8 +34,8 @@ define('ADDR_ZIP',   '33647');
 define('ADDR_FULL',  '10639 Mistflower Lane, Tampa, FL 33647');
 
 // ── Business hours ───────────────────────────────────
-define('HOURS_WEEKDAY',  'Monday–Friday 9 AM–6 PM EST');
-define('HOURS_SATURDAY', 'Saturday 10 AM–4 PM EST');
+define('HOURS_WEEKDAY',  'Monday–Friday:');
+define('HOURS_SATURDAY', '9:30 AM – 6:00 PM');
 define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
