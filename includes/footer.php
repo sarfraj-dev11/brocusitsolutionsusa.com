@@ -16,7 +16,7 @@ $_legal = unserialize(LEGAL_LINKS);
     <!-- Brand col -->
     <div class="footer-brand" style="display:flex;flex-direction:column;">
       <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-block;text-decoration:none;transition:opacity .2s ease;" onmouseover="this.style.opacity='.85';" onmouseout="this.style.opacity='1';">
-        <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain;">
+        <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain;">
       </a>
       <div style="display:flex;flex-direction:column;gap:.85rem;">
         <a href="tel:<?= PHONE_TEL ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:inline-flex;align-items:center;gap:.75rem;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">

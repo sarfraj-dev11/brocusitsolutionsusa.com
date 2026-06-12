@@ -41,6 +41,17 @@ if (!empty($product['faq_schema'])) {
       <h1><?= $product['h1'] ?></h1>
       <p class="pp-hero-sub"><?= $product['hero_subtitle'] ?></p>
 
+
+
+      <!-- CTA Buttons -->
+      <div class="pp-cta-row" style="margin-bottom: 2rem;">
+        <a href="tel:<?= PHONE_TEL ?>" class="pp-cta-primary">
+          <span class="pp-cta-icon"><i class="fas fa-phone" style="font-size:.8rem"></i></span>
+          Call now: <?= PHONE_DISPLAY ?>
+        </a>
+        <a href="<?= url('contact.php') ?>" class="pp-cta-secondary" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:10px;white-space:nowrap;backdrop-filter:blur(8px);">Get a free quote</a>
+      </div>
+
       <!-- Trust Strip -->
       <div class="pp-trust-strip">
         <?php foreach (['Independent advice', 'Free consultation', 'Vetted providers', 'No cost to compare'] as $t): ?>
@@ -48,14 +59,7 @@ if (!empty($product['faq_schema'])) {
         <?php endforeach; ?>
       </div>
 
-      <!-- CTA Buttons -->
-      <div class="pp-cta-row">
-        <a href="tel:<?= PHONE_TEL ?>" class="pp-cta-primary">
-          <span class="pp-cta-icon"><i class="fas fa-phone" style="font-size:.8rem"></i></span>
-          Call now: <?= PHONE_DISPLAY ?>
-        </a>
-        <a href="<?= url('contact.php') ?>" class="pp-cta-secondary">Get a free quote</a>
-      </div>
+
     </div>
 
     <!-- Hero Image Only -->
@@ -65,14 +69,7 @@ if (!empty($product['faq_schema'])) {
           <img src="<?= asset($product['hero_image']) ?>" alt="<?= htmlspecialchars($product['hero_image_alt']) ?>" width="560" height="400" loading="eager">
         </div>
         <!-- Premium Floating Badge -->
-        <div class="pp-floating-badge">
-          <div class="pp-fb-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <div class="pp-fb-text">
-            <strong>Top Rated</strong> Provider
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -194,10 +191,10 @@ if (!empty($product['faq_schema'])) {
             <div class="pp-image-wrap">
               <div class="pp-image-bg-tilted"></div>
               <?php
-                $imgSrc = asset('images/sections/sec_overview.png');
-                if($si % 4 == 1) $imgSrc = asset('images/sections/sec_placement.png');
-                if($si % 4 == 2) $imgSrc = asset('images/sections/sec_privacy.png');
-                if($si % 4 == 3) $imgSrc = asset('images/sections/sec_integration.png');
+              $imgSrc = asset('images/sections/sec_overview.png');
+              if ($si % 4 == 1) $imgSrc = asset('images/sections/sec_placement.png');
+              if ($si % 4 == 2) $imgSrc = asset('images/sections/sec_privacy.png');
+              if ($si % 4 == 3) $imgSrc = asset('images/sections/sec_integration.png');
               ?>
               <img src="<?= $imgSrc ?>" alt="<?= htmlspecialchars($section['heading']) ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:24px;z-index:1;box-shadow: 0 20px 40px rgba(0,0,0,0.12); transition: transform 0.4s ease;">
             </div>
@@ -236,8 +233,37 @@ if (!empty($product['faq_schema'])) {
   </div>
 </section>
 
+
+
+<!-- ═══ FAQ ═══ -->
+<section class="pp-faq">
+  <div class="pp-faq-glow"></div>
+  <div class="pp-faq-grid">
+    <div class="pp-faq-left">
+      <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);margin-bottom:1.5rem;">FAQ</span>
+      <h2>Frequently asked <span class="grad">questions</span></h2>
+      <p>Still have questions? Our advisors are always happy to help you get the answers you need.</p>
+      <a href="tel:<?= PHONE_TEL ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;"><i class="fas fa-phone" style="font-size:.9rem;color:#A78BFA;"></i> <?= PHONE_DISPLAY ?></a>
+    </div>
+    <div class="pp-faq-right">
+      <?php foreach ($product['faqs'] as $i => $faq): ?>
+        <div class="pp-faq-item" id="pp-faq-<?= $i ?>" onclick="togglePPFaq(<?= $i ?>)">
+          <div class="pp-faq-q">
+            <span><?= $faq['q'] ?></span>
+            <div class="pp-faq-icon"><i class="fas fa-plus" style="font-size:.85rem"></i></div>
+          </div>
+          <div class="pp-faq-a"><?= $faq['a'] ?></div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+
+
+
 <!-- ═══ RELATED PRODUCTS ═══ -->
-<?php 
+<?php
 $all_hs_products = [
   'home-security/smart-indoor-camera.php' => [
     'title' => 'Smart Home Security Camera',
@@ -278,7 +304,7 @@ $all_hs_products = [
 
 $current_page = basename($_SERVER['PHP_SELF']);
 $related_to_show = [];
-foreach($all_hs_products as $path => $p) {
+foreach ($all_hs_products as $path => $p) {
   if (basename($path) !== $current_page) {
     $p['href'] = $path;
     $related_to_show[] = $p;
@@ -304,7 +330,7 @@ foreach($all_hs_products as $path => $p) {
             </a>
             <h3 style="font-family: var(--font); font-size: 1.15rem; font-weight: 700; color: #0F172A; margin: 0 0 0.5rem;"><?= htmlspecialchars($r['title']) ?></h3>
             <p style="color: #64748B; font-size: 0.9rem; line-height: 1.6; margin: 0 0 1.5rem; flex-grow: 1;"><?= htmlspecialchars($r['desc']) ?></p>
-            
+
             <div style="border-top: 1px solid #F1F5F9; padding-top: 1.25rem; margin-top: auto;">
               <a href="<?= url($r['href']) ?>" style="color: #2563EB; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
                 Product Details <i class="fas fa-arrow-right"></i>
@@ -317,62 +343,12 @@ foreach($all_hs_products as $path => $p) {
   </section>
 <?php endif; ?>
 
-<!-- ═══ FAQ ═══ -->
-<section class="pp-faq">
-  <div class="pp-faq-glow"></div>
-  <div class="pp-faq-grid">
-    <div class="pp-faq-left">
-      <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);margin-bottom:1.5rem;">FAQ</span>
-      <h2>Frequently asked <span class="grad">questions</span></h2>
-      <p>Still have questions? Our advisors are always happy to help you get the answers you need.</p>
-      <a href="tel:<?= PHONE_TEL ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff;display:inline-flex;align-items:center;gap:.75rem;border-radius:12px;padding:.875rem 1.5rem;transition:all .3s ease;"><i class="fas fa-phone" style="font-size:.9rem;color:#A78BFA;"></i> <?= PHONE_DISPLAY ?></a>
-    </div>
-    <div class="pp-faq-right">
-      <?php foreach ($product['faqs'] as $i => $faq): ?>
-        <div class="pp-faq-item" id="pp-faq-<?= $i ?>" onclick="togglePPFaq(<?= $i ?>)">
-          <div class="pp-faq-q">
-            <span><?= $faq['q'] ?></span>
-            <div class="pp-faq-icon"><i class="fas fa-plus" style="font-size:.85rem"></i></div>
-          </div>
-          <div class="pp-faq-a"><?= $faq['a'] ?></div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ FINAL CTA ═══ -->
-<section class="pp-final-cta">
-  <div class="pp-final-cta-card">
-    <div class="pp-final-cta-inner">
-      <div style="position:absolute;top:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
-      <div style="position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
-      <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
-        <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(196,181,253,.1);border:1px solid rgba(196,181,253,.25);margin-bottom:2rem;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#A78BFA;display:inline-block;animation:pulseDot 2s infinite;box-shadow:0 0 8px #A78BFA;"></span>
-          Ready when you are
-        </span>
-        <h2><?= $product['final_headline'] ?></h2>
-        <p><?= $product['final_subtitle'] ?></p>
-        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;margin-bottom:3.5rem;">
-          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
-            Call now: <?= PHONE_DISPLAY ?>
-          </a>
-          <a href="<?= url('contact.php') ?>" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:.75rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
-            Get a free quote
-          </a>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-          <?php foreach (['Free consultation', 'No obligation', 'Real, Human Advisors'] as $badge): ?>
-            <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i><?= $badge ?></span>
-            <?php if ($badge !== 'Real, Human Advisors'): ?><span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span><?php endif; ?>
-          <?php endforeach; ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+$cta_headline = $product['final_headline'];
+$cta_subtitle = $product['final_subtitle'];
+include dirname(__DIR__) . '/includes/cta-banner.php';
+?>
 
 <script>
   /* FAQ Toggle */

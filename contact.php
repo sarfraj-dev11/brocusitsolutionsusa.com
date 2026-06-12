@@ -394,38 +394,11 @@ require_once __DIR__ . '/includes/head.php';
 </section>
 
 <!-- FINAL CTA -->
-<section id="cta-banner" style="padding:9rem 0;background-color:#050508;position:relative;overflow:hidden;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
-    <div style="position:relative;background:linear-gradient(135deg,rgba(30,11,62,.8) 0%,rgba(13,21,71,.8) 100%);border-radius:32px;padding:6rem 3rem;text-align:center;overflow:hidden;border:1px solid rgba(124,58,237,.3);box-shadow:0 30px 60px rgba(0,0,0,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);">
-      <div style="position:absolute;top:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.4),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
-      <div style="position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
-      <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
-        <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1.25rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#C4B5FD;background:rgba(196,181,253,.1);border:1px solid rgba(196,181,253,.25);margin-bottom:2rem;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#A78BFA;display:inline-block;animation:pulseDot 2s infinite;box-shadow:0 0 8px #A78BFA;"></span>
-          Ready when you are
-        </span>
-        <h2 style="font-family:var(--font);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;">A quick call is the<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">easiest way forward</span></h2>
-        <p style="color:rgba(255,255,255,.75);margin-bottom:3.5rem;line-height:1.8;font-weight:400;max-width:520px;margin-left:auto;margin-right:auto;">Whether you are just starting to look into your options or you already know what you want, a quick call is the easiest way forward.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;margin-bottom:3.5rem;">
-          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">
-            <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.85rem"></i></div>
-            Call now: <?= PHONE_DISPLAY ?>
-          </a>
-          <a href="mailto:<?= EMAIL_INFO ?>" class="btn btn-outline btn-lg" style="border-radius:16px;padding:1.15rem 2.25rem;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#fff;display:inline-flex;gap:.75rem;align-items:center;transition:all .3s ease;" onmouseover="this.style.background='rgba(255,255,255,.1)';this.style.borderColor='rgba(255,255,255,.3)';" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.15)';">
-            <i class="fas fa-envelope" style="font-size:.9rem;color:#A78BFA;"></i> <?= EMAIL_INFO ?>
-          </a>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Free consultation</span>
-          <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> No obligation</span>
-          <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2);"></span>
-          <span style="display:inline-flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);"><i class="fas fa-check" style="color:#059669;font-size:.8rem;"></i> Real, Human Advisors</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+$cta_headline = 'A quick call is the<br><span style="background:linear-gradient(135deg,#A78BFA,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">easiest way forward</span>';
+$cta_subtitle = 'Whether you are just starting to look into your options or you already know what you want, a quick call is the easiest way forward.';
+include __DIR__ . '/includes/cta-banner.php';
+?>
 
 <style>
   @media(max-width:680px) {

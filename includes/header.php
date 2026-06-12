@@ -23,8 +23,8 @@ $_cur   = currentPage();
   <div class="nav-inner">
     <!-- Logo -->
     <a href="<?= url('index.php') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
-      <img src="<?= asset('images/transparent-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" width="160" height="60">
-      <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" width="160" height="60">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="max-height: 60px; width: auto;">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="max-height: 60px; width: auto;">
     </a>
 
     <!-- Nav links (desktop) -->
