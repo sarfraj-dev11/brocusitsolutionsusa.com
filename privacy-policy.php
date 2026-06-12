@@ -136,7 +136,7 @@ require_once __DIR__ . '/includes/head.php';
     <h2>12. Changes to this policy and how to contact us</h2>
     <p>We may update this Privacy Policy from time to time. The "Last updated" date shows when it was last revised, and continued use of the Site means you accept the current version.</p>
     <p>Questions or privacy requests can be directed to:</p>
-    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
+    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:support@brocusitsolutionsusa.com">support@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
 </div>
 </section>
 <?php include 'includes/footer.php'; ?>

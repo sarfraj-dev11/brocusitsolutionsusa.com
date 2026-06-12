@@ -144,7 +144,7 @@ require_once __DIR__ . '/includes/head.php';
       .recaptcha-error-msg.visible { display: flex; }
     </style>
     <div class="contact-form" id="contact-form" style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 12px 40px rgba(15,23,42,.06);">
-      <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Callback</h2>
+      <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Free Consultation</h2>
       <p style="font-size:.875rem;color:#64748B;margin-bottom:1.25rem">An advisor will get back to you within one business day.</p>
       <?php if ($success): ?><div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#059669;margin-bottom:1rem"><?= $success ?></div><?php endif; ?>
       <?php if ($error):   ?><div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#DC2626;margin-bottom:1rem"><?= $error ?></div><?php endif; ?>
@@ -212,7 +212,7 @@ require_once __DIR__ . '/includes/head.php';
         </div>
 
         <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:1.1rem 2rem;font-size:1rem;border-radius:14px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.3);transition:all .3s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 20px 40px rgba(124,58,237,.45)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 12px 30px rgba(124,58,237,.3)';">
-          Request a Callback <i class="fas fa-arrow-right" style="font-size:.85rem;margin-left:.5rem;"></i>
+          Request Consultation <i class="fas fa-arrow-right" style="font-size:.85rem;margin-left:.5rem;"></i>
         </button>
 
         <p style="font-size:.72rem;color:#94A3B8;line-height:1.6;margin-top:1.25rem">

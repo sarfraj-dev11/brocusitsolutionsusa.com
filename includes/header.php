@@ -17,8 +17,8 @@ $_cur   = currentPage();
 
     <!-- Logo -->
     <a href="<?= url('index.php') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
-      <img src="<?= asset('images/transparent-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="height:60px;width:auto;object-fit:contain">
-      <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="height:60px;width:auto;object-fit:contain;display:none;">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="height:49px;width:auto;object-fit:contain">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="height:49px;width:auto;object-fit:contain;display:none;">
     </a>
 
     <!-- Nav links (centered) -->
@@ -81,7 +81,7 @@ $_cur   = currentPage();
 
 /* Nav — centered within its grid cell */
 .sh-nav{display:flex;align-items:center;justify-content:center;gap:28px}
-.sh-link{font-size:14px;font-weight:500;color:#fff;text-decoration:none;letter-spacing:0.01em;transition:color 0.2s,opacity 0.2s;white-space:nowrap}
+.sh-link{font-size:15px;font-weight:500;color:#fff;text-decoration:none;letter-spacing:0.01em;transition:color 0.2s,opacity 0.2s;white-space:nowrap}
 .sh-link:hover{opacity:0.8}
 .sh-link--active{font-weight:700;opacity:1}
 

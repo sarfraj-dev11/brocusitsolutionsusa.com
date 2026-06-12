@@ -14,7 +14,7 @@ $_legal = unserialize(LEGAL_LINKS);
   <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;"> <!-- Brand col -->
     <div class="footer-brand" style="display:flex;flex-direction:column;">
       <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-block;text-decoration:none;transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
-        <img src="<?= asset('images/logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:55px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(124,58,237,.4));">
+        <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:50px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(124,58,237,.4));">
       </a>
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <a href="tel:<?= PHONE_TEL ?>" style="font-size:.975rem;color:rgba(255,255,255,.75);text-decoration:none;transition:all .3s ease;display:inline-flex;align-items:center;gap:.875rem;" onmouseover="this.style.color='#C4B5FD';this.style.transform='translateX(4px)';" onmouseout="this.style.color='rgba(255,255,255,.75)';this.style.transform='none';">

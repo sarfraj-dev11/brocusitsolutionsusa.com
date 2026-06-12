@@ -268,7 +268,7 @@ require_once __DIR__ . '/includes/head.php';
       </p>
 
       <div class="hero-buttons">
-        <a href="tel:+18554870595" class="btn btn-lg" style="background:#8B5CF6;color:#fff;border-radius:10px;font-weight:600;box-shadow:0 8px 24px rgba(139,92,246,.4);white-space:nowrap;">
+        <a href="tel:<?= PHONE_TEL ?>" class="btn btn-lg" style="background:#8B5CF6;color:#fff;border-radius:10px;font-weight:600;box-shadow:0 8px 24px rgba(139,92,246,.4);white-space:nowrap;">
           <i class="fas fa-phone" style="font-size:.85rem"></i> Call now: (855) 487-0595
         </a>
         <a href="contact.php" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:10px;white-space:nowrap;backdrop-filter:blur(8px);">
@@ -474,7 +474,7 @@ require_once __DIR__ . '/includes/head.php';
         <?php endforeach; ?>
       </div>
 
-      <a href="tel:+18554870595" class="btn btn-primary btn-lg" style="display:inline-flex;align-items:center;gap:1rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.25);border-radius:20px;padding:1.25rem 2.5rem;font-weight:700;color:#fff;transition:all .3s;">
+      <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="display:inline-flex;align-items:center;gap:1rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.25);border-radius:20px;padding:1.25rem 2.5rem;font-weight:700;color:#fff;transition:all .3s;">
         <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone" style="font-size:.9rem;"></i></div>
         Speak to an advisor
       </a>
@@ -641,7 +641,7 @@ require_once __DIR__ . '/includes/head.php';
             Home security is where Brocus starts. We help you cut through confusing contracts and surprise fees, and figure out what actually fits, whether that is full professional monitoring or a simple setup. The reassuring part is that visible security works. In a University of North Carolina at Charlotte study of 422 burglars, about 83 percent said they would check for an alarm before breaking in, and around 60 percent would move to a different target if they found one.
           </p>
 
-          <a href="tel:+18554870595" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:.875rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.25);border-radius:16px;padding:.75rem 1.5rem;color:#fff;transition:all .3s;text-align:left;line-height:1.2;">
+          <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:.875rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.25);border-radius:16px;padding:.75rem 1.5rem;color:#fff;transition:all .3s;text-align:left;line-height:1.2;">
             <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:inset 0 2px 4px rgba(255,255,255,.2);"><i class="fas fa-phone" style="font-size:.8rem;"></i></div>
             <div style="display:flex;flex-direction:column;gap:0;">
               <span style="font-size:.9rem;font-weight:600;color:rgba(255,255,255,.9);">Get free home security advice:</span>
