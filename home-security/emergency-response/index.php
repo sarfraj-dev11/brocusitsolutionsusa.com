@@ -1,8 +1,8 @@
 <?php
 require_once dirname(__DIR__, 2) . '/includes/bootstrap.php';
-$page_slug  = 'professional-monitoring';
-$page_title = '24/7 Home Security Monitoring | Brocus IT Solutions';
-$page_desc  = 'Independent advice on 24/7 professional home security monitoring, plus a vetted provider to set it up. Trained staff respond to alarms day and night. Free, no-pressure consultation. Call today.';
+$page_slug  = 'emergency-response';
+$page_title = 'Emergency & Life Safety Monitoring | Brocus IT Solutions';
+$page_desc  = 'Independent advice on emergency response and life-safety monitoring for fire, carbon monoxide, and medical alerts, plus a vetted provider. Free, no-pressure consultation. Call today.';
 require_once dirname(__DIR__, 2) . '/includes/head.php';
 ?>
 <?php include dirname(__DIR__, 2) . '/includes/header.php'; ?>
@@ -356,7 +356,7 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <polyline points="9 18 15 12 9 6" />
       </svg>
-      <span style="color:var(--w70);">24/7 Professional Monitoring</span>
+      <span style="color:var(--w70);">Emergency Response</span>
     </nav>
 
     <!-- Split: LEFT text  |  RIGHT photo -->
@@ -373,13 +373,13 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
 
         <!-- H1 -->
         <h1 class="page-h" style="text-align:left;margin-bottom:1.25rem;">
-          24/7 Professional Monitoring,<br>
-          <span class="grad">So Someone Always Responds</span>
+          Emergency Response,<br>
+          <span class="grad">When Every Second Counts</span>
         </h1>
 
         <!-- Subtitle -->
         <p class="page-sub" style="text-align:left;max-width:520px;margin-bottom:2rem;">
-          An alarm only helps if someone acts on it. With 24/7 professional monitoring, trained staff watch your system around the clock and respond the moment something trips, even when you cannot. Independent advice and a vetted monitoring provider for your home.
+          A break-in is not the only emergency a home faces. Fire, carbon monoxide, and a medical event can be just as serious and just as time-sensitive. Emergency response monitoring brings the right help fast. Independent advice and a vetted provider for full life-safety coverage.
         </p>
 
         <!-- CTA Buttons -->
@@ -566,18 +566,18 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
       <span style="display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#7C3AED;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.18);border-radius:999px;padding:.35rem 1rem;margin-bottom:1.25rem;">
         <i class="fas fa-bolt" style="font-size:.62rem;"></i> Quick Benefits
       </span>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;color:#0F172A;letter-spacing:-.03em;margin:0 0 .75rem;line-height:1.15;">Why families choose professional monitoring</h2>
-      <p style="font-size:1.05rem;color:#475569;max-width:520px;margin:0 auto;line-height:1.7;">Four things that happen the moment you add a monitored system to your home.</p>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;color:#0F172A;letter-spacing:-.03em;margin:0 0 .75rem;line-height:1.15;">Why emergency response monitoring matters</h2>
+      <p style="font-size:1.05rem;color:#475569;max-width:520px;margin:0 auto;line-height:1.7;">Four ways monitored life-safety coverage protects your home and family.</p>
     </div>
 
     <!-- 2×2 benefit cards -->
     <div class="s2-grid-2x2" style="display:grid;grid-template-columns:1fr 1fr;gap:1.75rem;margin-bottom:4rem;">
       <?php
       $s2_benefits = [
-        ['img' => 's2_real_staff.png',    'num' => '01', 'text' => 'Trained staff responding to alarms day and night'],
-        ['img' => 's2_real_dispatch.png',  'num' => '02', 'text' => 'Police, fire, or medical dispatch when an event is verified'],
-        ['img' => 's2_real_backup.png',    'num' => '03', 'text' => 'Backup that keeps working in a power or internet outage'],
-        ['img' => 's2_real_advice.png',    'num' => '04', 'text' => 'Advice matched to your home and how much response you want'],
+        ['img' => 'er_s2_fast_dispatch.png',    'num' => '01', 'text' => 'Fast dispatch for fire, carbon monoxide, and medical emergencies'],
+        ['img' => 'er_s2_trained_staff.png',    'num' => '02', 'text' => 'Trained staff who act even when you cannot'],
+        ['img' => 'er_s2_tied_system.png',      'num' => '03', 'text' => 'Detectors and alerts tied into one monitored system'],
+        ['img' => 'er_s2_planned_coverage.png', 'num' => '04', 'text' => 'Coverage planned around your home and your household'],
       ];
       foreach ($s2_benefits as $b): ?>
         <div class="s2-benefit-card">
@@ -607,8 +607,8 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
   <!-- Trust strip -->
   <div style="padding:1.75rem 1.5rem;background:#fff;border-top:1px solid #EDE9FE;text-align:center;">
     <p style="max-width:800px;margin:0 auto;font-size:.9rem;color:#4B5563;line-height:1.75;">
-      <span style="color:#6D28D9;font-weight:700;">Brocus is an independent advisor, not a monitoring company.</span>
-      We compare monitoring options across a vetted provider network and recommend the level of response that fits your home, not the most expensive plan.
+      <span style="color:#6D28D9;font-weight:700;">Brocus is an independent advisor, not a response service.</span>
+      We compare life-safety options across a vetted provider network and recommend the coverage your household needs.
     </p>
   </div>
 
@@ -698,36 +698,36 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
       <!-- Card 1 -->
       <div class="seo3-card">
         <div class="seo3-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec3_card1_monitoring_center.png" alt="24/7 monitoring center" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s3_beyond_breakins.png" alt="Beyond break-ins: the emergencies that matter" loading="lazy">
         </div>
         <div class="seo3-body">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">01</span>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">What 24/7 monitoring actually means</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">When a sensor trips, the signal goes to a monitoring center that is staffed around the clock. Trained operators confirm the event and, if it is real, contact you and dispatch police, fire, or medical help. It is the difference between an alarm that only makes noise and one that brings a response.</p>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">Beyond break-ins: the emergencies that matter</h3>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">Security is not only about intruders. Smoke, carbon monoxide, and a medical event can turn deadly in minutes, and they often strike when you are asleep or alone. Monitored life-safety devices are what bring help fast in those moments, not just a loud noise in an empty house.</p>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="seo3-card" style="border-color:rgba(124,58,237,.4);">
         <div class="seo3-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec3_card2_home_security.png" alt="Why monitoring is worth it" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s3_saves_lives.png" alt="Why fast response saves lives" loading="lazy">
         </div>
         <div class="seo3-body" style="background:rgba(124,58,237,.06);">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">02</span>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;margin:0;line-height:1.35;">Why monitoring is worth it</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.8;margin:0;">Independent research backs this up. In a <a href="https://inside.charlotte.edu/news-features/2013-05-15/through-eyes-burglar-study-provides-insights-habits-and-motivations/" target="_blank" rel="noopener" style="color:#C4B5FD;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(196,181,253,.4);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#C4B5FD'">University of North Carolina at Charlotte study</a> of more than 400 burglars, around 60 percent said they would avoid a home with a visible alarm or security system and move to another target. A separate <a href="https://www.rutgers.edu/news/rutgers-study-finds-alarm-systems-are-valuable-crime-fighting-tool" target="_blank" rel="noopener" style="color:#C4B5FD;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(196,181,253,.4);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#C4B5FD'">Rutgers University study</a> of five years of police data found that homes with alarm systems were less likely to be burgled, with the benefit even reaching the surrounding neighborhood. Monitoring is what turns that deterrent into an actual response the moment an alarm goes off.</p>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;margin:0;line-height:1.35;">Why fast response saves lives</h3>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.8;margin:0;">The National Fire Protection Association reports that working smoke alarms cut the risk of dying in a home fire by roughly half, and that about three in five home fire deaths happen in homes with no working alarm. Tied into a monitored system, those detectors do more than warn you. They summon help, even if no one is awake to call.</p>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="seo3-card">
         <div class="seo3-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec3_card3_self_vs_monitored.png" alt="Monitored or self-monitored" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s3_what_covers.png" alt="What emergency response covers" loading="lazy">
         </div>
         <div class="seo3-body">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">03</span>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">Monitored or self-monitored?</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">This is the core choice. Self-monitored means alerts come to your phone and the response is up to you. Professionally monitored means trained staff respond and can dispatch help even when your phone is away or silenced. We help you weigh which suits your home and your routine.</p>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">What emergency response covers</h3>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">A full life-safety setup routes more than burglar alarms to the monitoring center. Smoke and fire, carbon monoxide, a medical alert button, and a panic alert can all reach trained staff who dispatch the right service. One platform, several kinds of emergency.</p>
         </div>
       </div>
 
@@ -836,11 +836,11 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
     <div class="wtlf-grid-5" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem;">
       <?php
       $wtlf_items = [
-        ['img' => 'card-staffed-center.png',  'icon' => 'fa-headset',       'num' => '01', 'tag' => 'Most Critical', 'title' => 'A staffed, round-the-clock center', 'body' => 'Real people watching at three in the morning, not just an app alert.'],
-        ['img' => 'card-cellular-backup.png', 'icon' => 'fa-signal',        'num' => '02', 'tag' => 'Reliability',   'title' => 'Cellular backup signaling',          'body' => 'So the connection to the center survives a power or internet cut.'],
-        ['img' => 'card-fast-response.png',   'icon' => 'fa-bolt',          'num' => '03', 'tag' => 'Speed',         'title' => 'Fast, verified response',            'body' => 'Quick confirmation and dispatch, with steps to reduce false alarms.'],
-        ['img' => 'card-mobile-alerts.png',   'icon' => 'fa-mobile-screen', 'num' => '04', 'tag' => 'Awareness',     'title' => 'Mobile alerts alongside',            'body' => 'You stay informed while the center handles the response.'],
-        ['img' => 'card-contract-terms.png',  'icon' => 'fa-file-contract', 'num' => '05', 'tag' => 'Transparency',  'title' => 'Clear contract terms',               'body' => 'Know the length, the cancellation terms, and what is included before you sign.'],
+        ['img' => 'card-staffed-center.png',  'icon' => 'fa-headset',       'num' => '01', 'tag' => 'Most Critical', 'title' => '24/7 dispatch',                      'body' => 'Staff ready to act at any hour, for any of these events.'],
+        ['img' => 'card-fast-response.png',   'icon' => 'fa-fire-extinguisher', 'num' => '02', 'tag' => 'Coverage',      'title' => 'Fire, CO, and medical options',     'body' => 'Coverage for the emergencies that matter most, not just intrusion.'],
+        ['img' => 'card-mobile-alerts.png',   'icon' => 'fa-route',         'num' => '03', 'tag' => 'Process',       'title' => 'Clear escalation',                  'body' => 'A defined process for verifying and dispatching, with you kept informed.'],
+        ['img' => 'card-cellular-backup.png', 'icon' => 'fa-signal',        'num' => '04', 'tag' => 'Reliability',   'title' => 'Cellular backup',                   'body' => 'So a power or internet cut does not silence the system.'],
+        ['img' => 'card-contract-terms.png',  'icon' => 'fa-users',         'num' => '05', 'tag' => 'Awareness',     'title' => 'Alerts to family too',              'body' => 'Loved ones can be notified alongside the response.'],
       ];
       foreach ($wtlf_items as $c): ?>
         <div class="wtlf-card">
@@ -1009,36 +1009,36 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
       <!-- Card 1 -->
       <div class="s5-card">
         <div class="s5-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec5_card1_self_monitoring.png" alt="When self-monitoring is enough" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s5_who_benefits.png" alt="Who benefits most" loading="lazy">
         </div>
         <div class="s5-body">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">01</span>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">When self-monitoring is enough</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">For a low-risk home, or a single camera or doorbell, app alerts on your phone may be all you need. We will tell you honestly when paying for full monitoring is not worth it for your situation.</p>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">Who benefits most</h3>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">Families with young children, older adults living alone, and anyone who wants protection against more than burglary get the most from this. If your worry extends beyond a break-in, this is the layer that covers it.</p>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="s5-card" style="border-color:rgba(124,58,237,.4);">
         <div class="s5-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec5_card2_system_fit.png" alt="How monitoring fits your system" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s5_system_fit.png" alt="How emergency response fits your system" loading="lazy">
         </div>
         <div class="s5-body" style="background:rgba(124,58,237,.06);">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">02</span>
-          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;margin:0;line-height:1.35;">How monitoring fits your system</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.8;margin:0;">Monitoring is the response layer that sits on top of your sensors, cameras, and panel. The hardware detects, and monitoring acts. One without the other leaves a gap.</p>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;margin:0;line-height:1.35;">How emergency response fits your system</h3>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.8;margin:0;">Emergency response adds life-safety to your security, all on one monitored platform. The same center that watches for intruders also watches for fire, carbon monoxide, and medical alerts, so one system covers the whole household.</p>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="s5-card">
         <div class="s5-img-wrap">
-          <img src="<?= BASE_PATH ?>/assets/images/sec5_card3_cost_advice.png" alt="What it costs" loading="lazy">
+          <img src="<?= BASE_PATH ?>/assets/images/er_s5_costs.png" alt="What it costs" loading="lazy">
         </div>
         <div class="s5-body">
           <span style="display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A78BFA;">03</span>
           <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#F8FAFC;margin:0;line-height:1.35;">What it costs</h3>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">Monitoring is a monthly service rather than a one-time purchase, and the price moves with the level of response you choose and the provider. We will give you clear figures for the level that fits, with nothing owed for the advice.</p>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.8;margin:0;">Emergency response is usually part of a monitoring plan, and the level depends on the detectors and services you add. We will lay out the options and the numbers for your household on the call.</p>
         </div>
       </div>
 
@@ -1046,7 +1046,7 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
 
     <!-- CTA strip -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
-      <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;color:#fff;margin:0;line-height:1.3;">Get the right level of response. Call <?= PHONE_DISPLAY ?></h3>
+      <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;color:#fff;margin:0;line-height:1.3;">Protect against more than break-ins. Call <?= PHONE_DISPLAY ?></h3>
       <a href="tel:<?= PHONE_TEL ?>" style="display:inline-flex;align-items:center;gap:.75rem;padding:.9rem 1.75rem;background:linear-gradient(135deg,#7C3AED,#4F46E5);border-radius:999px;font-size:.92rem;font-weight:700;color:#fff;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(124,58,237,.35);transition:all .25s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 14px 36px rgba(124,58,237,.45)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 24px rgba(124,58,237,.35)'">
         <i class="fas fa-phone" style="font-size:.8rem;"></i> Call <?= PHONE_DISPLAY ?>
       </a>
@@ -1137,10 +1137,10 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
     <div style="display:flex;flex-direction:column;">
       <?php
       $faqs = [
-        ['q' => 'What is professional alarm monitoring?', 'a' => 'A staffed center watches your system 24/7 and responds to alarms, contacting you and dispatching help when needed.'],
-        ['q' => 'Is 24/7 monitoring worth it?', 'a' => 'For most homes, yes, because it turns an alert into a real response when you cannot act yourself.'],
-        ['q' => 'How does alarm monitoring work?', 'a' => 'A tripped sensor sends a signal to the monitoring center, where trained staff verify it and dispatch police, fire, or medical help.'],
-        ['q' => 'Does monitoring work if the internet goes down?', 'a' => 'A properly set up system uses cellular backup so monitoring stays connected during an outage.'],
+        ['q' => 'How does emergency response work?', 'a' => 'Monitored detectors and alerts signal a center that verifies the event and dispatches fire, medical, or police help.'],
+        ['q' => 'What is life-safety monitoring?', 'a' => 'Monitoring for fire, carbon monoxide, and medical emergencies, not just break-ins.'],
+        ['q' => 'Does home security include fire monitoring?', 'a' => 'It can. Many systems add smoke and carbon monoxide detectors to the monitored plan.'],
+        ['q' => 'Can my system call for medical help?', 'a' => 'Yes. With a medical alert or panic option, a monitored system can summon medical help fast.'],
       ];
       foreach ($faqs as $faq): ?>
         <div class="faq-accordion-item">
@@ -1176,8 +1176,8 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
       <div style="position:relative;z-index:2;max-width:700px;margin:0 auto;">
 
 
-        <span style="display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A78BFA;margin-bottom:1.5rem;">Always Someone Watching</span>
-        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.2;margin:0 0 2.5rem;">Talk to an advisor and set up monitoring that responds the moment your alarm goes off.</h2>
+        <span style="display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A78BFA;margin-bottom:1.5rem;">The right help, fast</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.2;margin:0 0 2.5rem;">Talk to an advisor and add emergency response that protects your household from more than burglary.</h2>
 
         <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;align-items:center;">
           <a href="tel:<?= PHONE_TEL ?>" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 16px 40px rgba(124,58,237,.35);border-radius:16px;padding:1.15rem 2.25rem;display:inline-flex;gap:1rem;align-items:center;transition:all .3s ease;color:#fff;font-weight:800;text-decoration:none;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 50px rgba(124,58,237,.5)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 16px 40px rgba(124,58,237,.35)';">

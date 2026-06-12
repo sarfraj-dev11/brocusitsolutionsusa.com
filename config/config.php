@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', ''); // '' on production
+define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -53,6 +53,10 @@ define('NAV_ITEMS', serialize([
         ],
         'services' => [
             ['href' => 'home-security/professional-monitoring/', 'slug' => 'professional-monitoring', 'label' => '24/7 Monitoring', 'desc' => 'Round-the-clock professional alarm monitoring'],
+            ['href' => 'home-security/professional-installation/', 'slug' => 'professional-installation', 'label' => 'Professional Installation', 'desc' => 'Done right the first time by vetted installers'],
+            ['href' => 'home-security/security-app/', 'slug' => 'security-app', 'label' => 'Security App Control', 'desc' => 'Remote system control from your phone'],
+            ['href' => 'home-security/smart-home-integration/', 'slug' => 'smart-home-integration', 'label' => 'Smart Home Integration', 'desc' => 'Connect locks, lights, & thermostats'],
+            ['href' => 'home-security/emergency-response/', 'slug' => 'emergency-response', 'label' => 'Emergency Response', 'desc' => 'Life safety monitoring for fire, CO, & medical'],
         ],
     ]],
     ['href' => 'about',          'slug' => 'about',         'label' => 'About',         'dropdown' => []],
