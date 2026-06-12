@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', '/brocusitsolutionsusa.com'); // '' on production
+define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -40,10 +40,17 @@ define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
 define('NAV_ITEMS', serialize([
-    ['href' => '',                    'slug' => 'index',         'label' => 'Home'],
-    ['href' => 'home-security',      'slug' => 'home-security', 'label' => 'Home Security'],
-    ['href' => 'about',              'slug' => 'about',         'label' => 'About'],
-    ['href' => 'contact',            'slug' => 'contact',       'label' => 'Contact'],
+    ['href' => 'index.php',         'slug' => 'index',         'label' => 'Home',          'dropdown' => []],
+    ['href' => 'home-security.php', 'slug' => 'home-security', 'label' => 'Home Security', 'dropdown' => [
+        'products' => [
+            // Placeholder — products added in future
+        ],
+        'services' => [
+            ['href' => 'home-security/professional-monitoring/', 'slug' => 'professional-monitoring', 'label' => '24/7 Monitoring', 'desc' => 'Round-the-clock professional alarm monitoring'],
+        ],
+    ]],
+    ['href' => 'about.php',         'slug' => 'about',         'label' => 'About',         'dropdown' => []],
+    ['href' => 'contact.php',       'slug' => 'contact',       'label' => 'Contact',       'dropdown' => []],
 ]));
 
 // ── Footer legal links ───────────────────────────────
