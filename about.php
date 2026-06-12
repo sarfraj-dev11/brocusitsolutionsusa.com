@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<section class="page-hero" style="background:radial-gradient(ellipse 80% 600px at 50% 10%, #5746c6 0%, #5746c6 45%, #110c28 100%)">
+<section class="page-hero" style="background: radial-gradient(ellipse 80% 80% at 50% -10%, #4338ca 0%, #312e81 45%, #0f172a 100%) !important;">
   <div class="page-hero-inner">
     <span class="label">About Brocus</span>
     <h1 class="page-h">We Help You Make Confident<br><span class="grad">Home Decisions</span></h1>

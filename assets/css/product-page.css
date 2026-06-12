@@ -505,9 +505,13 @@
   box-shadow: 0 0 0 3px rgba(124,58,237,.12);
 }
 .pp-lf-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: .75rem .75rem .75rem 1rem;
-  font-size: .82rem;
-  color: rgba(255,255,255,.7);
+  font-size: .85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
   white-space: nowrap;
   flex-shrink: 0;
   border-right: 1px solid rgba(255,255,255,.08);
@@ -518,6 +522,10 @@
   box-shadow: none !important;
   border-radius: 0;
   padding-left: .75rem;
+}
+.pp-lf-phone-wrap input::placeholder {
+  color: rgba(255,255,255,.35);
+  font-size: .85rem;
 }
 
 /* Validation states */

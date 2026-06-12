@@ -115,8 +115,17 @@ if (!empty($product['faq_schema'])) {
             <div class="pp-lf-field">
               <label for="lf-phone">Phone Number <span class="pp-lf-req">*</span></label>
               <div class="pp-lf-phone-wrap">
-                <span class="pp-lf-flag">🇺🇸 +1</span>
-                <input type="tel" id="lf-phone" name="phone" placeholder="10-digit number" maxlength="10" autocomplete="tel">
+                <span class="pp-lf-flag">
+                  <svg width="20" height="14" viewBox="0 0 60 42" style="border-radius:2px;vertical-align:middle;margin-right:6px;flex-shrink:0;">
+                    <rect width="60" height="42" fill="#B22234"/>
+                    <rect y="3.23" width="60" height="3.23" fill="#fff"/><rect y="9.69" width="60" height="3.23" fill="#fff"/>
+                    <rect y="16.15" width="60" height="3.23" fill="#fff"/><rect y="22.62" width="60" height="3.23" fill="#fff"/>
+                    <rect y="29.08" width="60" height="3.23" fill="#fff"/><rect y="35.54" width="60" height="3.23" fill="#fff"/>
+                    <rect width="24" height="22.62" fill="#3C3B6E"/>
+                  </svg>
+                  +1
+                </span>
+                <input type="tel" id="lf-phone" name="phone" placeholder="(555) 000-0000" maxlength="10" autocomplete="tel">
               </div>
               <div class="pp-lf-error" id="lf-phone-error"></div>
             </div>

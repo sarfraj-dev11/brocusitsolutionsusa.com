@@ -11,7 +11,7 @@ require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<section class="page-hero" style="background:radial-gradient(ellipse 80% 80% at 50% 40%, #5746c6 0%, #5746c6 45%, #110c28 100%);">
+<section class="page-hero" style="background: radial-gradient(ellipse 80% 80% at 50% -10%, #4338ca 0%, #312e81 45%, #0f172a 100%) !important;">
   <div class="page-hero-inner">
     <span class="label">Get in touch</span>
     <h1 class="page-h">Talk to an Independent Advisor</h1>
@@ -67,7 +67,11 @@ require_once __DIR__ . '/includes/head.php';
 
     <!-- Right: Form -->
     <style>
-      #contact-form .form-control::placeholder { color: #374151 !important; opacity: 1; }
+      #contact-form .form-control::placeholder {
+        color: #374151 !important;
+        opacity: 1;
+      }
+
       .field-error-msg {
         display: none;
         font-size: .78rem;
@@ -77,12 +81,17 @@ require_once __DIR__ . '/includes/head.php';
         align-items: center;
         gap: .35rem;
       }
-      .field-error-msg.visible { display: flex; }
+
+      .field-error-msg.visible {
+        display: flex;
+      }
+
       .form-control.input-error {
         border-color: #DC2626 !important;
         background: #FEF2F2 !important;
-        box-shadow: 0 0 0 3px rgba(220,38,38,.1);
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, .1);
       }
+
       .phone-input-wrapper {
         display: flex;
         align-items: center;
@@ -92,15 +101,18 @@ require_once __DIR__ . '/includes/head.php';
         overflow: hidden;
         transition: border-color .2s, box-shadow .2s;
       }
+
       .phone-input-wrapper:focus-within {
         border-color: #7C3AED;
-        box-shadow: 0 0 0 3px rgba(124,58,237,.1);
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, .1);
       }
+
       .phone-input-wrapper.input-error {
         border-color: #DC2626 !important;
         background: #FEF2F2 !important;
-        box-shadow: 0 0 0 3px rgba(220,38,38,.1);
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, .1);
       }
+
       .phone-prefix {
         display: flex;
         align-items: center;
@@ -110,11 +122,12 @@ require_once __DIR__ . '/includes/head.php';
         font-weight: 600;
         color: #374151;
         white-space: nowrap;
-        background: rgba(0,0,0,.02);
+        background: rgba(0, 0, 0, .02);
         border-right: 1px solid #E2E8F0;
         height: 100%;
         user-select: none;
       }
+
       .phone-prefix .usa-flag {
         width: 20px;
         height: 14px;
@@ -122,6 +135,7 @@ require_once __DIR__ . '/includes/head.php';
         object-fit: cover;
         flex-shrink: 0;
       }
+
       .phone-input-wrapper .form-control {
         border: none !important;
         background: transparent !important;
@@ -129,10 +143,12 @@ require_once __DIR__ . '/includes/head.php';
         flex: 1;
         min-width: 0;
       }
+
       .phone-input-wrapper .form-control:focus {
         box-shadow: none !important;
         outline: none !important;
       }
+
       .recaptcha-error-msg {
         display: none;
         font-size: .78rem;
@@ -142,7 +158,10 @@ require_once __DIR__ . '/includes/head.php';
         align-items: center;
         gap: .35rem;
       }
-      .recaptcha-error-msg.visible { display: flex; }
+
+      .recaptcha-error-msg.visible {
+        display: flex;
+      }
     </style>
     <div class="contact-form" id="contact-form" style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 12px 40px rgba(15,23,42,.06);">
       <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Free Consultation</h2>
@@ -162,24 +181,56 @@ require_once __DIR__ . '/includes/head.php';
             <div class="phone-input-wrapper" id="phone-wrapper">
               <div class="phone-prefix">
                 <svg class="usa-flag" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="60" height="30" fill="#B22234"/>
-                  <rect y="2.31" width="60" height="2.31" fill="#fff"/>
-                  <rect y="6.92" width="60" height="2.31" fill="#fff"/>
-                  <rect y="11.54" width="60" height="2.31" fill="#fff"/>
-                  <rect y="16.15" width="60" height="2.31" fill="#fff"/>
-                  <rect y="20.77" width="60" height="2.31" fill="#fff"/>
-                  <rect y="25.38" width="60" height="2.31" fill="#fff"/>
-                  <rect width="24" height="16.15" fill="#3C3B6E"/>
+                  <rect width="60" height="30" fill="#B22234" />
+                  <rect y="2.31" width="60" height="2.31" fill="#fff" />
+                  <rect y="6.92" width="60" height="2.31" fill="#fff" />
+                  <rect y="11.54" width="60" height="2.31" fill="#fff" />
+                  <rect y="16.15" width="60" height="2.31" fill="#fff" />
+                  <rect y="20.77" width="60" height="2.31" fill="#fff" />
+                  <rect y="25.38" width="60" height="2.31" fill="#fff" />
+                  <rect width="24" height="16.15" fill="#3C3B6E" />
                   <g fill="#fff" font-size="2" font-family="Arial">
-                    <circle cx="2.4" cy="1.5" r=".8"/><circle cx="7.2" cy="1.5" r=".8"/><circle cx="12" cy="1.5" r=".8"/><circle cx="16.8" cy="1.5" r=".8"/><circle cx="21.6" cy="1.5" r=".8"/>
-                    <circle cx="4.8" cy="3.2" r=".8"/><circle cx="9.6" cy="3.2" r=".8"/><circle cx="14.4" cy="3.2" r=".8"/><circle cx="19.2" cy="3.2" r=".8"/>
-                    <circle cx="2.4" cy="4.9" r=".8"/><circle cx="7.2" cy="4.9" r=".8"/><circle cx="12" cy="4.9" r=".8"/><circle cx="16.8" cy="4.9" r=".8"/><circle cx="21.6" cy="4.9" r=".8"/>
-                    <circle cx="4.8" cy="6.6" r=".8"/><circle cx="9.6" cy="6.6" r=".8"/><circle cx="14.4" cy="6.6" r=".8"/><circle cx="19.2" cy="6.6" r=".8"/>
-                    <circle cx="2.4" cy="8.3" r=".8"/><circle cx="7.2" cy="8.3" r=".8"/><circle cx="12" cy="8.3" r=".8"/><circle cx="16.8" cy="8.3" r=".8"/><circle cx="21.6" cy="8.3" r=".8"/>
-                    <circle cx="4.8" cy="10" r=".8"/><circle cx="9.6" cy="10" r=".8"/><circle cx="14.4" cy="10" r=".8"/><circle cx="19.2" cy="10" r=".8"/>
-                    <circle cx="2.4" cy="11.7" r=".8"/><circle cx="7.2" cy="11.7" r=".8"/><circle cx="12" cy="11.7" r=".8"/><circle cx="16.8" cy="11.7" r=".8"/><circle cx="21.6" cy="11.7" r=".8"/>
-                    <circle cx="4.8" cy="13.4" r=".8"/><circle cx="9.6" cy="13.4" r=".8"/><circle cx="14.4" cy="13.4" r=".8"/><circle cx="19.2" cy="13.4" r=".8"/>
-                    <circle cx="2.4" cy="15" r=".8"/><circle cx="7.2" cy="15" r=".8"/><circle cx="12" cy="15" r=".8"/><circle cx="16.8" cy="15" r=".8"/><circle cx="21.6" cy="15" r=".8"/>
+                    <circle cx="2.4" cy="1.5" r=".8" />
+                    <circle cx="7.2" cy="1.5" r=".8" />
+                    <circle cx="12" cy="1.5" r=".8" />
+                    <circle cx="16.8" cy="1.5" r=".8" />
+                    <circle cx="21.6" cy="1.5" r=".8" />
+                    <circle cx="4.8" cy="3.2" r=".8" />
+                    <circle cx="9.6" cy="3.2" r=".8" />
+                    <circle cx="14.4" cy="3.2" r=".8" />
+                    <circle cx="19.2" cy="3.2" r=".8" />
+                    <circle cx="2.4" cy="4.9" r=".8" />
+                    <circle cx="7.2" cy="4.9" r=".8" />
+                    <circle cx="12" cy="4.9" r=".8" />
+                    <circle cx="16.8" cy="4.9" r=".8" />
+                    <circle cx="21.6" cy="4.9" r=".8" />
+                    <circle cx="4.8" cy="6.6" r=".8" />
+                    <circle cx="9.6" cy="6.6" r=".8" />
+                    <circle cx="14.4" cy="6.6" r=".8" />
+                    <circle cx="19.2" cy="6.6" r=".8" />
+                    <circle cx="2.4" cy="8.3" r=".8" />
+                    <circle cx="7.2" cy="8.3" r=".8" />
+                    <circle cx="12" cy="8.3" r=".8" />
+                    <circle cx="16.8" cy="8.3" r=".8" />
+                    <circle cx="21.6" cy="8.3" r=".8" />
+                    <circle cx="4.8" cy="10" r=".8" />
+                    <circle cx="9.6" cy="10" r=".8" />
+                    <circle cx="14.4" cy="10" r=".8" />
+                    <circle cx="19.2" cy="10" r=".8" />
+                    <circle cx="2.4" cy="11.7" r=".8" />
+                    <circle cx="7.2" cy="11.7" r=".8" />
+                    <circle cx="12" cy="11.7" r=".8" />
+                    <circle cx="16.8" cy="11.7" r=".8" />
+                    <circle cx="21.6" cy="11.7" r=".8" />
+                    <circle cx="4.8" cy="13.4" r=".8" />
+                    <circle cx="9.6" cy="13.4" r=".8" />
+                    <circle cx="14.4" cy="13.4" r=".8" />
+                    <circle cx="19.2" cy="13.4" r=".8" />
+                    <circle cx="2.4" cy="15" r=".8" />
+                    <circle cx="7.2" cy="15" r=".8" />
+                    <circle cx="12" cy="15" r=".8" />
+                    <circle cx="16.8" cy="15" r=".8" />
+                    <circle cx="21.6" cy="15" r=".8" />
                   </g>
                 </svg>
                 +1
@@ -231,165 +282,168 @@ require_once __DIR__ . '/includes/head.php';
 
     <!-- Contact Form Validation -->
     <script>
-    (function() {
-      'use strict';
+      (function() {
+        'use strict';
 
-      const form = document.getElementById('contactFormEl');
-      if (!form) return;
+        const form = document.getElementById('contactFormEl');
+        if (!form) return;
 
-      // Helper: show error
-      function showError(fieldId, message) {
-        const errEl = document.getElementById('error-' + fieldId);
-        const input = document.getElementById(fieldId);
-        if (errEl) {
-          errEl.querySelector('span').textContent = message;
-          errEl.classList.add('visible');
-        }
-        if (input) {
-          input.classList.add('input-error');
-        }
-        // Special handling for phone wrapper
-        if (fieldId === 'phone') {
-          const wrapper = document.getElementById('phone-wrapper');
-          if (wrapper) wrapper.classList.add('input-error');
-        }
-      }
-
-      // Helper: clear error
-      function clearError(fieldId) {
-        const errEl = document.getElementById('error-' + fieldId);
-        const input = document.getElementById(fieldId);
-        if (errEl) {
-          errEl.classList.remove('visible');
-        }
-        if (input) {
-          input.classList.remove('input-error');
-        }
-        if (fieldId === 'phone') {
-          const wrapper = document.getElementById('phone-wrapper');
-          if (wrapper) wrapper.classList.remove('input-error');
-        }
-      }
-
-      // Real-time: strip non-digits from phone
-      const phoneInput = document.getElementById('phone');
-      if (phoneInput) {
-        phoneInput.addEventListener('input', function() {
-          this.value = this.value.replace(/\D/g, '').slice(0, 10);
-          if (this.value.length > 0) clearError('phone');
-        });
-      }
-
-      // Real-time: strip non-digits from zip
-      const zipInput = document.getElementById('zip');
-      if (zipInput) {
-        zipInput.addEventListener('input', function() {
-          this.value = this.value.replace(/\D/g, '').slice(0, 5);
-          if (this.value.length > 0) clearError('zip');
-        });
-      }
-
-      // Real-time: strip non-alpha from name (allow spaces, hyphens, apostrophes)
-      const nameInput = document.getElementById('full-name');
-      if (nameInput) {
-        nameInput.addEventListener('input', function() {
-          if (this.value.length > 0) clearError('full-name');
-        });
-      }
-
-      // Real-time: email
-      const emailInput = document.getElementById('email');
-      if (emailInput) {
-        emailInput.addEventListener('input', function() {
-          if (this.value.length > 0) clearError('email');
-        });
-      }
-
-      // reCAPTCHA callbacks
-      window.onRecaptchaSuccess = function() {
-        const errEl = document.getElementById('error-recaptcha');
-        if (errEl) errEl.classList.remove('visible');
-      };
-      window.onRecaptchaExpired = function() {};
-
-      // Form submit validation
-      form.addEventListener('submit', function(e) {
-        let isValid = true;
-
-        // --- Full Name ---
-        const nameVal = nameInput ? nameInput.value.trim() : '';
-        if (nameVal === '') {
-          showError('full-name', 'Full Name is required.');
-          isValid = false;
-        } else if (nameVal.length < 2) {
-          showError('full-name', 'Full Name must be at least 2 characters.');
-          isValid = false;
-        } else if (!/^[A-Za-z\s\-']+$/.test(nameVal)) {
-          showError('full-name', 'Full Name can only contain letters, spaces, hyphens, and apostrophes. No numbers or special characters.');
-          isValid = false;
-        } else {
-          clearError('full-name');
-        }
-
-        // --- Phone Number ---
-        const phoneVal = phoneInput ? phoneInput.value.trim() : '';
-        if (phoneVal === '') {
-          showError('phone', 'Phone Number is required.');
-          isValid = false;
-        } else if (!/^\d{10}$/.test(phoneVal)) {
-          showError('phone', 'Phone Number must be exactly 10 digits. No letters or special characters.');
-          isValid = false;
-        } else {
-          clearError('phone');
-        }
-
-        // --- Email ---
-        const emailVal = emailInput ? emailInput.value.trim() : '';
-        const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-        if (emailVal === '') {
-          showError('email', 'Email Address is required.');
-          isValid = false;
-        } else if (!emailRegex.test(emailVal)) {
-          showError('email', 'Please enter a valid email address (e.g., jane@example.com).');
-          isValid = false;
-        } else {
-          clearError('email');
-        }
-
-        // --- ZIP Code ---
-        const zipVal = zipInput ? zipInput.value.trim() : '';
-        if (zipVal === '') {
-          showError('zip', 'ZIP Code is required.');
-          isValid = false;
-        } else if (!/^\d{5}$/.test(zipVal)) {
-          showError('zip', 'ZIP Code must be exactly 5 digits. No letters or special characters.');
-          isValid = false;
-        } else {
-          clearError('zip');
-        }
-
-        // --- reCAPTCHA ---
-        const recaptchaResponse = (typeof grecaptcha !== 'undefined') ? grecaptcha.getResponse() : '';
-        if (!recaptchaResponse) {
-          const errEl = document.getElementById('error-recaptcha');
-          if (errEl) errEl.classList.add('visible');
-          isValid = false;
-        } else {
-          const errEl = document.getElementById('error-recaptcha');
-          if (errEl) errEl.classList.remove('visible');
-        }
-
-        if (!isValid) {
-          e.preventDefault();
-          // Scroll to first error
-          const firstErr = form.querySelector('.field-error-msg.visible, .recaptcha-error-msg.visible');
-          if (firstErr) {
-            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Helper: show error
+        function showError(fieldId, message) {
+          const errEl = document.getElementById('error-' + fieldId);
+          const input = document.getElementById(fieldId);
+          if (errEl) {
+            errEl.querySelector('span').textContent = message;
+            errEl.classList.add('visible');
+          }
+          if (input) {
+            input.classList.add('input-error');
+          }
+          // Special handling for phone wrapper
+          if (fieldId === 'phone') {
+            const wrapper = document.getElementById('phone-wrapper');
+            if (wrapper) wrapper.classList.add('input-error');
           }
         }
-      });
 
-    })();
+        // Helper: clear error
+        function clearError(fieldId) {
+          const errEl = document.getElementById('error-' + fieldId);
+          const input = document.getElementById(fieldId);
+          if (errEl) {
+            errEl.classList.remove('visible');
+          }
+          if (input) {
+            input.classList.remove('input-error');
+          }
+          if (fieldId === 'phone') {
+            const wrapper = document.getElementById('phone-wrapper');
+            if (wrapper) wrapper.classList.remove('input-error');
+          }
+        }
+
+        // Real-time: strip non-digits from phone
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').slice(0, 10);
+            if (this.value.length > 0) clearError('phone');
+          });
+        }
+
+        // Real-time: strip non-digits from zip
+        const zipInput = document.getElementById('zip');
+        if (zipInput) {
+          zipInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').slice(0, 5);
+            if (this.value.length > 0) clearError('zip');
+          });
+        }
+
+        // Real-time: strip non-alpha from name (allow spaces, hyphens, apostrophes)
+        const nameInput = document.getElementById('full-name');
+        if (nameInput) {
+          nameInput.addEventListener('input', function() {
+            if (this.value.length > 0) clearError('full-name');
+          });
+        }
+
+        // Real-time: email
+        const emailInput = document.getElementById('email');
+        if (emailInput) {
+          emailInput.addEventListener('input', function() {
+            if (this.value.length > 0) clearError('email');
+          });
+        }
+
+        // reCAPTCHA callbacks
+        window.onRecaptchaSuccess = function() {
+          const errEl = document.getElementById('error-recaptcha');
+          if (errEl) errEl.classList.remove('visible');
+        };
+        window.onRecaptchaExpired = function() {};
+
+        // Form submit validation
+        form.addEventListener('submit', function(e) {
+          let isValid = true;
+
+          // --- Full Name ---
+          const nameVal = nameInput ? nameInput.value.trim() : '';
+          if (nameVal === '') {
+            showError('full-name', 'Full Name is required.');
+            isValid = false;
+          } else if (nameVal.length < 2) {
+            showError('full-name', 'Full Name must be at least 2 characters.');
+            isValid = false;
+          } else if (!/^[A-Za-z\s\-']+$/.test(nameVal)) {
+            showError('full-name', 'Full Name can only contain letters, spaces, hyphens, and apostrophes. No numbers or special characters.');
+            isValid = false;
+          } else {
+            clearError('full-name');
+          }
+
+          // --- Phone Number ---
+          const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+          if (phoneVal === '') {
+            showError('phone', 'Phone Number is required.');
+            isValid = false;
+          } else if (!/^\d{10}$/.test(phoneVal)) {
+            showError('phone', 'Phone Number must be exactly 10 digits. No letters or special characters.');
+            isValid = false;
+          } else {
+            clearError('phone');
+          }
+
+          // --- Email ---
+          const emailVal = emailInput ? emailInput.value.trim() : '';
+          const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+          if (emailVal === '') {
+            showError('email', 'Email Address is required.');
+            isValid = false;
+          } else if (!emailRegex.test(emailVal)) {
+            showError('email', 'Please enter a valid email address (e.g., jane@example.com).');
+            isValid = false;
+          } else {
+            clearError('email');
+          }
+
+          // --- ZIP Code ---
+          const zipVal = zipInput ? zipInput.value.trim() : '';
+          if (zipVal === '') {
+            showError('zip', 'ZIP Code is required.');
+            isValid = false;
+          } else if (!/^\d{5}$/.test(zipVal)) {
+            showError('zip', 'ZIP Code must be exactly 5 digits. No letters or special characters.');
+            isValid = false;
+          } else {
+            clearError('zip');
+          }
+
+          // --- reCAPTCHA ---
+          const recaptchaResponse = (typeof grecaptcha !== 'undefined') ? grecaptcha.getResponse() : '';
+          if (!recaptchaResponse) {
+            const errEl = document.getElementById('error-recaptcha');
+            if (errEl) errEl.classList.add('visible');
+            isValid = false;
+          } else {
+            const errEl = document.getElementById('error-recaptcha');
+            if (errEl) errEl.classList.remove('visible');
+          }
+
+          if (!isValid) {
+            e.preventDefault();
+            // Scroll to first error
+            const firstErr = form.querySelector('.field-error-msg.visible, .recaptcha-error-msg.visible');
+            if (firstErr) {
+              firstErr.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+            }
+          }
+        });
+
+      })();
     </script>
   </div>
 </section>
@@ -403,7 +457,10 @@ include __DIR__ . '/includes/cta-banner.php';
 
 <style>
   @media(max-width:680px) {
-    .form-grid-2 { grid-template-columns: 1fr !important; }
+    .form-grid-2 {
+      grid-template-columns: 1fr !important;
+    }
+
     .contact-grid,
     .contact-form,
     .contact-form form {
@@ -414,18 +471,18 @@ include __DIR__ . '/includes/cta-banner.php';
 </style>
 
 <?php if ($smtpDebug): ?>
-<script>
-  console.group('%c📧 SMTP Debug Log (Contact Form)', 'color: #7C3AED; font-weight: bold; font-size: 14px');
-  console.log('%cFull SMTP Transcript:', 'color: #059669; font-weight: bold');
-  console.log(<?= json_encode($smtpDebug) ?>);
-  <?php if ($error): ?>
-  console.log('%c❌ ERROR:', 'color: #DC2626; font-weight: bold', <?= json_encode($error) ?>);
-  <?php endif; ?>
-  <?php if ($success): ?>
-  console.log('%c✅ SUCCESS:', 'color: #059669; font-weight: bold', <?= json_encode($success) ?>);
-  <?php endif; ?>
-  console.groupEnd();
-</script>
+  <script>
+    console.group('%c📧 SMTP Debug Log (Contact Form)', 'color: #7C3AED; font-weight: bold; font-size: 14px');
+    console.log('%cFull SMTP Transcript:', 'color: #059669; font-weight: bold');
+    console.log(<?= json_encode($smtpDebug) ?>);
+    <?php if ($error): ?>
+      console.log('%c❌ ERROR:', 'color: #DC2626; font-weight: bold', <?= json_encode($error) ?>);
+    <?php endif; ?>
+    <?php if ($success): ?>
+      console.log('%c✅ SUCCESS:', 'color: #059669; font-weight: bold', <?= json_encode($success) ?>);
+    <?php endif; ?>
+    console.groupEnd();
+  </script>
 <?php endif; ?>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
