@@ -33,8 +33,8 @@ AddDefaultCharset UTF-8
     ExpiresByType application/json       "access plus 0 seconds"
 </IfModule>
 
-# ── Protect sensitive directories ───────────────────
-<FilesMatch "^(config|handlers|includes)">
+# ── Protect sensitive directories (NOT handlers — forms POST there) ──
+<FilesMatch "^(config|includes)">
     Order allow,deny
     Deny from all
 </FilesMatch>
@@ -57,7 +57,9 @@ AddDefaultCharset UTF-8
     RewriteRule ^index\.php$ / [R=301,L]
 
     # 3) Redirect any .php URL to the clean version (301 permanent)
+    #    EXCEPT handler files — POST requests must not be redirected
     RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+    RewriteCond %{REQUEST_URI} !^/handlers/ [NC]
     RewriteRule ^(.+)\.php$ /$1 [R=301,L]
 
     # 4) Internally rewrite clean URLs to .php files

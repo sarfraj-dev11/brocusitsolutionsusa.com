@@ -75,6 +75,7 @@ define('ANNOUNCE_LINK_HREF', 'home-security');
 define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
 
 // ── Email / mailer ───────────────────────────────────
+// NOTE: Hostinger enforces FROM must match SMTP_USERNAME
 define('MAIL_FROM',      'support@brocusitsolutionsusa.com');
 define('MAIL_FROM_NAME', SITE_SHORT);
 define('MAIL_TO',        'support@brocusitsolutionsusa.com');
