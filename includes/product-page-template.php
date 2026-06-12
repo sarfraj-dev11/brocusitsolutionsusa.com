@@ -513,6 +513,17 @@ include dirname(__DIR__) . '/includes/cta-banner.php';
           btnArrow.style.display = 'inline';
           btnLoad.style.display = 'none';
           btn.disabled = false;
+
+          // ── SMTP DEBUG: Log full transcript to browser console ──
+          if (data.smtp_debug) {
+            console.group('%c📧 SMTP Debug Log', 'color: #7C3AED; font-weight: bold; font-size: 14px');
+            console.log('%cFull SMTP Transcript:', 'color: #059669; font-weight: bold');
+            console.log(data.smtp_debug);
+            console.log('%cResult:', 'color: #DC2626; font-weight: bold', data.success ? '✅ SUCCESS' : '❌ FAILED');
+            console.log('%cMessage:', 'color: #2563EB; font-weight: bold', data.message);
+            console.groupEnd();
+          }
+
           if (data.success) {
             submitOk.textContent = data.message || 'Thank you! We will call you back shortly.';
             submitOk.style.display = 'block';
@@ -524,11 +535,12 @@ include dirname(__DIR__) . '/includes/cta-banner.php';
             showErr(submitErr, data.message || 'Something went wrong. Please try again.');
           }
         })
-        .catch(function() {
+        .catch(function(err) {
           btnText.style.display = 'inline';
           btnArrow.style.display = 'inline';
           btnLoad.style.display = 'none';
           btn.disabled = false;
+          console.error('📧 SMTP Form Error:', err);
           showErr(submitErr, 'Network error. Please try again or call us directly.');
         });
     });

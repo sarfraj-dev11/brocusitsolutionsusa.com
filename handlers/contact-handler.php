@@ -130,14 +130,19 @@ if ($errors) {
 // Clear stored form values on success
 unset($_SESSION['form_values']);
 
+// ── Global debug buffer — captures SMTP transcript ──
+$smtpDebug = '';
+
 // ── Send email via PHPMailer SMTP (Hostinger) ──────────────
 $mail = new PHPMailer(true);
 
 try {
-    // SMTP configuration
-    $mail->SMTPDebug = 3; // Enable verbose debug output
-    $mail->Debugoutput = function($str, $level) {
-        file_put_contents(__DIR__ . '/smtp_error_log.txt', gmdate('Y-m-d H:i:s'). " [$level] $str\n", FILE_APPEND);
+    // ── SMTP Debug: capture EVERY line into $smtpDebug ──
+    $mail->SMTPDebug = 3;
+    $mail->Debugoutput = function($str, $level) use (&$smtpDebug) {
+        $line = gmdate('Y-m-d H:i:s') . " [{$level}] {$str}";
+        $smtpDebug .= $line . "\n";
+        file_put_contents(__DIR__ . '/smtp_debug.txt', $line . "\n", FILE_APPEND);
     };
     $mail->isSMTP();
     $mail->Host       = SMTP_HOST;
@@ -180,17 +185,15 @@ try {
     unset($_SESSION['csrf_token']);
 
     $_SESSION['form_success'] = 'Thanks, ' . htmlspecialchars($name) . '! We will call you back within one business day.';
+    $_SESSION['smtp_debug'] = $smtpDebug;
 
 } catch (Exception $e) {
     // Regenerate CSRF token after submission
     unset($_SESSION['csrf_token']);
 
-    // Log the error for debugging (only in development)
-    if (APP_ENV === 'development') {
-        $_SESSION['form_error'] = 'Mailer Error: ' . htmlspecialchars($mail->ErrorInfo);
-    } else {
-        $_SESSION['form_error'] = 'Sorry, we could not send your message right now. Please call us at ' . PHONE_DISPLAY . '.';
-    }
+    // Always show the real error so we can debug
+    $_SESSION['form_error'] = 'Mailer Error: ' . htmlspecialchars($mail->ErrorInfo) . ' | Exception: ' . htmlspecialchars($e->getMessage());
+    $_SESSION['smtp_debug'] = $smtpDebug;
 }
 
 header('Location: ' . BASE_PATH . '/contact.php#contact-form');

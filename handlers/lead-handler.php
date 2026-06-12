@@ -12,15 +12,18 @@ use PHPMailer\PHPMailer\Exception;
 
 header('Content-Type: application/json');
 
+// ── Global debug buffer — captures SMTP transcript ──
+$smtpDebug = '';
+
 // Only accept POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
+    echo json_encode(['success' => false, 'message' => 'Invalid request method.', 'smtp_debug' => '']);
     exit;
 }
 
 // CSRF check
 if (!verifyCsrf()) {
-    echo json_encode(['success' => false, 'message' => 'Security token mismatch. Please refresh the page and try again.']);
+    echo json_encode(['success' => false, 'message' => 'Security token mismatch. Please refresh the page and try again.', 'smtp_debug' => '']);
     exit;
 }
 
@@ -64,7 +67,7 @@ if (strlen($email) === 0) {
 }
 
 if ($errors) {
-    echo json_encode(['success' => false, 'message' => implode(' ', $errors)]);
+    echo json_encode(['success' => false, 'message' => implode(' ', $errors), 'smtp_debug' => '']);
     exit;
 }
 
@@ -72,11 +75,16 @@ if ($errors) {
 $mail = new PHPMailer(true);
 
 try {
-    // SMTP configuration
-    $mail->SMTPDebug = 3; // Enable verbose debug output
-    $mail->Debugoutput = function($str, $level) {
-        file_put_contents(__DIR__ . '/smtp_error_log.txt', gmdate('Y-m-d H:i:s'). " [$level] $str\n", FILE_APPEND);
+    // ── SMTP Debug: capture EVERY line into $smtpDebug ──
+    $mail->SMTPDebug = 3;
+    $mail->Debugoutput = function($str, $level) use (&$smtpDebug) {
+        $line = gmdate('Y-m-d H:i:s') . " [{$level}] {$str}";
+        $smtpDebug .= $line . "\n";
+        // Also write to file for backup
+        file_put_contents(__DIR__ . '/smtp_debug.txt', $line . "\n", FILE_APPEND);
     };
+
+    // SMTP configuration
     $mail->isSMTP();
     $mail->Host       = SMTP_HOST;
     $mail->SMTPAuth   = true;
@@ -119,18 +127,21 @@ try {
     unset($_SESSION['csrf_token']);
 
     echo json_encode([
-        'success' => true,
-        'message' => 'Thanks, ' . htmlspecialchars($name) . '! We will call you back within one business day.'
+        'success'    => true,
+        'message'    => 'Thanks, ' . htmlspecialchars($name) . '! We will call you back within one business day.',
+        'smtp_debug' => $smtpDebug
     ]);
 
 } catch (Exception $e) {
     // Regenerate CSRF token after submission
     unset($_SESSION['csrf_token']);
 
-    if (APP_ENV === 'development') {
-        echo json_encode(['success' => false, 'message' => 'Mailer Error: ' . $mail->ErrorInfo]);
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Sorry, we could not send your message right now. Mailer Error: ' . $mail->ErrorInfo]);
-    }
+    $errorMsg = 'Mailer Error: ' . $mail->ErrorInfo . ' | Exception: ' . $e->getMessage();
+
+    echo json_encode([
+        'success'    => false,
+        'message'    => $errorMsg,
+        'smtp_debug' => $smtpDebug
+    ]);
 }
 exit;

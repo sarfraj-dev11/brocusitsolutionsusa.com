@@ -5,7 +5,8 @@ $page_desc  = 'Get in touch with Brocus IT Solutions for free, independent, no-p
 $success    = $_SESSION['form_success'] ?? '';
 $error      = $_SESSION['form_error']   ?? '';
 $vals       = $_SESSION['form_values']  ?? [];
-unset($_SESSION['form_success'], $_SESSION['form_error'], $_SESSION['form_values']);
+$smtpDebug  = $_SESSION['smtp_debug']   ?? '';
+unset($_SESSION['form_success'], $_SESSION['form_error'], $_SESSION['form_values'], $_SESSION['smtp_debug']);
 require_once __DIR__ . '/includes/head.php';
 ?>
 <?php include __DIR__ . '/includes/header.php'; ?>
@@ -411,4 +412,20 @@ include __DIR__ . '/includes/cta-banner.php';
     }
   }
 </style>
+
+<?php if ($smtpDebug): ?>
+<script>
+  console.group('%c📧 SMTP Debug Log (Contact Form)', 'color: #7C3AED; font-weight: bold; font-size: 14px');
+  console.log('%cFull SMTP Transcript:', 'color: #059669; font-weight: bold');
+  console.log(<?= json_encode($smtpDebug) ?>);
+  <?php if ($error): ?>
+  console.log('%c❌ ERROR:', 'color: #DC2626; font-weight: bold', <?= json_encode($error) ?>);
+  <?php endif; ?>
+  <?php if ($success): ?>
+  console.log('%c✅ SUCCESS:', 'color: #059669; font-weight: bold', <?= json_encode($success) ?>);
+  <?php endif; ?>
+  console.groupEnd();
+</script>
+<?php endif; ?>
+
 <?php include __DIR__ . '/includes/footer.php'; ?>
