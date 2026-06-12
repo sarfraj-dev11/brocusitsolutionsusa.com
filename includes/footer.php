@@ -61,7 +61,7 @@ $_legal = unserialize(LEGAL_LINKS);
     <p style="font-size:.82rem;color:rgba(255,255,255,.65);margin:0 auto 1.25rem;font-family:'Manrope',sans-serif;">&copy; 2026 Brocus IT Solutions LLC. All rights reserved.</p>
     <div style="display:inline-flex;gap:2rem;">
       <a href="<?= url('privacy-policy.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</a>
-      <a href="<?= url('terms-of-service.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms of Service</a>
+      <a href="<?= url('terms-and-conditions.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms of Service</a>
     </div>
   </div>
 </footer>

@@ -143,6 +143,15 @@ try {
     $mail->SMTPSecure = SMTP_SECURE;
     $mail->Port       = SMTP_PORT;
 
+    // Bypass SSL verification for localhost/shared hosting issues
+    $mail->SMTPOptions = [
+        'ssl' => [
+            'verify_peer'       => false,
+            'verify_peer_name'  => false,
+            'allow_self_signed' => true,
+        ],
+    ];
+
     // Sender & recipient
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
     $mail->addAddress(MAIL_TO, SITE_SHORT);
