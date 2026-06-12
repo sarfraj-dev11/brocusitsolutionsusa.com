@@ -131,7 +131,7 @@ $_cur   = currentPage();
   <div class="sh-mobile-menu" id="sh-mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <!-- Drawer Header -->
     <div class="sh-drawer-header">
-      <img src="<?= asset('images/transparent-logo.png') ?>" alt="<?= SITE_NAME ?>" height="44" width="130">
+      <img src="<?= asset('/brocusitsolutionsusa/assets/images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?>" height="44" width="130">
       <button class="sh-drawer-close" id="sh-drawer-close" aria-label="Close menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
           <line x1="18" y1="6" x2="6" y2="18" />
@@ -517,6 +517,7 @@ $_cur   = currentPage();
     text-decoration: none;
     transition: all .2s cubic-bezier(.4, 0, .2, 1);
   }
+
   .sh-mega-simple-link:hover {
     color: #0F172A;
     background: #F1F5F9;
@@ -527,7 +528,7 @@ $_cur   = currentPage();
     font-weight: 600;
     background: #F1F5F9;
   }
-  
+
   .sh-mega-link {
     display: flex;
     align-items: center;
@@ -1170,6 +1171,12 @@ $_cur   = currentPage();
       var trigger = wrap.querySelector('.sh-has-dropdown');
       if (!trigger) return;
       trigger.addEventListener('click', function(e) {
+        // If the device supports hover (desktop), let the click navigate to the URL
+        if (window.matchMedia('(hover: hover)').matches) {
+          return;
+        }
+        // Otherwise (touch devices), toggle the dropdown and prevent navigation
+        e.preventDefault();
         var isOpen = wrap.classList.contains('open');
         closeAllDropdowns(wrap);
         if (isOpen) {

@@ -14,28 +14,47 @@ $_legal = unserialize(LEGAL_LINKS);
   <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;">
 
     <!-- Brand col -->
-    <div class="footer-brand" style="display:flex;flex-direction:column;">
-      <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-block;text-decoration:none;transition:opacity .2s ease;" onmouseover="this.style.opacity='.85';" onmouseout="this.style.opacity='1';">
+    <div class="footer-brand" style="display:flex;flex-direction:column;align-items:flex-start;">
+      <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-flex;align-items:center;text-decoration:none;transition:opacity .2s ease;" onmouseover="this.style.opacity='.85';" onmouseout="this.style.opacity='1';">
         <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain;">
       </a>
-      <div style="display:flex;flex-direction:column;gap:.85rem;">
-        <a href="tel:<?= PHONE_TEL ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:inline-flex;align-items:center;gap:.75rem;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
+      <div style="display:flex;flex-direction:column;gap:.85rem;align-items:flex-start;">
+        <div style="font-size:.85rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.75rem;min-height:32px;line-height:1.2;">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-map-marker-alt" style="font-size:.75rem"></i></div>
+          <span><?= ADDR_FULL ?></span>
+        </div>
+        <a href="tel:<?= PHONE_TEL ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:flex;align-items:center;gap:.75rem;min-height:32px;line-height:1.2;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
           <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-phone" style="font-size:.75rem"></i></div>
-          <?= PHONE_DISPLAY ?>
+          <span><?= PHONE_DISPLAY ?></span>
         </a>
-        <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:inline-flex;align-items:center;gap:.75rem;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
+        <a href="mailto:<?= EMAIL_INFO ?>" style="font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s ease;display:flex;align-items:center;gap:.75rem;min-height:32px;line-height:1.2;" onmouseover="this.style.color='#fff';" onmouseout="this.style.color='rgba(255,255,255,.55)';">
           <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-envelope" style="font-size:.75rem"></i></div>
-          <?= EMAIL_INFO ?>
+          <span><?= EMAIL_INFO ?></span>
         </a>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.75rem;min-height:32px;line-height:1.2;">
+          <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.2);display:flex;align-items:center;justify-content:center;color:#7C3AED;flex-shrink:0;"><i class="fas fa-fingerprint" style="font-size:.75rem"></i></div>
+          <span>D-U-N-S #: 14-611-0107</span>
+        </div>
       </div>
     </div>
 
+<?php
+// Get services dynamically from NAV_ITEMS
+$_nav_items = unserialize(NAV_ITEMS);
+$_services = [];
+foreach ($_nav_items as $_item) {
+    if ($_item['slug'] === 'home-security' && isset($_item['dropdown']['services'])) {
+        $_services = $_item['dropdown']['services'];
+        break;
+    }
+}
+?>
     <!-- Our Services col -->
     <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Our Services</span>
-      <a href="<?= url('home-security/professional-monitoring/') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">24/7 Professional Monitoring</a>
-      <a href="<?= url('home-security.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Smart Home Security</a>
-      <a href="<?= url('home-security.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Fire &amp; CO Detection</a>
+      <?php foreach ($_services as $svc): ?>
+        <a href="<?= url($svc['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($svc['label']) ?></a>
+      <?php endforeach; ?>
     </div>
 
     <!-- Company col -->

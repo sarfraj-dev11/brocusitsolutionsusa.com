@@ -92,4 +92,4 @@ define('SMTP_USERNAME', 'support@brocusitsolutionsusa.com');
 define('SMTP_PASSWORD', 'BrocusS#2k26TsusaIT');
 
 // ── Copyright ────────────────────────────────────────
-define('COPYRIGHT_YEAR', '2025');
+define('COPYRIGHT_YEAR', '2026');

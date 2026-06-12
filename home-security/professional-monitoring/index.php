@@ -1,5 +1,9 @@
-<?php
+﻿<?php
 require_once dirname(__DIR__, 2) . '/includes/bootstrap.php';
+$svc_success = $_SESSION['svc_form_success'] ?? '';
+$svc_error   = $_SESSION['svc_form_error']   ?? '';
+$svc_vals    = $_SESSION['svc_form_values']  ?? [];
+unset($_SESSION['svc_form_success'], $_SESSION['svc_form_error'], $_SESSION['svc_form_values'], $_SESSION['svc_smtp_debug']);
 $page_slug  = 'professional-monitoring';
 $page_title = '24/7 Home Security Monitoring | Brocus IT Solutions';
 $page_desc  = 'Independent advice on 24/7 professional home security monitoring, plus a vetted provider to set it up. Trained staff respond to alarms day and night. Free, no-pressure consultation. Call today.';
@@ -405,44 +409,60 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
 
       <!-- ── RIGHT: Lead Form ── -->
       <div class="hero-right">
-        <div class="hero-form-card">
+        <div class="hero-form-card" id="quote-form">
 
           <div class="form-badge">
             <i class="fas fa-shield-check" style="font-size:.65rem;"></i> Free Quote
           </div>
 
           <h3>Get my free quote</h3>
-          <p class="form-sub">Enter your ZIP and phone, and we will check the best options at your address.</p>
+          <p class="form-sub">Enter your details — we'll check the best options at your address and call you back.</p>
 
-          <form action="<?= url('contact') ?>" method="get" style="display:flex;flex-direction:column;gap:1.1rem;">
+          <?php if (!empty($svc_success)): ?>
+            <div style="padding:.75rem 1rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:10px;color:#6EE7B7;font-size:.85rem;margin-bottom:1rem;text-align:center;"><?= htmlspecialchars($svc_success) ?></div>
+          <?php endif; ?>
+          <?php if (!empty($svc_error)): ?>
+            <div style="padding:.75rem 1rem;background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.3);border-radius:10px;color:#F87171;font-size:.85rem;margin-bottom:1rem;"><?= $svc_error ?></div>
+          <?php endif; ?>
+          <form id="svcLeadForm" method="POST" action="<?= url('handlers/service-lead-handler.php') ?>" novalidate style="display:flex;flex-direction:column;gap:1.1rem;">
+            <input type="hidden" name="csrf_token" value="<?= csrfToken() ?>">
+            <input type="hidden" name="return_url" value="/brocusitsolutionsusa/home-security/professional-monitoring/">
+            <input type="hidden" name="service_page" value="24/7 Professional Monitoring">
 
-            <!-- Full Name (Optional) -->
             <div>
-              <label class="hf-label">Full Name</label>
-              <input type="text" name="name" placeholder="Your name" class="hf-input">
+              <label class="hf-label">Full Name <span style="color:#A78BFA;">*</span></label>
+              <input type="text" id="svc-name" name="full_name" placeholder="Your full name" class="hf-input" value="<?= htmlspecialchars($svc_vals['name'] ?? '') ?>">
+              <div class="svc-field-error" id="svc-name-error"></div>
             </div>
 
-            <!-- Phone + ZIP side-by-side -->
             <div class="hf-row">
               <div>
-                <label class="hf-label">Phone <span>*</span></label>
-                <input type="tel" name="phone" placeholder="(555) 000-0000" required class="hf-input">
+                <label class="hf-label">Phone <span style="color:#A78BFA;">*</span></label>
+                <input type="tel" id="svc-phone" name="phone" placeholder="(555) 000-0000" maxlength="10" class="hf-input" value="<?= htmlspecialchars($svc_vals['phone'] ?? '') ?>">
+                <div class="svc-field-error" id="svc-phone-error"></div>
               </div>
               <div>
-                <label class="hf-label">ZIP Code <span>*</span></label>
-                <input type="text" name="zip" placeholder="Enter ZIP" required class="hf-input">
+                <label class="hf-label">ZIP Code <span style="color:#A78BFA;">*</span></label>
+                <input type="text" id="svc-zip" name="zip" placeholder="5 digits" maxlength="5" class="hf-input" value="<?= htmlspecialchars($svc_vals['zip'] ?? '') ?>">
+                <div class="svc-field-error" id="svc-zip-error"></div>
               </div>
             </div>
 
-            <!-- Submit -->
-            <button type="submit" class="hf-submit">
+            <div>
+              <label class="hf-label">Email Address <span style="color:#A78BFA;">*</span></label>
+              <input type="email" id="svc-email" name="email" placeholder="you@example.com" class="hf-input" value="<?= htmlspecialchars($svc_vals['email'] ?? '') ?>">
+              <div class="svc-field-error" id="svc-email-error"></div>
+            </div>
+
+            <div class="svc-field-error" id="svc-submit-error" style="text-align:center;"></div>
+            <div id="svc-submit-success" style="display:none;padding:.75rem 1rem;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);border-radius:10px;color:#6EE7B7;font-size:.85rem;text-align:center;"></div>
+
+            <button type="submit" id="svcLeadBtn" class="hf-submit">
               <span class="btn-icon"><i class="fas fa-paper-plane" style="font-size:.75rem;"></i></span>
               <span>Get my free quote</span>
             </button>
-
           </form>
 
-          <!-- Trust line -->
           <p style="margin:1.1rem 0 0;text-align:center;font-size:.73rem;color:rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;gap:.4rem;">
             <i class="fas fa-lock" style="font-size:.65rem;"></i> Secure &amp; confidential &mdash; no obligation.
           </p>
@@ -1193,5 +1213,54 @@ require_once dirname(__DIR__, 2) . '/includes/head.php';
     </div>
   </div>
 </section>
+
+
+
+<style>
+  .svc-field-error { display:none; font-size:.78rem; color:#F87171; margin-top:.3rem; }
+</style>
+<script>
+(function () {
+  var form    = document.getElementById('svcLeadForm');
+  if (!form) return;
+  var phoneIn = document.getElementById('svc-phone');
+  var zipIn   = document.getElementById('svc-zip');
+  if (phoneIn) phoneIn.addEventListener('input', function () { this.value = this.value.replace(/\D/g,'').slice(0,10); });
+  if (zipIn)   zipIn.addEventListener('input',   function () { this.value = this.value.replace(/\D/g,'').slice(0,5); });
+
+  function showErr(el, msg) { if (el) { el.textContent = msg; el.style.display = 'block'; } }
+  function clrErr(el) { if (el) { el.textContent = ''; el.style.display = 'none'; } }
+
+  form.addEventListener('submit', function (ev) {
+    var ok = true;
+    var nameIn  = document.getElementById('svc-name');
+    var emailIn = document.getElementById('svc-email');
+    var nameErr  = document.getElementById('svc-name-error');
+    var phoneErr = document.getElementById('svc-phone-error');
+    var zipErr   = document.getElementById('svc-zip-error');
+    var emailErr = document.getElementById('svc-email-error');
+    [nameErr, phoneErr, zipErr, emailErr].forEach(clrErr);
+
+    var n = nameIn ? nameIn.value.trim() : '';
+    if (!n) { showErr(nameErr,'Full Name is required.'); ok=false; }
+    else if (n.length < 2) { showErr(nameErr,'At least 2 characters.'); ok=false; }
+    else if (!/^[A-Za-z\s\-']+$/.test(n)) { showErr(nameErr,'Letters and spaces only.'); ok=false; }
+
+    var p = phoneIn ? phoneIn.value.trim() : '';
+    if (!p) { showErr(phoneErr,'Phone Number is required.'); ok=false; }
+    else if (!/^\d{10}$/.test(p)) { showErr(phoneErr,'Must be exactly 10 digits.'); ok=false; }
+
+    var z = zipIn ? zipIn.value.trim() : '';
+    if (!z) { showErr(zipErr,'ZIP Code is required.'); ok=false; }
+    else if (!/^\d{5}$/.test(z)) { showErr(zipErr,'Must be exactly 5 digits.'); ok=false; }
+
+    var e = emailIn ? emailIn.value.trim() : '';
+    if (!e) { showErr(emailErr,'Email Address is required.'); ok=false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) { showErr(emailErr,'Enter a valid email.'); ok=false; }
+
+    if (!ok) ev.preventDefault();
+  });
+})();
+</script>
 
 <?php include dirname(__DIR__, 2) . '/includes/footer.php'; ?>

@@ -248,3 +248,403 @@
 2026-06-12 21:52:59 [2] SERVER -> CLIENT: 221 2.0.0 Bye
 
 2026-06-12 21:52:59 [3] Connection: closed
+2026-06-12 23:20:52 [3] Connection: opening to ssl://smtp.hostinger.com:465, timeout=300, options=array (
+  'ssl' => 
+  array (
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ),
+)
+2026-06-12 23:20:52 [3] Connection: opened
+2026-06-12 23:20:52 [2] SERVER -> CLIENT: 220 ESMTP smtp.hostinger.com
+
+2026-06-12 23:20:52 [1] CLIENT -> SERVER: EHLO brocusitsolutionsusa.com
+
+2026-06-12 23:20:52 [2] SERVER -> CLIENT: 250-smtp.hostinger.com
+250-PIPELINING
+250-SIZE 48811212
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 CHUNKING
+
+2026-06-12 23:20:52 [1] CLIENT -> SERVER: AUTH LOGIN
+
+2026-06-12 23:20:52 [2] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-06-12 23:20:52 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:20:53 [2] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:20:53 [2] SERVER -> CLIENT: 235 2.7.0 Authentication successful
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: MAIL FROM:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:20:53 [2] SERVER -> CLIENT: 250 2.1.0 Ok
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: RCPT TO:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:20:53 [2] SERVER -> CLIENT: 250 2.1.5 Ok
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: DATA
+
+2026-06-12 23:20:53 [2] SERVER -> CLIENT: 354 End data with <CR><LF>.<CR><LF>
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Date: Sat, 13 Jun 2026 01:20:52 +0200
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: To: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: From: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Reply-To: Kathleen Daniel <kyko@mailinator.com>
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Subject: New Lead from Service Page: Kathleen Daniel
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Message-ID: <05IhETDarRbxdc5KUnIN1CHQCxYvlmz8Pvl6gSNFyg@brocusitsolutionsusa.com>
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: X-Mailer: PHPMailer 7.1.1 (https://github.com/PHPMailer/PHPMailer)
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: ── NEW SERVICE PAGE LEAD ──
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Service Page: 24/7 Professional Monitoring
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Name:  Kathleen Daniel
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Phone: +1 1304818180
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Email: kyko@mailinator.com
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: ZIP:   88675
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: ---
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: Sent from brocusitsolutionsusa.com (Service Page Lead Form)
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:20:53 [1] CLIENT -> SERVER: .
+
+2026-06-12 23:20:54 [2] SERVER -> CLIENT: 250 2.0.0 Ok: queued as 4gcb6d1JX2z2xWT
+
+2026-06-12 23:20:54 [1] CLIENT -> SERVER: QUIT
+
+2026-06-12 23:20:54 [2] SERVER -> CLIENT: 221 2.0.0 Bye
+
+2026-06-12 23:20:54 [3] Connection: closed
+2026-06-12 23:22:32 [3] Connection: opening to ssl://smtp.hostinger.com:465, timeout=300, options=array (
+  'ssl' => 
+  array (
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ),
+)
+2026-06-12 23:22:32 [3] Connection: opened
+2026-06-12 23:22:32 [2] SERVER -> CLIENT: 220 ESMTP smtp.hostinger.com
+
+2026-06-12 23:22:32 [1] CLIENT -> SERVER: EHLO brocusitsolutionsusa.com
+
+2026-06-12 23:22:32 [2] SERVER -> CLIENT: 250-smtp.hostinger.com
+250-PIPELINING
+250-SIZE 48811212
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 CHUNKING
+
+2026-06-12 23:22:32 [1] CLIENT -> SERVER: AUTH LOGIN
+
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 235 2.7.0 Authentication successful
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: MAIL FROM:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 250 2.1.0 Ok
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: RCPT TO:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 250 2.1.5 Ok
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: DATA
+
+2026-06-12 23:22:33 [2] SERVER -> CLIENT: 354 End data with <CR><LF>.<CR><LF>
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Date: Sat, 13 Jun 2026 01:22:32 +0200
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: To: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: From: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Reply-To: Keith Hardin <soguzap@mailinator.com>
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Subject: New Lead from Service Page: Keith Hardin
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Message-ID: <oLPfTNeG2TusXngU3DeAxcsDUL35IHiVE9elDwe3tiU@brocusitsolutionsusa.com>
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: X-Mailer: PHPMailer 7.1.1 (https://github.com/PHPMailer/PHPMailer)
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: ── NEW SERVICE PAGE LEAD ──
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Service Page: Professional Installation Service
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Name:  Keith Hardin
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Phone: +1 1261801188
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Email: soguzap@mailinator.com
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: ZIP:   87171
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: ---
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: Sent from brocusitsolutionsusa.com (Service Page Lead Form)
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:22:33 [1] CLIENT -> SERVER: .
+
+2026-06-12 23:22:34 [2] SERVER -> CLIENT: 250 2.0.0 Ok: queued as 4gcb8Y2m2Sz2xWC
+
+2026-06-12 23:22:34 [1] CLIENT -> SERVER: QUIT
+
+2026-06-12 23:22:34 [2] SERVER -> CLIENT: 221 2.0.0 Bye
+
+2026-06-12 23:22:34 [3] Connection: closed
+2026-06-12 23:31:17 [3] Connection: opening to ssl://smtp.hostinger.com:465, timeout=300, options=array (
+  'ssl' => 
+  array (
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ),
+)
+2026-06-12 23:31:17 [3] Connection: opened
+2026-06-12 23:31:17 [2] SERVER -> CLIENT: 220 ESMTP smtp.hostinger.com
+
+2026-06-12 23:31:17 [1] CLIENT -> SERVER: EHLO brocusitsolutionsusa.com
+
+2026-06-12 23:31:17 [2] SERVER -> CLIENT: 250-smtp.hostinger.com
+250-PIPELINING
+250-SIZE 48811212
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 CHUNKING
+
+2026-06-12 23:31:17 [1] CLIENT -> SERVER: AUTH LOGIN
+
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 235 2.7.0 Authentication successful
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: MAIL FROM:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 250 2.1.0 Ok
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: RCPT TO:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 250 2.1.5 Ok
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: DATA
+
+2026-06-12 23:31:18 [2] SERVER -> CLIENT: 354 End data with <CR><LF>.<CR><LF>
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Date: Sat, 13 Jun 2026 01:31:17 +0200
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: To: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: From: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Reply-To: Mark Frost <kojafij@mailinator.com>
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Subject: New Lead from Service Page: Mark Frost
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Message-ID: <RKeuxV46m4kGDLOhq7fXDVhLVcmzoJP9r9ZrrTDFyk@brocusitsolutionsusa.com>
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: X-Mailer: PHPMailer 7.1.1 (https://github.com/PHPMailer/PHPMailer)
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: ── NEW SERVICE PAGE LEAD ──
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Service Page: Security App Control Service
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Name:  Mark Frost
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Phone: +1 1842385957
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Email: kojafij@mailinator.com
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: ZIP:   36706
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: ---
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: Sent from brocusitsolutionsusa.com (Service Page Lead Form)
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:31:18 [1] CLIENT -> SERVER: .
+
+2026-06-12 23:31:19 [2] SERVER -> CLIENT: 250 2.0.0 Ok: queued as 4gcbLf2s4Dz3ywc
+
+2026-06-12 23:31:19 [1] CLIENT -> SERVER: QUIT
+
+2026-06-12 23:31:19 [2] SERVER -> CLIENT: 221 2.0.0 Bye
+
+2026-06-12 23:31:19 [3] Connection: closed
+2026-06-12 23:44:09 [3] Connection: opening to ssl://smtp.hostinger.com:465, timeout=300, options=array (
+  'ssl' => 
+  array (
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true,
+  ),
+)
+2026-06-12 23:44:09 [3] Connection: opened
+2026-06-12 23:44:09 [2] SERVER -> CLIENT: 220 ESMTP smtp.hostinger.com
+
+2026-06-12 23:44:09 [1] CLIENT -> SERVER: EHLO brocusitsolutionsusa.com
+
+2026-06-12 23:44:09 [2] SERVER -> CLIENT: 250-smtp.hostinger.com
+250-PIPELINING
+250-SIZE 48811212
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 CHUNKING
+
+2026-06-12 23:44:09 [1] CLIENT -> SERVER: AUTH LOGIN
+
+2026-06-12 23:44:10 [2] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+2026-06-12 23:44:10 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:44:11 [2] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+2026-06-12 23:44:11 [1] CLIENT -> SERVER: [credentials hidden]
+2026-06-12 23:44:11 [2] SERVER -> CLIENT: 235 2.7.0 Authentication successful
+
+2026-06-12 23:44:11 [1] CLIENT -> SERVER: MAIL FROM:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:44:11 [2] SERVER -> CLIENT: 250 2.1.0 Ok
+
+2026-06-12 23:44:11 [1] CLIENT -> SERVER: RCPT TO:<support@brocusitsolutionsusa.com>
+
+2026-06-12 23:44:11 [2] SERVER -> CLIENT: 250 2.1.5 Ok
+
+2026-06-12 23:44:11 [1] CLIENT -> SERVER: DATA
+
+2026-06-12 23:44:12 [2] SERVER -> CLIENT: 354 End data with <CR><LF>.<CR><LF>
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Date: Sat, 13 Jun 2026 01:44:09 +0200
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: To: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: From: Brocus IT Solutions <support@brocusitsolutionsusa.com>
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Reply-To: Erica Ayers <belos@mailinator.com>
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Subject: New Lead from Service Page: Erica Ayers
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Message-ID: <1gncazfuvXDaOcdhwfYYGgomdUEsT8szhxSUUcM@brocusitsolutionsusa.com>
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: X-Mailer: PHPMailer 7.1.1 (https://github.com/PHPMailer/PHPMailer)
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: MIME-Version: 1.0
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: ── NEW SERVICE PAGE LEAD ──
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Service Page: 24/7 Professional Monitoring
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Name:  Erica Ayers
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Phone: +1 1284694961
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Email: belos@mailinator.com
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: ZIP:   72892
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: ---
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: Sent from brocusitsolutionsusa.com (Service Page Lead Form)
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: 
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: .
+
+2026-06-12 23:44:12 [2] SERVER -> CLIENT: 250 2.0.0 Ok: queued as 4gcbdW3VqWz2xWC
+
+2026-06-12 23:44:12 [1] CLIENT -> SERVER: QUIT
+
+2026-06-12 23:44:12 [2] SERVER -> CLIENT: 221 2.0.0 Bye
+
+2026-06-12 23:44:12 [3] Connection: closed
