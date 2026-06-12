@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
+define('BASE_PATH', ''); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -76,7 +76,7 @@ define('ANNOUNCE_LINK_TEXT', 'Learn more');
 define('ANNOUNCE_LINK_HREF', 'home-security');
 
 // ── Analytics (leave empty until live) ───────────────
-define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
+define('GA_ID', 'G-K1V1VLRS3C');   // e.g. 'G-XXXXXXXXXX'
 
 // ── Email / mailer ───────────────────────────────────
 // NOTE: Hostinger enforces FROM must match SMTP_USERNAME
