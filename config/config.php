@@ -62,9 +62,16 @@ define('ANNOUNCE_LINK_HREF', 'home-security.php');
 define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
 
 // ── Email / mailer ───────────────────────────────────
-define('MAIL_FROM',      EMAIL_INFO);
+define('MAIL_FROM',      'support@brocusitsolutionsusa.com');
 define('MAIL_FROM_NAME', SITE_SHORT);
-define('MAIL_TO',        EMAIL_INFO);   // where form submissions go
+define('MAIL_TO',        'support@brocusitsolutionsusa.com');
+
+// ── SMTP (Hostinger Business Mail) ──────────────────
+define('SMTP_HOST',     'smtp.hostinger.com');
+define('SMTP_PORT',     465);
+define('SMTP_SECURE',   'ssl');              // 'ssl' for port 465
+define('SMTP_USERNAME', 'support@brocusitsolutionsusa.com');
+define('SMTP_PASSWORD', 'BrocusS#2k26TsusaIT');
 
 // ── Copyright ────────────────────────────────────────
 define('COPYRIGHT_YEAR', '2025');

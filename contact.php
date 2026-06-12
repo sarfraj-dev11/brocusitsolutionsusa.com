@@ -67,40 +67,151 @@ require_once __DIR__ . '/includes/head.php';
     <!-- Right: Form -->
     <style>
       #contact-form .form-control::placeholder { color: #374151 !important; opacity: 1; }
+      .field-error-msg {
+        display: none;
+        font-size: .78rem;
+        color: #DC2626;
+        margin-top: .35rem;
+        line-height: 1.4;
+        align-items: center;
+        gap: .35rem;
+      }
+      .field-error-msg.visible { display: flex; }
+      .form-control.input-error {
+        border-color: #DC2626 !important;
+        background: #FEF2F2 !important;
+        box-shadow: 0 0 0 3px rgba(220,38,38,.1);
+      }
+      .phone-input-wrapper {
+        display: flex;
+        align-items: center;
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: border-color .2s, box-shadow .2s;
+      }
+      .phone-input-wrapper:focus-within {
+        border-color: #7C3AED;
+        box-shadow: 0 0 0 3px rgba(124,58,237,.1);
+      }
+      .phone-input-wrapper.input-error {
+        border-color: #DC2626 !important;
+        background: #FEF2F2 !important;
+        box-shadow: 0 0 0 3px rgba(220,38,38,.1);
+      }
+      .phone-prefix {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+        padding: 0 .75rem;
+        font-size: .875rem;
+        font-weight: 600;
+        color: #374151;
+        white-space: nowrap;
+        background: rgba(0,0,0,.02);
+        border-right: 1px solid #E2E8F0;
+        height: 100%;
+        user-select: none;
+      }
+      .phone-prefix .usa-flag {
+        width: 22px;
+        height: 15px;
+        border-radius: 2px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .phone-input-wrapper .form-control {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        flex: 1;
+        min-width: 0;
+      }
+      .phone-input-wrapper .form-control:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+      .recaptcha-error-msg {
+        display: none;
+        font-size: .78rem;
+        color: #DC2626;
+        margin-top: .35rem;
+        line-height: 1.4;
+        align-items: center;
+        gap: .35rem;
+      }
+      .recaptcha-error-msg.visible { display: flex; }
     </style>
     <div class="contact-form" id="contact-form" style="background:#fff;border:1px solid #E2E8F0;box-shadow:0 12px 40px rgba(15,23,42,.06);">
       <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:#0F172A">Request a Free Consultation</h2>
       <p style="font-size:.875rem;color:#64748B;margin-bottom:1.25rem">An advisor will get back to you within one business day.</p>
       <?php if ($success): ?><div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#059669;margin-bottom:1rem"><?= $success ?></div><?php endif; ?>
       <?php if ($error):   ?><div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:1rem;font-size:.9rem;color:#DC2626;margin-bottom:1rem"><?= $error ?></div><?php endif; ?>
-      <form action="<?= url('handlers/contact-handler.php') ?>" method="POST">
+      <form id="contactFormEl" action="<?= url('handlers/contact-handler.php') ?>" method="POST" novalidate>
         <input type="hidden" name="csrf_token" value="<?= csrfToken() ?>">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
           <div class="form-group">
-            <label class="form-label" for="full-name" style="color:#374151">Full Name</label>
-            <input type="text" id="full-name" name="full_name" class="form-control" placeholder="Jane Smith" value="<?= htmlspecialchars($vals['name'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <label class="form-label" for="full-name" style="color:#374151">Full Name <span style="color:#DC2626">*</span></label>
+            <input type="text" id="full-name" name="full_name" class="form-control" placeholder="Jane Smith" value="<?= htmlspecialchars($vals['name'] ?? '') ?>" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <div class="field-error-msg" id="error-full-name"><i class="fas fa-exclamation-circle" style="font-size:.7rem;flex-shrink:0;"></i> <span></span></div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="phone" style="color:#374151">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" value="<?= htmlspecialchars($vals['phone'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <label class="form-label" for="phone" style="color:#374151">Phone Number <span style="color:#DC2626">*</span></label>
+            <div class="phone-input-wrapper" id="phone-wrapper">
+              <div class="phone-prefix">
+                <svg class="usa-flag" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="60" height="30" fill="#B22234"/>
+                  <rect y="2.31" width="60" height="2.31" fill="#fff"/>
+                  <rect y="6.92" width="60" height="2.31" fill="#fff"/>
+                  <rect y="11.54" width="60" height="2.31" fill="#fff"/>
+                  <rect y="16.15" width="60" height="2.31" fill="#fff"/>
+                  <rect y="20.77" width="60" height="2.31" fill="#fff"/>
+                  <rect y="25.38" width="60" height="2.31" fill="#fff"/>
+                  <rect width="24" height="16.15" fill="#3C3B6E"/>
+                  <g fill="#fff" font-size="2" font-family="Arial">
+                    <circle cx="2.4" cy="1.5" r=".8"/><circle cx="7.2" cy="1.5" r=".8"/><circle cx="12" cy="1.5" r=".8"/><circle cx="16.8" cy="1.5" r=".8"/><circle cx="21.6" cy="1.5" r=".8"/>
+                    <circle cx="4.8" cy="3.2" r=".8"/><circle cx="9.6" cy="3.2" r=".8"/><circle cx="14.4" cy="3.2" r=".8"/><circle cx="19.2" cy="3.2" r=".8"/>
+                    <circle cx="2.4" cy="4.9" r=".8"/><circle cx="7.2" cy="4.9" r=".8"/><circle cx="12" cy="4.9" r=".8"/><circle cx="16.8" cy="4.9" r=".8"/><circle cx="21.6" cy="4.9" r=".8"/>
+                    <circle cx="4.8" cy="6.6" r=".8"/><circle cx="9.6" cy="6.6" r=".8"/><circle cx="14.4" cy="6.6" r=".8"/><circle cx="19.2" cy="6.6" r=".8"/>
+                    <circle cx="2.4" cy="8.3" r=".8"/><circle cx="7.2" cy="8.3" r=".8"/><circle cx="12" cy="8.3" r=".8"/><circle cx="16.8" cy="8.3" r=".8"/><circle cx="21.6" cy="8.3" r=".8"/>
+                    <circle cx="4.8" cy="10" r=".8"/><circle cx="9.6" cy="10" r=".8"/><circle cx="14.4" cy="10" r=".8"/><circle cx="19.2" cy="10" r=".8"/>
+                    <circle cx="2.4" cy="11.7" r=".8"/><circle cx="7.2" cy="11.7" r=".8"/><circle cx="12" cy="11.7" r=".8"/><circle cx="16.8" cy="11.7" r=".8"/><circle cx="21.6" cy="11.7" r=".8"/>
+                    <circle cx="4.8" cy="13.4" r=".8"/><circle cx="9.6" cy="13.4" r=".8"/><circle cx="14.4" cy="13.4" r=".8"/><circle cx="19.2" cy="13.4" r=".8"/>
+                    <circle cx="2.4" cy="15" r=".8"/><circle cx="7.2" cy="15" r=".8"/><circle cx="12" cy="15" r=".8"/><circle cx="16.8" cy="15" r=".8"/><circle cx="21.6" cy="15" r=".8"/>
+                  </g>
+                </svg>
+                +1
+              </div>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" value="<?= htmlspecialchars($vals['phone'] ?? '') ?>" maxlength="10" style="color:#0F172A;">
+            </div>
+            <div class="field-error-msg" id="error-phone"><i class="fas fa-exclamation-circle" style="font-size:.7rem;flex-shrink:0;"></i> <span></span></div>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-grid-2">
           <div class="form-group">
-            <label class="form-label" for="email" style="color:#374151">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" value="<?= htmlspecialchars($vals['email'] ?? '') ?>" required style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <label class="form-label" for="email" style="color:#374151">Email Address <span style="color:#DC2626">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" value="<?= htmlspecialchars($vals['email'] ?? '') ?>" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <div class="field-error-msg" id="error-email"><i class="fas fa-exclamation-circle" style="font-size:.7rem;flex-shrink:0;"></i> <span></span></div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="zip" style="color:#374151">ZIP Code</label>
-            <input type="text" id="zip" name="zip" class="form-control" placeholder="33647" maxlength="10" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <label class="form-label" for="zip" style="color:#374151">ZIP Code <span style="color:#DC2626">*</span></label>
+            <input type="text" id="zip" name="zip" class="form-control" placeholder="33647" maxlength="5" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;">
+            <div class="field-error-msg" id="error-zip"><i class="fas fa-exclamation-circle" style="font-size:.7rem;flex-shrink:0;"></i> <span></span></div>
           </div>
         </div>
         <div class="form-group">
           <label class="form-label" for="message" style="color:#374151">How Can We Help You? <span style="font-weight:400;opacity:.6">(optional)</span></label>
-          <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us a bit about your home and what you are looking for…" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;"></textarea>
+          <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us a bit about your home and what you are looking for…" style="background:#F8FAFC;border-color:#E2E8F0;color:#0F172A;"><?= htmlspecialchars($vals['message'] ?? '') ?></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1.1rem 2rem;font-size:1rem;border-radius:14px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.3);transition:all .3s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 20px 40px rgba(124,58,237,.45)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 12px 30px rgba(124,58,237,.3)';">
+        <!-- Google reCAPTCHA v2 -->
+        <div class="form-group" style="margin-bottom:1rem;">
+          <div class="g-recaptcha" data-sitekey="6Ld7fxstAAAAAPfyyh4pFgDp5eYLfGi68nJT0ZIU" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
+          <div class="recaptcha-error-msg" id="error-recaptcha"><i class="fas fa-exclamation-circle" style="font-size:.7rem;flex-shrink:0;"></i> <span>Please verify that you are not a robot.</span></div>
+        </div>
+
+        <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:1.1rem 2rem;font-size:1rem;border-radius:14px;background:linear-gradient(135deg,#7C3AED,#4F46E5);border:none;box-shadow:0 12px 30px rgba(124,58,237,.3);transition:all .3s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 20px 40px rgba(124,58,237,.45)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 12px 30px rgba(124,58,237,.3)';">
           Request Consultation <i class="fas fa-arrow-right" style="font-size:.85rem;margin-left:.5rem;"></i>
         </button>
 
@@ -113,6 +224,172 @@ require_once __DIR__ . '/includes/head.php';
         </p>
       </form>
     </div>
+
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Contact Form Validation -->
+    <script>
+    (function() {
+      'use strict';
+
+      const form = document.getElementById('contactFormEl');
+      if (!form) return;
+
+      // Helper: show error
+      function showError(fieldId, message) {
+        const errEl = document.getElementById('error-' + fieldId);
+        const input = document.getElementById(fieldId);
+        if (errEl) {
+          errEl.querySelector('span').textContent = message;
+          errEl.classList.add('visible');
+        }
+        if (input) {
+          input.classList.add('input-error');
+        }
+        // Special handling for phone wrapper
+        if (fieldId === 'phone') {
+          const wrapper = document.getElementById('phone-wrapper');
+          if (wrapper) wrapper.classList.add('input-error');
+        }
+      }
+
+      // Helper: clear error
+      function clearError(fieldId) {
+        const errEl = document.getElementById('error-' + fieldId);
+        const input = document.getElementById(fieldId);
+        if (errEl) {
+          errEl.classList.remove('visible');
+        }
+        if (input) {
+          input.classList.remove('input-error');
+        }
+        if (fieldId === 'phone') {
+          const wrapper = document.getElementById('phone-wrapper');
+          if (wrapper) wrapper.classList.remove('input-error');
+        }
+      }
+
+      // Real-time: strip non-digits from phone
+      const phoneInput = document.getElementById('phone');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function() {
+          this.value = this.value.replace(/\D/g, '').slice(0, 10);
+          if (this.value.length > 0) clearError('phone');
+        });
+      }
+
+      // Real-time: strip non-digits from zip
+      const zipInput = document.getElementById('zip');
+      if (zipInput) {
+        zipInput.addEventListener('input', function() {
+          this.value = this.value.replace(/\D/g, '').slice(0, 5);
+          if (this.value.length > 0) clearError('zip');
+        });
+      }
+
+      // Real-time: strip non-alpha from name (allow spaces, hyphens, apostrophes)
+      const nameInput = document.getElementById('full-name');
+      if (nameInput) {
+        nameInput.addEventListener('input', function() {
+          if (this.value.length > 0) clearError('full-name');
+        });
+      }
+
+      // Real-time: email
+      const emailInput = document.getElementById('email');
+      if (emailInput) {
+        emailInput.addEventListener('input', function() {
+          if (this.value.length > 0) clearError('email');
+        });
+      }
+
+      // reCAPTCHA callbacks
+      window.onRecaptchaSuccess = function() {
+        const errEl = document.getElementById('error-recaptcha');
+        if (errEl) errEl.classList.remove('visible');
+      };
+      window.onRecaptchaExpired = function() {};
+
+      // Form submit validation
+      form.addEventListener('submit', function(e) {
+        let isValid = true;
+
+        // --- Full Name ---
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        if (nameVal === '') {
+          showError('full-name', 'Full Name is required.');
+          isValid = false;
+        } else if (nameVal.length < 2) {
+          showError('full-name', 'Full Name must be at least 2 characters.');
+          isValid = false;
+        } else if (!/^[A-Za-z\s\-']+$/.test(nameVal)) {
+          showError('full-name', 'Full Name can only contain letters, spaces, hyphens, and apostrophes. No numbers or special characters.');
+          isValid = false;
+        } else {
+          clearError('full-name');
+        }
+
+        // --- Phone Number ---
+        const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+        if (phoneVal === '') {
+          showError('phone', 'Phone Number is required.');
+          isValid = false;
+        } else if (!/^\d{10}$/.test(phoneVal)) {
+          showError('phone', 'Phone Number must be exactly 10 digits. No letters or special characters.');
+          isValid = false;
+        } else {
+          clearError('phone');
+        }
+
+        // --- Email ---
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+        const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+        if (emailVal === '') {
+          showError('email', 'Email Address is required.');
+          isValid = false;
+        } else if (!emailRegex.test(emailVal)) {
+          showError('email', 'Please enter a valid email address (e.g., jane@example.com).');
+          isValid = false;
+        } else {
+          clearError('email');
+        }
+
+        // --- ZIP Code ---
+        const zipVal = zipInput ? zipInput.value.trim() : '';
+        if (zipVal === '') {
+          showError('zip', 'ZIP Code is required.');
+          isValid = false;
+        } else if (!/^\d{5}$/.test(zipVal)) {
+          showError('zip', 'ZIP Code must be exactly 5 digits. No letters or special characters.');
+          isValid = false;
+        } else {
+          clearError('zip');
+        }
+
+        // --- reCAPTCHA ---
+        const recaptchaResponse = (typeof grecaptcha !== 'undefined') ? grecaptcha.getResponse() : '';
+        if (!recaptchaResponse) {
+          const errEl = document.getElementById('error-recaptcha');
+          if (errEl) errEl.classList.add('visible');
+          isValid = false;
+        } else {
+          const errEl = document.getElementById('error-recaptcha');
+          if (errEl) errEl.classList.remove('visible');
+        }
+
+        if (!isValid) {
+          e.preventDefault();
+          // Scroll to first error
+          const firstErr = form.querySelector('.field-error-msg.visible, .recaptcha-error-msg.visible');
+          if (firstErr) {
+            firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+
+    })();
+    </script>
   </div>
 </section>
 
