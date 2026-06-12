@@ -103,9 +103,9 @@ require_once __DIR__ . '/includes/head.php';
       .phone-prefix {
         display: flex;
         align-items: center;
-        gap: .4rem;
-        padding: 0 .75rem;
-        font-size: .875rem;
+        gap: .25rem;
+        padding: 0 .4rem;
+        font-size: .8rem;
         font-weight: 600;
         color: #374151;
         white-space: nowrap;
@@ -115,8 +115,8 @@ require_once __DIR__ . '/includes/head.php';
         user-select: none;
       }
       .phone-prefix .usa-flag {
-        width: 22px;
-        height: 15px;
+        width: 20px;
+        height: 14px;
         border-radius: 2px;
         object-fit: cover;
         flex-shrink: 0;
