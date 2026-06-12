@@ -48,21 +48,32 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # Stop mod_dir from adding trailing slashes (fixes directory/file name collision)
+    DirectorySlash Off
+
     # 1) Force HTTPS (uncomment on production)
     # RewriteCond %{HTTPS} !=on
     # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # 2) Redirect /index.php to root /
-    RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
-    RewriteRule ^index\.php$ / [R=301,L]
+    # 2) Redirect /index.php to subfolder root
+    RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/index\.php[\s?] [NC]
+    RewriteRule ^index\.php$ /brocusitsolutionsusa/ [R=301,L]
 
-    # 3) Redirect any .php URL to the clean version (301 permanent)
-    RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
-    RewriteRule ^(.+)\.php$ /$1 [R=301,L]
+    # 3) EARLY: home-security.php → /brocusitsolutionsusa/home-security (must come before generic rule)
+    RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/home-security\.php[\s?] [NC]
+    RewriteRule ^home-security\.php$ /brocusitsolutionsusa/home-security [R=301,L]
 
-    # 4) Internally rewrite clean URLs to .php files
+    # 4) Redirect any other .php URL to its clean version
+    RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/([^.]+)\.php[\s?] [NC]
+    RewriteRule ^(.+)\.php$ /brocusitsolutionsusa/$1 [R=301,L]
+
+    # 5) Handle directory collision: /home-security or /home-security/ → home-security.php
+    RewriteRule ^home-security/?$ home-security.php [L]
+
+    # 6) Internally rewrite clean URLs to .php files
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.php -f
     RewriteRule ^(.+)$ $1.php [L]
+
 </IfModule>
