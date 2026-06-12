@@ -122,7 +122,7 @@ require_once __DIR__ . '/includes/head.php';
     <p>If any provision of these Terms is found unenforceable, the remaining provisions will remain in effect. These Terms, together with our Privacy Policy and Electronic Disclosure Consent, are the entire agreement between you and Brocus regarding the Site.</p>
 
     <h2>17. Contact us</h2>
-    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:info@brocusitsolutionsusa.com">info@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
+    <address>Brocus IT Solutions LLC<br>10639 Mistflower Lane, Tampa, FL 33647<br>Email: <a href="mailto:support@brocusitsolutionsusa.com">support@brocusitsolutionsusa.com</a><br>Phone: <a href="tel:<?= PHONE_TEL ?>"><?= PHONE_DISPLAY ?></a></address>
 </div>
 </section>
 <?php include 'includes/footer.php'; ?>

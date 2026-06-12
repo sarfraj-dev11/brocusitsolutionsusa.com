@@ -36,7 +36,7 @@ require_once __DIR__ . '/includes/head.php';
         <span style="font-size:.7rem;padding:.2rem .6rem;border-radius:6px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.55);font-weight:500"><?= $tag ?></span>
         <?php endforeach; ?>
       </div>
-      <a href="contact.php" class="svc-link" style="color:<?= $s['ac'] ?>">Get started <i class="fas fa-arrow-right" style="font-size:.7rem"></i></a>
+      <a href="contact" class="svc-link" style="color:<?= $s['ac'] ?>">Get started <i class="fas fa-arrow-right" style="font-size:.7rem"></i></a>
     </div>
     <?php endforeach; ?>
   </div>
@@ -48,7 +48,7 @@ require_once __DIR__ . '/includes/head.php';
     <span class="label" style="display:inline-flex;margin-bottom:1.25rem">Ready to start?</span>
     <h2 style="font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:900;letter-spacing:-.03em;margin-bottom:1rem">Not sure which service<br>is right for you?</h2>
     <p style="color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;margin-bottom:2rem">Book a free 30-minute discovery call. We&rsquo;ll assess your situation and recommend the right approach — no commitment required.</p>
-    <a href="contact.php" class="btn btn-primary btn-lg">Book a Free Call <i class="fas fa-arrow-right"></i></a>
+    <a href="contact" class="btn btn-primary btn-lg">Book a Free Call <i class="fas fa-arrow-right"></i></a>
   </div>
 </section>
 

@@ -24,7 +24,7 @@ define('SITE_URL',     'https://brocusitsolutionsusa.com');
 // ── Contact ──────────────────────────────────────────
 define('PHONE_DISPLAY', '(855) 487-0595');
 define('PHONE_TEL',     '(855) 487-0595');
-define('EMAIL_INFO',    'info@brocusitsolutionsusa.com');
+define('EMAIL_INFO',    'support@brocusitsolutionsusa.com');
 
 // ── Address ──────────────────────────────────────────
 define('ADDR_LINE1', '10639 Mistflower Lane');
@@ -34,8 +34,8 @@ define('ADDR_ZIP',   '33647');
 define('ADDR_FULL',  '10639 Mistflower Lane, Tampa, FL 33647');
 
 // ── Business hours ───────────────────────────────────
-define('HOURS_WEEKDAY',  'Monday–Friday 9 AM–6 PM EST');
-define('HOURS_SATURDAY', 'Saturday 10 AM–4 PM EST');
+define('HOURS_WEEKDAY',  'Monday–Friday:');
+define('HOURS_SATURDAY', '9:30 AM – 6:00 PM');
 define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
@@ -55,23 +55,30 @@ define('NAV_ITEMS', serialize([
 
 // ── Footer legal links ───────────────────────────────
 define('LEGAL_LINKS', serialize([
-    ['href' => 'privacy-policy.php',             'label' => 'Privacy Policy'],
-    ['href' => 'terms-and-conditions.php',       'label' => 'Terms &amp; Conditions'],
-    ['href' => 'electronic-disclosure-consent.php', 'label' => 'Electronic Disclosure'],
+    ['href' => 'privacy-policy',                 'label' => 'Privacy Policy'],
+    ['href' => 'terms-and-conditions',           'label' => 'Terms &amp; Conditions'],
+    ['href' => 'electronic-disclosure-consent',  'label' => 'Electronic Disclosure'],
 ]));
 
 // ── Announce bar ─────────────────────────────────────
 define('ANNOUNCE_TEXT', 'Free, independent home security advice — no sales pressure, real people');
 define('ANNOUNCE_LINK_TEXT', 'Learn more');
-define('ANNOUNCE_LINK_HREF', 'home-security.php');
+define('ANNOUNCE_LINK_HREF', 'home-security');
 
 // ── Analytics (leave empty until live) ───────────────
 define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
 
 // ── Email / mailer ───────────────────────────────────
-define('MAIL_FROM',      EMAIL_INFO);
+define('MAIL_FROM',      'support@brocusitsolutionsusa.com');
 define('MAIL_FROM_NAME', SITE_SHORT);
-define('MAIL_TO',        EMAIL_INFO);   // where form submissions go
+define('MAIL_TO',        'support@brocusitsolutionsusa.com');
+
+// ── SMTP (Hostinger Business Mail) ──────────────────
+define('SMTP_HOST',     'smtp.hostinger.com');
+define('SMTP_PORT',     465);
+define('SMTP_SECURE',   'ssl');              // 'ssl' for port 465
+define('SMTP_USERNAME', 'support@brocusitsolutionsusa.com');
+define('SMTP_PASSWORD', 'BrocusS#2k26TsusaIT');
 
 // ── Copyright ────────────────────────────────────────
 define('COPYRIGHT_YEAR', '2025');

@@ -88,6 +88,7 @@ $_legal = unserialize(LEGAL_LINKS);
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       });
+
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
@@ -110,18 +111,20 @@ $_legal = unserialize(LEGAL_LINKS);
     padding: 8px 20px 8px 8px;
     color: #fff;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(124,58,237,0.4);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
     z-index: 9999;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
   .floating-call-btn:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(124,58,237,0.6);
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.6);
   }
+
   .fcb-icon {
     width: 44px;
     height: 44px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -129,11 +132,13 @@ $_legal = unserialize(LEGAL_LINKS);
     font-size: 1.1rem;
     animation: pulse-ring 2s infinite;
   }
+
   .fcb-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
   }
+
   .fcb-text span {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -141,6 +146,7 @@ $_legal = unserialize(LEGAL_LINKS);
     opacity: 0.8;
     font-weight: 600;
   }
+
   .fcb-text strong {
     font-size: 1.05rem;
     font-weight: 800;
@@ -148,9 +154,17 @@ $_legal = unserialize(LEGAL_LINKS);
   }
 
   @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
-    70% { box-shadow: 0 0 0 12px rgba(255,255,255,0); }
-    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
   }
 
   @media(max-width: 600px) {
@@ -159,14 +173,17 @@ $_legal = unserialize(LEGAL_LINKS);
       left: 20px;
       padding: 6px 16px 6px 6px;
     }
+
     .fcb-icon {
       width: 38px;
       height: 38px;
       font-size: 1rem;
     }
+
     .fcb-text strong {
       font-size: 0.95rem;
     }
+
     .fcb-text span {
       font-size: 0.7rem;
     }
