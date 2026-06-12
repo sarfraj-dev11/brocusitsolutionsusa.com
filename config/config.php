@@ -12,7 +12,7 @@ define('APP_ENV',    'development');          // 'development' | 'production'
 define('SHOW_ERRORS', APP_ENV === 'development');
 
 // ── Base path (change to '' on live server) ──────────
-define('BASE_PATH', ''); // '' on production
+define('BASE_PATH', '/brocusitsolutionsusa.com'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
 define('SITE_NAME',    'Brocus IT Solutions LLC');
@@ -40,23 +40,23 @@ define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
 define('NAV_ITEMS', serialize([
-    ['href' => 'index.php',          'slug' => 'index',         'label' => 'Home'],
-    ['href' => 'home-security.php',  'slug' => 'home-security', 'label' => 'Home Security'],
-    ['href' => 'about.php',          'slug' => 'about',         'label' => 'About'],
-    ['href' => 'contact.php',        'slug' => 'contact',       'label' => 'Contact'],
+    ['href' => '',                    'slug' => 'index',         'label' => 'Home'],
+    ['href' => 'home-security',      'slug' => 'home-security', 'label' => 'Home Security'],
+    ['href' => 'about',              'slug' => 'about',         'label' => 'About'],
+    ['href' => 'contact',            'slug' => 'contact',       'label' => 'Contact'],
 ]));
 
 // ── Footer legal links ───────────────────────────────
 define('LEGAL_LINKS', serialize([
-    ['href' => 'privacy-policy.php',             'label' => 'Privacy Policy'],
-    ['href' => 'terms-and-conditions.php',       'label' => 'Terms &amp; Conditions'],
-    ['href' => 'electronic-disclosure-consent.php', 'label' => 'Electronic Disclosure'],
+    ['href' => 'privacy-policy',                 'label' => 'Privacy Policy'],
+    ['href' => 'terms-and-conditions',           'label' => 'Terms &amp; Conditions'],
+    ['href' => 'electronic-disclosure-consent',  'label' => 'Electronic Disclosure'],
 ]));
 
 // ── Announce bar ─────────────────────────────────────
 define('ANNOUNCE_TEXT', 'Free, independent home security advice — no sales pressure, real people');
 define('ANNOUNCE_LINK_TEXT', 'Learn more');
-define('ANNOUNCE_LINK_HREF', 'home-security.php');
+define('ANNOUNCE_LINK_HREF', 'home-security');
 
 // ── Analytics (leave empty until live) ───────────────
 define('GA_ID', '');   // e.g. 'G-XXXXXXXXXX'
