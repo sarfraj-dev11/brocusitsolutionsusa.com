@@ -86,14 +86,8 @@ $_cur   = currentPage();
                       Services
                     </div>
                     <?php foreach ($item['dropdown']['services'] as $child): ?>
-                      <a href="<?= url($child['href']) ?>" class="sh-mega-link <?= $_cur === $child['slug'] ? 'sh-mega-link--active' : '' ?>" role="menuitem">
-                        <div class="sh-mega-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                          </svg></div>
-                        <div class="sh-mega-link-body">
-                          <div class="sh-mega-link-title"><?= htmlspecialchars($child['label']) ?></div>
-                          <div class="sh-mega-link-desc"><?= htmlspecialchars($child['desc']) ?></div>
-                        </div>
+                      <a href="<?= url($child['href']) ?>" class="sh-mega-simple-link <?= $_cur === $child['slug'] ? 'sh-mega-simple-link--active' : '' ?>" role="menuitem">
+                        <?= htmlspecialchars($child['label']) ?>
                       </a>
                     <?php endforeach; ?>
                   </div>
@@ -525,6 +519,12 @@ $_cur   = currentPage();
   }
   .sh-mega-simple-link:hover {
     color: #0F172A;
+    background: #F1F5F9;
+  }
+
+  .sh-mega-simple-link--active {
+    color: #0F172A;
+    font-weight: 600;
     background: #F1F5F9;
   }
   
