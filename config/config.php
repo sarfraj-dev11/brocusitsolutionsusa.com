@@ -40,8 +40,8 @@ define('HOURS_SUNDAY',   'Closed');
 
 // ── Navigation pages ─────────────────────────────────
 define('NAV_ITEMS', serialize([
-    ['href' => 'index.php',         'slug' => 'index',         'label' => 'Home',          'dropdown' => []],
-    ['href' => 'home-security.php', 'slug' => 'home-security', 'label' => 'Home Security', 'dropdown' => [
+    ['href' => '',                'slug' => 'index',         'label' => 'Home',          'dropdown' => []],
+    ['href' => 'home-security',  'slug' => 'home-security', 'label' => 'Home Security', 'dropdown' => [
         'products' => [
             ['href' => 'home-security/smart-indoor-camera.php', 'slug' => 'smart-indoor-camera', 'label' => 'Smart Indoor Camera', 'desc' => 'High-res indoor monitoring'],
             ['href' => 'home-security/smart-outdoor-camera.php', 'slug' => 'smart-outdoor-camera', 'label' => 'Smart Outdoor Camera', 'desc' => 'Weatherproof exterior security'],
@@ -55,8 +55,8 @@ define('NAV_ITEMS', serialize([
             ['href' => 'home-security/professional-monitoring/', 'slug' => 'professional-monitoring', 'label' => '24/7 Monitoring', 'desc' => 'Round-the-clock professional alarm monitoring'],
         ],
     ]],
-    ['href' => 'about.php',         'slug' => 'about',         'label' => 'About',         'dropdown' => []],
-    ['href' => 'contact.php',       'slug' => 'contact',       'label' => 'Contact',       'dropdown' => []],
+    ['href' => 'about',          'slug' => 'about',         'label' => 'About',         'dropdown' => []],
+    ['href' => 'contact',        'slug' => 'contact',       'label' => 'Contact',       'dropdown' => []],
 ]));
 
 // ── Footer legal links ───────────────────────────────
