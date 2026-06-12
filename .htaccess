@@ -62,11 +62,12 @@ AddDefaultCharset UTF-8
     # 3) Redirect any .php URL to the clean version (301 permanent)
     #    EXCEPT handler files — POST requests must not be redirected
     RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
-    RewriteCond %{REQUEST_URI} !^/handlers/ [NC]
+    RewriteCond %{REQUEST_URI} !handlers/ [NC]
     RewriteRule ^(.+)\.php$ /$1 [R=301,L]
 
     # 4) Redirect any other .php URL to its clean version
     RewriteCond %{THE_REQUEST} \s/brocusitsolutionsusa/([^.]+)\.php[\s?] [NC]
+    RewriteCond %{REQUEST_URI} !handlers/ [NC]
     RewriteRule ^(.+)\.php$ /brocusitsolutionsusa/$1 [R=301,L]
 
     # 5) Handle directory collision: /home-security or /home-security/ → home-security.php
