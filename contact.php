@@ -430,6 +430,12 @@ require_once __DIR__ . '/includes/head.php';
 <style>
   @media(max-width:680px) {
     .form-grid-2 { grid-template-columns: 1fr !important; }
+    .contact-grid,
+    .contact-form,
+    .contact-form form {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
   }
 </style>
 <?php include __DIR__ . '/includes/footer.php'; ?>
