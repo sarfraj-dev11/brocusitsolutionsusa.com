@@ -2244,3 +2244,51 @@ a {
     font-size: 1.8rem
   }
 }
+
+/* ── CONTACT PAGE MOBILE FIXES ── */
+@media(max-width:768px) {
+  .contact-grid {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media(max-width:576px) {
+  .contact-grid {
+    padding: 0 .75rem;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  /* Scale reCAPTCHA to fit small screens */
+  .g-recaptcha {
+    transform: scale(0.88);
+    transform-origin: left top;
+  }
+}
+
+@media(max-width:380px) {
+  .contact-form {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .g-recaptcha {
+    transform: scale(0.77);
+    transform-origin: left top;
+  }
+}
