@@ -19,6 +19,16 @@ $canonical  = $canonical  ?? '';
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1V1VLRS3C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K1V1VLRS3C');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php pageMeta($page_title, $page_desc, $canonical); ?>
@@ -39,9 +49,6 @@ $canonical  = $canonical  ?? '';
 
   <!-- Site styles -->
   <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
-
-  <!-- Analytics (only on production) -->
-  <?php gaScript(); ?>
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
