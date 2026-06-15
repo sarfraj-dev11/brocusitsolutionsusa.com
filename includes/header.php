@@ -23,8 +23,8 @@ $_cur   = currentPage();
   <div class="nav-inner">
     <!-- Logo -->
     <a href="<?= url('index.php') ?>" class="sh-logo" aria-label="<?= SITE_NAME ?> home">
-      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="max-height: 60px; width: auto;">
-      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="max-height: 60px; width: auto;">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-transparent" style="max-height: 45px; width: auto;">
+      <img src="<?= asset('images/brocus-new-logo.png') ?>?v=2" alt="<?= SITE_NAME ?> Logo" class="logo-scrolled" style="max-height: 45px; width: auto;">
     </a>
 
     <!-- Nav links (desktop) -->
@@ -269,7 +269,7 @@ $_cur   = currentPage();
   /* ── LOGO SWAP ── */
   .logo-transparent {
     display: block;
-    height: 56px;
+    height: 45px;
     width: auto;
     object-fit: contain;
     transition: opacity .3s
@@ -277,7 +277,7 @@ $_cur   = currentPage();
 
   .logo-scrolled {
     display: none;
-    height: 56px;
+    height: 45px;
     width: auto;
     object-fit: contain
   }
