@@ -11,12 +11,12 @@ $_legal = unserialize(LEGAL_LINKS);
   <div style="position:absolute;top:-50%;left:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
   <div style="position:absolute;bottom:0;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4rem;position:relative;z-index:1;margin-bottom:4.5rem;">
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.6fr 1.1fr 0.7fr 1.2fr 1.2fr;gap:3rem;position:relative;z-index:1;margin-bottom:4.5rem;">
 
     <!-- Brand col -->
     <div class="footer-brand" style="display:flex;flex-direction:column;align-items:flex-start;">
       <a href="<?= url('index.php') ?>" class="sh-logo" style="margin-bottom:2rem;display:inline-flex;align-items:center;text-decoration:none;transition:opacity .2s ease;" onmouseover="this.style.opacity='.85';" onmouseout="this.style.opacity='1';">
-        <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:60px;width:auto;object-fit:contain;">
+        <img src="<?= asset('images/brocus-new-logo.png') ?>" alt="<?= SITE_NAME ?> Logo" style="height:45px;width:auto;object-fit:contain;">
       </a>
       <div style="display:flex;flex-direction:column;gap:.85rem;align-items:flex-start;">
         <div style="font-size:.85rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.75rem;min-height:32px;line-height:1.2;">
@@ -39,12 +39,18 @@ $_legal = unserialize(LEGAL_LINKS);
     </div>
 
 <?php
-// Get services dynamically from NAV_ITEMS
+// Get services and products dynamically from NAV_ITEMS
 $_nav_items = unserialize(NAV_ITEMS);
 $_services = [];
+$_products = [];
 foreach ($_nav_items as $_item) {
-    if ($_item['slug'] === 'home-security' && isset($_item['dropdown']['services'])) {
-        $_services = $_item['dropdown']['services'];
+    if ($_item['slug'] === 'home-security') {
+        if (isset($_item['dropdown']['services'])) {
+            $_services = $_item['dropdown']['services'];
+        }
+        if (isset($_item['dropdown']['products'])) {
+            $_products = $_item['dropdown']['products'];
+        }
         break;
     }
 }
@@ -53,16 +59,24 @@ foreach ($_nav_items as $_item) {
     <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Our Services</span>
       <?php foreach ($_services as $svc): ?>
-        <a href="<?= url($svc['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($svc['label']) ?></a>
+        <a href="<?= url($svc['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($svc['label']) ?></a>
       <?php endforeach; ?>
     </div>
 
     <!-- Company col -->
     <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Company</span>
-      <a href="<?= url('index.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Home</a>
-      <a href="<?= url('about.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">About Us</a>
-      <a href="<?= url('contact.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Contact Us</a>
+      <a href="<?= url('index.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Home</a>
+      <a href="<?= url('about.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">About Us</a>
+      <a href="<?= url('contact.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Contact Us</a>
+    </div>
+
+    <!-- Products col -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Products</span>
+      <?php foreach ($_products as $prod): ?>
+        <a href="<?= url($prod['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($prod['label']) ?></a>
+      <?php endforeach; ?>
     </div>
 
     <!-- Get Started col -->
