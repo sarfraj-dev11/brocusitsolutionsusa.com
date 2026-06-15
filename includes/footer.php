@@ -11,7 +11,7 @@ $_legal = unserialize(LEGAL_LINKS);
   <div style="position:absolute;top:-50%;left:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(124,58,237,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
   <div style="position:absolute;bottom:0;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.08),transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.6fr 1.1fr 0.7fr 1.2fr 1.2fr;gap:3rem;position:relative;z-index:1;margin-bottom:4.5rem;">
+  <div class="footer-inner" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.7fr 1.2fr 1.1fr 0.8fr;gap:3rem;position:relative;z-index:1;margin-bottom:4.5rem;">
 
     <!-- Brand col -->
     <div class="footer-brand" style="display:flex;flex-direction:column;align-items:flex-start;">
@@ -55,6 +55,14 @@ foreach ($_nav_items as $_item) {
     }
 }
 ?>
+    <!-- Products col -->
+    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Products</span>
+      <?php foreach ($_products as $prod): ?>
+        <a href="<?= url($prod['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($prod['label']) ?></a>
+      <?php endforeach; ?>
+    </div>
+
     <!-- Our Services col -->
     <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Our Services</span>
@@ -66,24 +74,9 @@ foreach ($_nav_items as $_item) {
     <!-- Company col -->
     <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
       <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Company</span>
-      <a href="<?= url('index.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Home</a>
-      <a href="<?= url('about.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">About Us</a>
-      <a href="<?= url('contact.php') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Contact Us</a>
-    </div>
-
-    <!-- Products col -->
-    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
-      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Products</span>
-      <?php foreach ($_products as $prod): ?>
-        <a href="<?= url($prod['href']) ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';"><?= htmlspecialchars($prod['label']) ?></a>
-      <?php endforeach; ?>
-    </div>
-
-    <!-- Get Started col -->
-    <div class="footer-col" style="display:flex;flex-direction:column;gap:.75rem;">
-      <span style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:1rem;display:block;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.08);">Get Started</span>
-      <p style="font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.65;margin:0 0 1rem;font-family:'Manrope',sans-serif;">Ready to secure your home? Get a free, no-obligation quote from our experts.</p>
-      <a href="<?= url('contact.php') ?>" class="btn btn-primary" style="display:inline-flex;justify-content:center;padding:.75rem 1.25rem;font-size:.85rem;font-weight:700;border-radius:8px;">Get a Free Quote</a>
+      <a href="<?= url('') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Home</a>
+      <a href="<?= url('about') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">About Us</a>
+      <a href="<?= url('contact') ?>" style="font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s ease;display:block;padding:.2rem 0;line-height:1.4;" onmouseover="this.style.color='#fff';this.style.paddingLeft='6px';" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.paddingLeft='0';">Contact Us</a>
     </div>
 
   </div>
@@ -93,8 +86,8 @@ foreach ($_nav_items as $_item) {
     <p style="font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.75;margin:0 auto 0.75rem;max-width:800px;font-family:'Manrope',sans-serif;">Brocus IT Solutions LLC is an independent advisory and referral service — not a manufacturer, dealer, installer, or monitoring provider. We empower you to make safe choices.</p>
     <p style="font-size:.82rem;color:rgba(255,255,255,.65);margin:0 auto 1.25rem;font-family:'Manrope',sans-serif;">&copy; 2026 Brocus IT Solutions LLC. All rights reserved.</p>
     <div style="display:inline-flex;gap:2rem;">
-      <a href="<?= url('privacy-policy.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</a>
-      <a href="<?= url('terms-and-conditions.php') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms and conditions</a>
+      <a href="<?= url('privacy-policy') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</a>
+      <a href="<?= url('terms-and-conditions') ?>" style="font-size:.78rem;color:rgba(255,255,255,.5);text-decoration:none;font-family:'Manrope',sans-serif;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms and Conditions</a>
     </div>
   </div>
 </footer>
@@ -102,7 +95,7 @@ foreach ($_nav_items as $_item) {
 <!-- Floating Call Button -->
 <a href="tel:<?= PHONE_TEL ?>" class="floating-call-btn" aria-label="Call Us Now">
   <div class="fcb-icon">
-    <i class="fas fa-phone-alt" style="transform: scaleX(-1);"></i>
+    <i class="fas fa-phone-alt"></i>
   </div>
   <div class="fcb-text">
     <span>Call Now</span>

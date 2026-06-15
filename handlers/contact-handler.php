@@ -12,14 +12,14 @@ use PHPMailer\PHPMailer\Exception;
 
 // Only accept POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ' . BASE_PATH . '/contact.php');
+    header('Location: ' . BASE_PATH . '/contact');
     exit;
 }
 
 // CSRF check
 if (!verifyCsrf()) {
     $_SESSION['form_error'] = 'Security token mismatch. Please try again.';
-    header('Location: ' . BASE_PATH . '/contact.php#contact-form');
+    header('Location: ' . BASE_PATH . '/contact#contact-form');
     exit;
 }
 
@@ -121,29 +121,16 @@ if (empty($recaptchaResponse)) {
     }
 }
 
+// If validation errors, send back to the contact form
 if ($errors) {
-    $_SESSION['form_error']  = implode('<br>', $errors);
-    header('Location: ' . BASE_PATH . '/contact.php#contact-form');
+    $_SESSION['form_error'] = implode('<br>', $errors);
+    header('Location: ' . BASE_PATH . '/contact#contact-form');
     exit;
 }
 
-// Clear stored form values on success
-unset($_SESSION['form_values']);
-
-// ── Global debug buffer — captures SMTP transcript ──
-$smtpDebug = '';
-
-// ── Send email via PHPMailer SMTP (Hostinger) ──────────────
+// ── Attempt to send email via PHPMailer — errors are logged silently ──
 $mail = new PHPMailer(true);
-
 try {
-    // ── SMTP Debug: capture EVERY line into $smtpDebug ──
-    $mail->SMTPDebug = 3;
-    $mail->Debugoutput = function($str, $level) use (&$smtpDebug) {
-        $line = gmdate('Y-m-d H:i:s') . " [{$level}] {$str}";
-        $smtpDebug .= $line . "\n";
-        file_put_contents(__DIR__ . '/smtp_debug.txt', $line . "\n", FILE_APPEND);
-    };
     $mail->isSMTP();
     $mail->Host       = SMTP_HOST;
     $mail->SMTPAuth   = true;
@@ -151,8 +138,6 @@ try {
     $mail->Password   = SMTP_PASSWORD;
     $mail->SMTPSecure = SMTP_SECURE;
     $mail->Port       = SMTP_PORT;
-
-    // Bypass SSL verification for localhost/shared hosting issues
     $mail->SMTPOptions = [
         'ssl' => [
             'verify_peer'       => false,
@@ -160,16 +145,10 @@ try {
             'allow_self_signed' => true,
         ],
     ];
-
-    // Explicitly set Hostname to prevent 'localhost' in Message-ID and EHLO (helps with spam filters)
     $mail->Hostname = SITE_DOMAIN;
-
-    // Sender & recipient
     $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
     $mail->addAddress(MAIL_TO, SITE_SHORT);
     $mail->addReplyTo($email, $name);
-
-    // Email content
     $mail->isHTML(false);
     $mail->Subject = 'New callback request from ' . $name;
     $mail->Body    = "Name: {$name}\n"
@@ -178,23 +157,16 @@ try {
                    . "ZIP: {$zip}\n\n"
                    . "Message:\n{$message}\n\n"
                    . "---\nSent from " . SITE_DOMAIN;
-
     $mail->send();
-
-    // Regenerate CSRF token after submission
-    unset($_SESSION['csrf_token']);
-
-    $_SESSION['form_success'] = 'Thanks, ' . htmlspecialchars($name) . '! We will call you back within one business day.';
-    $_SESSION['smtp_debug'] = $smtpDebug;
-
 } catch (Exception $e) {
-    // Regenerate CSRF token after submission
-    unset($_SESSION['csrf_token']);
-
-    // Always show the real error so we can debug
-    $_SESSION['form_error'] = 'Mailer Error: ' . htmlspecialchars($mail->ErrorInfo) . ' | Exception: ' . htmlspecialchars($e->getMessage());
-    $_SESSION['smtp_debug'] = $smtpDebug;
+    // Log silently — do NOT block the user redirect
+    file_put_contents(__DIR__ . '/smtp_debug.txt',
+        gmdate('Y-m-d H:i:s') . " [ERROR] " . $mail->ErrorInfo . "\n", FILE_APPEND);
 }
 
-header('Location: ' . BASE_PATH . '/contact.php#contact-form');
+// ── Always redirect to thank-you after successful validation ──
+unset($_SESSION['csrf_token'], $_SESSION['form_values']);
+$_SESSION['form_success'] = 'Thanks, ' . htmlspecialchars($name) . '! We will call you back within one business day.';
+
+header('Location: ' . BASE_PATH . '/thank-you');
 exit;

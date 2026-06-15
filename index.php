@@ -254,7 +254,7 @@ require_once __DIR__ . '/includes/head.php';
     <!-- Left Column: Content -->
     <div class="hero-left-content">
       <div class="hero-top-pill">
-        <i class="fas fa-shield-alt"></i> INDEPENDENT ADVISORS FOR US HOUSEHOLDS
+        <i class="fas fa-shield-alt"></i> INDEPENDENT ADVICE FOR U.S. HOMEOWNERS
       </div>
 
       <h1 class="hero-main-h1">
