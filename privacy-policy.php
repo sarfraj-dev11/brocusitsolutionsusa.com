@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Privacy Policy | Brocus IT Solutions LLC';
-$page_desc  = 'Read how Brocus IT Solutions LLC collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
+$page_title = 'Privacy Policy | Brocus IT Solutions';
+$page_desc  = 'Read how Brocus IT Solutions collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>

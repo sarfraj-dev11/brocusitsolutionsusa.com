@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Electronic Disclosure Consent | Brocus IT Solutions LLC';
-$page_desc  = 'Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions LLC, including the requirements and how to withdraw consent.';
+$page_title = 'Electronic Disclosure Consent | Brocus IT Solutions';
+$page_desc  = 'Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions, including the requirements and how to withdraw consent.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>

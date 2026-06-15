@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Terms and Conditions | Brocus IT Solutions LLC';
-$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory services provided by Brocus IT Solutions LLC.';
+$page_title = 'Terms and Conditions | Brocus IT Solutions';
+$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory services provided by Brocus IT Solutions.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
