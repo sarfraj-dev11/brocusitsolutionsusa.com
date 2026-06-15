@@ -24,12 +24,12 @@ require_once __DIR__ . '/includes/head.php';
       </span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:.875rem 0 1.25rem;line-height:1.25;color:#0F172A">Built to put you at the center of the decision</h2>
       <p style="color:#374151;line-height:1.8;margin-bottom:1rem">Brocus IT Solutions LLC is a United States based advisory company built on a simple belief: people deserve honest guidance before they spend money on their home. Too often, households are sold the wrong product, locked into the wrong contract, or talked into paying for things they will never use. We started Brocus to put you, not the sale, at the center of the decision.</p>
-      <p style="color:#374151;line-height:1.8;margin-bottom:1rem">We are an independent advisory and referral service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
+      <p style="color:#374151;line-height:1.8;margin-bottom:1rem">We are an independent advisory service. We do not manufacture, sell, install, or service anything ourselves. What we do is help you understand your options clearly, then connect you with a trusted provider who delivers exactly what you decide on.</p>
       <p style="color:#374151;line-height:1.8">Today, our focus is helping families across the US choose the right home security — and we are building toward helping with more everyday home decisions over time.</p>
     </div>
     <div style="position:relative;padding-right:1rem;">
       <div style="position:absolute;top:-20px;left:-20px;width:100%;height:100%;background:linear-gradient(135deg,#E8D7FF,#BFDBFE);border-radius:32px;z-index:0;transform:rotate(-3deg);"></div>
-      <img src="/assets/images/advisor_consultation.png" alt="Brocus IT Solutions advisor" width="520" height="440" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;display:block;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.15);">
+      <img src="<?= asset('images/advisor_consultation.png') ?>" alt="Brocus IT Solutions advisor" width="520" height="440" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;display:block;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.15);">
     </div>
   </div>
 </section>
