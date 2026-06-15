@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/head.php';
     }
 </style>
 <div class="legal-wrap">
-    <p class="legal-meta">Last updated: June 11, 2025</p>
+    <p class="legal-meta">Last updated: June 2026</p>
 
     <p>This Electronic Disclosure and Consent ("Consent") explains how Brocus IT Solutions LLC ("Brocus," "we," "us," or "our") provides communications and disclosures to you electronically. By submitting a form on brocusitsolutionsusa.com, checking a consent box, or otherwise interacting with us electronically, you agree to the terms of this Consent.</p>
 
