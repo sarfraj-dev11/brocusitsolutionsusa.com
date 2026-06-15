@@ -128,7 +128,7 @@ $_legal = unserialize(LEGAL_LINKS);
 </div>
 
 <!-- ── Cookie Consent Banner ── -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99997;background:rgba(15,23,42,.97);border-top:1px solid rgba(124,58,237,.25);backdrop-filter:blur(12px);padding:1.25rem 2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
+<div id="cookie-banner" class="cookie-banner-hidden" style="position:fixed;bottom:0;left:0;right:0;z-index:99997;background:rgba(15,23,42,.97);border-top:1px solid rgba(124,58,237,.25);backdrop-filter:blur(12px);padding:1.25rem 2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
   <p style="color:rgba(255,255,255,.75);font-size:.82rem;margin:0;max-width:700px;line-height:1.6;">
     <i class="fas fa-cookie-bite" style="color:#A78BFA;margin-right:.5rem;"></i>
     We use cookies to improve your experience and analyse site usage. By continuing, you agree to our
@@ -203,18 +203,32 @@ $_legal = unserialize(LEGAL_LINKS);
 
   // ── Cookie Consent ───────────────────────────────────
   var cookieBanner = document.getElementById('cookie-banner');
-  if (cookieBanner && !localStorage.getItem('cookieConsent')) {
-    cookieBanner.style.display = 'flex';
-  }
   var acceptBtn = document.getElementById('cookie-accept');
   var declineBtn = document.getElementById('cookie-decline');
+
+  function hideCookieBanner() {
+    if (!cookieBanner) return;
+    cookieBanner.style.transform = 'translateY(100%)';
+    cookieBanner.style.opacity = '0';
+    setTimeout(function() { cookieBanner.classList.add('cookie-banner-hidden'); }, 400);
+  }
+
+  if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+    // Delay a tiny bit so the slide-in animation is visible
+    setTimeout(function() {
+      cookieBanner.classList.remove('cookie-banner-hidden');
+      cookieBanner.style.transform = 'translateY(0)';
+      cookieBanner.style.opacity = '1';
+    }, 800);
+  }
+
   if (acceptBtn) acceptBtn.addEventListener('click', function() {
     localStorage.setItem('cookieConsent', 'accepted');
-    cookieBanner.style.display = 'none';
+    hideCookieBanner();
   });
   if (declineBtn) declineBtn.addEventListener('click', function() {
     localStorage.setItem('cookieConsent', 'declined');
-    cookieBanner.style.display = 'none';
+    hideCookieBanner();
   });
 
   // ── Entrance Animations (IntersectionObserver) ───────
@@ -269,6 +283,17 @@ $_legal = unserialize(LEGAL_LINKS);
   .aos-fade-left.aos-in { opacity:1; transform:translateX(0); }
   .aos-fade-right { opacity:0; transform:translateX(32px); transition:opacity .65s cubic-bezier(.4,0,.2,1), transform .65s cubic-bezier(.4,0,.2,1); }
   .aos-fade-right.aos-in { opacity:1; transform:translateX(0); }
+
+  /* ── Cookie Consent Banner ── */
+  #cookie-banner {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s ease;
+  }
+  .cookie-banner-hidden {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 
   .floating-call-btn {
     position: fixed;
