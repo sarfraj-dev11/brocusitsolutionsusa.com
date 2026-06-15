@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Privacy Policy | Brocus IT Solutions LLC';
-$page_desc  = 'Read how Brocus IT Solutions LLC collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
+$page_title = 'Privacy Policy | Brocus IT Solutions';
+$page_desc  = 'Read how Brocus IT Solutions collects, uses, shares, and protects your personal information, and the privacy choices available to you.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
@@ -70,7 +70,7 @@ require_once __DIR__ . '/includes/head.php';
         }
     </style>
     <div class="legal-wrap">
-        <p class="legal-meta">Last updated: June 11, 2025</p>
+        <p class="legal-meta">Last updated: June 2026</p>
 
         <p>Brocus IT Solutions LLC ("Brocus," "we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect through brocusitsolutionsusa.com (the "Site"), how we use and share it, and the choices you have. By using the Site or submitting information to us, you agree to the practices described here.</p>
 

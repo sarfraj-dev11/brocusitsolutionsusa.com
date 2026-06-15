@@ -15,7 +15,7 @@ define('SHOW_ERRORS', APP_ENV === 'development');
 define('BASE_PATH', '/brocusitsolutionsusa'); // '' on production
 
 // ── Brand ────────────────────────────────────────────
-define('SITE_NAME',    'Brocus IT Solutions LLC');
+define('SITE_NAME',    'Brocus IT Solutions');
 define('SITE_SHORT',   'Brocus IT Solutions');
 define('SITE_TAGLINE', 'Independent Advice for U.S. Homeowners');
 define('SITE_DOMAIN',  'brocusitsolutionsusa.com');

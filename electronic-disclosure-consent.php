@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Electronic Disclosure Consent | Brocus IT Solutions LLC';
-$page_desc  = 'Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions LLC, including the requirements and how to withdraw consent.';
+$page_title = 'Electronic Disclosure Consent | Brocus IT Solutions';
+$page_desc  = 'Your consent to receive disclosures, agreements, and communications electronically from Brocus IT Solutions, including the requirements and how to withdraw consent.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/head.php';
     }
 </style>
 <div class="legal-wrap">
-    <p class="legal-meta">Last updated: June 11, 2025</p>
+    <p class="legal-meta">Last updated: June 2026</p>
 
     <p>This Electronic Disclosure and Consent ("Consent") explains how Brocus IT Solutions LLC ("Brocus," "we," "us," or "our") provides communications and disclosures to you electronically. By submitting a form on brocusitsolutionsusa.com, checking a consent box, or otherwise interacting with us electronically, you agree to the terms of this Consent.</p>
 

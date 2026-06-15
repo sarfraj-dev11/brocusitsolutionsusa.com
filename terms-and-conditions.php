@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Terms and Conditions | Brocus IT Solutions LLC';
-$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory services provided by Brocus IT Solutions LLC.';
+$page_title = 'Terms and Conditions | Brocus IT Solutions';
+$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory services provided by Brocus IT Solutions.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/head.php';
         }
     </style>
     <div class="legal-wrap">
-        <p class="legal-meta">Last updated: June 11, 2025</p>
+        <p class="legal-meta">Last updated: June 2026</p>
 
         <p>These Terms and Conditions ("Terms") govern your access to and use of brocusitsolutionsusa.com (the "Site") and the services offered by Brocus IT Solutions LLC ("Brocus," "we," "us," or "our"). By using the Site or submitting a request, you agree to these Terms. If you do not agree, please do not use the Site.</p>
 
