@@ -128,15 +128,13 @@ $_legal = unserialize(LEGAL_LINKS);
 </div>
 
 <!-- ── Cookie Consent Banner ── -->
-<div id="cookie-banner" class="cookie-banner-hidden" style="position:fixed;bottom:0;left:0;right:0;z-index:99997;background:rgba(15,23,42,.97);border-top:1px solid rgba(124,58,237,.25);backdrop-filter:blur(12px);padding:1.25rem 2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
-  <p style="color:rgba(255,255,255,.75);font-size:.82rem;margin:0;max-width:700px;line-height:1.6;">
-    <i class="fas fa-cookie-bite" style="color:#A78BFA;margin-right:.5rem;"></i>
-    We use cookies to improve your experience and analyse site usage. By continuing, you agree to our
-    <a href="<?= url('privacy-policy') ?>" style="color:#A78BFA;text-decoration:underline;">Privacy Policy</a>.
+<div id="cookie-banner" class="cookie-banner-hidden" style="position:fixed;bottom:0;left:0;right:0;z-index:99997;background:rgba(15,23,42,.97);border-top:1px solid rgba(124,58,237,.25);backdrop-filter:blur(12px);padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;">
+  <p style="color:rgba(255,255,255,.75);font-size:.82rem;margin:0;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0;max-width:none;">
+    <i class="fas fa-cookie-bite" style="color:#A78BFA;margin-right:.5rem;"></i>We use cookies to improve your experience and analyse site usage. By continuing, you agree to our <a href="<?= url('privacy-policy') ?>" style="color:#A78BFA;text-decoration:underline;white-space:nowrap;">Privacy Policy</a>.
   </p>
   <div style="display:flex;gap:.75rem;flex-shrink:0;">
-    <button id="cookie-accept" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);color:#fff;border:none;border-radius:8px;padding:.5rem 1.25rem;font-size:.82rem;font-weight:700;cursor:pointer;">Accept</button>
-    <button id="cookie-decline" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:.5rem 1.25rem;font-size:.82rem;font-weight:600;cursor:pointer;">Decline</button>
+    <button id="cookie-accept" style="background:linear-gradient(135deg,#7C3AED,#4F46E5);color:#fff;border:none;border-radius:8px;padding:.5rem 1.25rem;font-size:.82rem;font-weight:700;cursor:pointer;white-space:nowrap;">Accept</button>
+    <button id="cookie-decline" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:.5rem 1.25rem;font-size:.82rem;font-weight:600;cursor:pointer;white-space:nowrap;">Decline</button>
   </div>
 </div>
 
