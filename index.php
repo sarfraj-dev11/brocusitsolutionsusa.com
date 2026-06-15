@@ -278,7 +278,7 @@ require_once __DIR__ . '/includes/head.php';
 
       <div class="hero-stats-row" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem;">
         <div class="hero-stat-block">
-          <div class="hero-stat-num" style="font-size:2.25rem;">10,000+</div>
+          <div class="hero-stat-num" style="font-size:2.25rem;" data-count="10000" data-suffix="+">10,000+</div>
           <div class="hero-stat-label">Homes Protected</div>
         </div>
         <div class="hero-stat-block">
@@ -286,11 +286,11 @@ require_once __DIR__ . '/includes/head.php';
           <div class="hero-stat-label">Live Monitoring</div>
         </div>
         <div class="hero-stat-block">
-          <div class="hero-stat-num" style="font-size:2.25rem;">All 50</div>
+          <div class="hero-stat-num" style="font-size:2.25rem;" data-count="50" data-prefix="All ">All 50</div>
           <div class="hero-stat-label">States Covered</div>
         </div>
         <div class="hero-stat-block">
-          <div class="hero-stat-num" style="font-size:2.25rem;">10+ Years</div>
+          <div class="hero-stat-num" style="font-size:2.25rem;" data-count="10" data-suffix="+ Years">10+ Years</div>
           <div class="hero-stat-label">In Business</div>
         </div>
       </div>
@@ -314,7 +314,7 @@ require_once __DIR__ . '/includes/head.php';
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;">
 
     <!-- Section Header: One honest place to start -->
-    <div style="text-align:center;margin-bottom:4rem;">
+    <div class="aos-fade" style="text-align:center;margin-bottom:4rem;">
       <span style="display:inline-flex;align-items:center;gap:.6rem;padding:.4rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B21B6;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);margin-bottom:1.5rem;">
         <span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;display:inline-block;box-shadow:0 0 8px #7C3AED;"></span>
         What We Do
@@ -326,7 +326,7 @@ require_once __DIR__ . '/includes/head.php';
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:5rem;align-items:center;">
 
       <!-- Left: Beautiful Image -->
-      <div style="position:relative;padding-right:1rem;">
+      <div class="aos-fade-left" style="position:relative;padding-right:1rem;">
         <div style="position:absolute;top:-20px;left:-20px;width:100%;height:100%;background:linear-gradient(135deg,#E8D7FF,#BFDBFE);border-radius:32px;z-index:0;transform:rotate(-3deg);"></div>
         <img src="<?= asset('images/advisor_consultation.png') ?>" alt="Friendly Advisor" style="position:relative;z-index:1;width:100%;height:auto;border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.15);object-fit:cover;aspect-ratio:4/5;">
 
@@ -343,7 +343,7 @@ require_once __DIR__ . '/includes/head.php';
       </div>
 
       <!-- Right: Text & Features -->
-      <div>
+      <div class="aos-fade-right" data-delay="150">
         <p style="color:#374151;line-height:1.8;margin:0 0 3rem;font-weight:400;">
           Most home services are sold by the companies that profit from the sale, so the advice always points back to their product. Brocus is different. We are an independent advisory service. We do not sell or install anything ourselves. We listen to what you need, walk you through your choices, and match you with a trusted provider. The advice is free and there is never any pressure to buy.
         </p>

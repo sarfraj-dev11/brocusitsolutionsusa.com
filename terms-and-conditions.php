@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Terms and Conditions | Brocus IT Solutions LLC';
-$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory and referral services provided by Brocus IT Solutions LLC.';
+$page_desc  = 'The Terms and Conditions governing your use of brocusitsolutionsusa.com and the advisory services provided by Brocus IT Solutions LLC.';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/head.php';
 ?>
@@ -74,7 +74,7 @@ require_once __DIR__ . '/includes/head.php';
         <p>These Terms and Conditions ("Terms") govern your access to and use of brocusitsolutionsusa.com (the "Site") and the services offered by Brocus IT Solutions LLC ("Brocus," "we," "us," or "our"). By using the Site or submitting a request, you agree to these Terms. If you do not agree, please do not use the Site.</p>
 
         <h2>1. Who we are and what we do</h2>
-        <p>Brocus is an independent advisory and referral service. We help you understand your options and connect you with independent third-party providers who supply, install, and service the products and services you choose. We do not manufacture, sell, install, monitor, or service those products ourselves, and we are not the provider of the end services you may ultimately purchase.</p>
+        <p>Brocus is an independent advisory service. We help you understand your options and connect you with independent third-party providers who supply, install, and service the products and services you choose. We do not manufacture, sell, install, monitor, or service those products ourselves, and we are not the provider of the end services you may ultimately purchase.</p>
 
         <h2>2. Our role and the role of providers</h2>
         <p>Any provider we refer you to is an independent business, not an agent, partner, or employee of Brocus. The agreement for any product or service is solely between you and that provider. We do not control and are not responsible for the pricing, availability, quality, timing, installation, or performance of any provider's products or services. You are responsible for reviewing and agreeing to the provider's own terms before purchasing.</p>

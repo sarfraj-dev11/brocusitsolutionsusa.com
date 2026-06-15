@@ -93,7 +93,7 @@ require_once __DIR__ . '/includes/head.php';
         </ul>
 
         <h2>3. How we share your information</h2>
-        <p>We are an advisory and referral service, so sharing certain information is central to what we do. We may share your information with:</p>
+        <p>We are an advisory service, so sharing certain information is central to what we do. We may share your information with:</p>
         <ul>
             <li><strong>Third-party providers.</strong> When you request a quote, consultation, or service, we share the relevant details with one or more independent providers so they can follow up with you. Once your information is shared, the provider's own privacy policy will also apply to how they use it.</li>
             <li><strong>Service vendors.</strong> Companies that perform functions on our behalf, such as hosting, analytics, customer communication, and marketing support, under obligations to protect your information.</li>
